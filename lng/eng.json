@@ -1,0 +1,27 @@
+{
+    "lenguage" : "Language",
+    "catalan" : "Catalan",
+    "spanish" : "Spanish",
+    "english" : "English",
+    "french" : "French",
+    "home" : "Home",
+    "about" : "About",
+    "newsletter" : "Newsletter",
+    "gallery" : "Gallery",
+    "contact" : "Contact",
+    "fname" : "First Name",
+    "lname" : "Last Name",
+    "copied" : "Copied!",
+    "message" : "Message",
+    "send" : "Send",
+    "draws" : "Draws and series",
+    "big_formats" : "Big Formats",
+    "performances" : "Performances",
+    "facilities" : "Facilities",
+    "description" : "Artista multidisciplinar. Llicenciat en Belles Arts per la Universitat de Barcelona (1988). <br>Membre fundador del grup col·lectiu d'artistes La Xina A.R.T. (1997), i de la xarxa europea d&#39;espais d&#39;art contemporani Kanîbal'hopox (2008). Va formar el duet performàtic Deluxe, amb Luis Casado. És professor de dibuix a l&#39;Escola Isabel de Villena i ensenya escultura a l&#39;Escola de Parcs i Jardins de Barcelona. Ha estat editor i director de la revista d&#39;art La Conxinxina. Ha fet, fins ara, més de 50 exposicions individuals i més de 140 de col·lectives, a més de nombroses accions, instal·lacions i escultures públiques. El seu treball s'ha exposat arreu del país i de l'estat i a una desena de països del continent europeu. Ha publicat tres llibres (<em>10 artistes mediterranis a N.Y.</em> 1998, <em>Mil nou-cents noranta deu</em>, 1999 i <em>El desert químic</em>, 2023). Viu i treballa a Esplugues de Llobregat i a Ivars d'Urgell, on hi te el taller.",
+    "generalTasks" : [
+        "AAA",
+        "BBB",
+        "CCC"
+    ]
+}
