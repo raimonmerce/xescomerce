@@ -32,37 +32,38 @@
     </header>
     <main>
         <section id="home" class="sectioncontent" style="display: block;">
-            <div id="main_images" class="panel">
-            </div>
+            <div id="random_home" class="accordion_panel" style="max-height:none">
+            </div>    
         </section>
         <section id="about" class="sectioncontent">
 
             <h2 lng-tag="about"></h2>
+            <img src="images/main_picture.jpg" class="float_image">
+
             <p> 
                 XESCO MERCÉ
                 <br><br>
                 Ivars d'Urgell, 1965.
                 <br><br>
             </p>
-
-            <p lng-tag="description"> </p>
+            <p lng-tag="description" style="text-align: justify;"> </p>
         </section>
         <section id="gallery" class="sectioncontent">
             <h2 lng-tag="gallery"></h2>
 
-            <button lng-tag="draws" class="accordion"></button>
+            <button lng-tag="draws" class="accordion accordion_active"></button>
             <div id="draws" class="accordion_panel">
             </div>
             
-            <button lng-tag="big_formats" class="accordion">Section 2</button>
+            <button lng-tag="big_formats" class="accordion accordion_active">Section 2</button>
             <div id="big_formats" class="accordion_panel">
             </div>
             
-            <button lng-tag="performances" class="accordion">Section 3</button>
+            <button lng-tag="performances" class="accordion accordion_active">Section 3</button>
             <div id="performances" class="accordion_panel">
             </div>
 
-            <button lng-tag="facilities" class="accordion">Section 3</button>
+            <button lng-tag="facilities" class="accordion accordion_active">Section 3</button>
             <div id="facilities" class="accordion_panel">
             </div>
             
@@ -119,8 +120,24 @@
             <h2 id="modal-title"></h2>
         </div>
         <div class="modal-body">
-            <p id="modal-text"></p>
-            <img src="image-source.jpg" id="modal-image">
+            <div style="display: flex;">
+                <div class="column">
+                    <p id="modal-text"></p>
+                </div>
+                <div class="column">
+                    <div class="slideshow-container">
+                        <div id="slideshow-div">
+        
+                        </div>
+                        <a id= "prev_slideshow" class="prev">&#10094;</a>
+                        <a id= "next_slideshow" class="next">&#10095;</a>
+                    </div>
+                    <br>
+                    
+                    <div id="dots-div" style="text-align:center">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   
