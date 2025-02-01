@@ -1,0 +1,18 @@
+{
+    "header": {
+      "title": "Main Name of the Web",
+      "home": "Home",
+      "about": "About",
+      "newsletter": "Newsletter",
+      "gallery": "Gallery",
+      "books": "Books",
+      "contact": "Contact"
+    },
+    "main": {
+      "welcomeMessage": "Welcome to Our Website",
+      "bodyText": "This is the body of the main page. Add your content here to share details about your site or project."
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    }
+}

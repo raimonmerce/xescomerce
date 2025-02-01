@@ -1,0 +1,18 @@
+{
+    "header": {
+      "title": "Main Name of the Web",
+      "home": "Inici",
+      "about": "Sobre mi",
+      "newsletter": "Notícies",
+      "gallery": "Galeria",
+      "books": "Llibres",
+      "contact": "Contacte"
+    },
+    "main": {
+      "welcomeMessage": "Bon dia",
+      "bodyText": "This is the body of the main page. Add your content here to share details about your site or project."
+    },
+    "footer": {
+      "rights": "Tots els drets reservats."
+    }
+}

@@ -1,0 +1,45 @@
+/* General header styling */
+.app-header {
+  position: fixed; /* Keeps the header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;  /* Optional: Set background color for the header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow */
+  padding: 20px 20px 10px 20px;  /* Adjust padding to make it look better */
+  z-index: 10;  /* Ensure the header stays on top of other content */
+  display: flex;
+  flex-direction: column;  /* Stack the elements vertically */
+  align-items: center;
+}
+
+/* Header top section (title and language selector) */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+/* Center the title */
+.title {
+  font-size: 3rem;  /* Make it larger */
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;  /* Allow title to take remaining space and be centered */
+}
+
+/* Position Language Selector at the top right */
+.language-selector {
+  position: absolute;  /* Position it absolutely inside the parent */
+  top: 30px;
+  right: 50px;
+}
+
+/* Tab Selector styling (position it at the bottom of the header) */
+.tab-selector {
+  margin-top: 10px;  /* Add space between the title section and tab selector */
+  width: 100%;  /* Ensure it stretches across the entire width */
+  text-align: center;  /* Center the tab content */
+}
