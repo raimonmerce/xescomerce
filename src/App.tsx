@@ -1,36 +1,70 @@
 import Main from './components/Main'
-import Footer from './components/footer/Footer'
-import LanguageSelector from "./components/header/LanguageSelector";
 import './App.css'
-import { useState } from "react";
-import TabSelector from "./components/header/TabSelector";
+import { useState, useEffect } from "react";
 import Peace from "./components/peace/Peace";
+import LandPage from "./components/content/LandPage";
+import Header from "./components/header/Header";
 
 function App() {
-  const [activeTab, setActiveTab] = useState<string>("home");
+  const minZoom = 1.7;
+
+  const [isLandPage, setIsLandPage] = useState(true);
+  const [initialScale, setInitialScale] = useState(minZoom);
+  const [activeTab, setActiveTab] = useState<string>("about");
+  const [goToTab, setGoToTab] = useState<string>("");
   const [openPeace, setOpenPeace] = useState("");
+
+  useEffect(() => {
+    setGoToTab("");
+  }, [isLandPage]);
 
   const togglePopup = () => {
     setOpenPeace("");
   };
 
-  const handleTabChange = (tab: string) => {
-    setActiveTab(tab);
-  };
+  const handleWheel = (event: React.WheelEvent) => {
+    if (window.scrollY === 0 && event.deltaY < 0) {
+        setIsLandPage(true);
+    }
+};
 
   return (
-    <>
-      <header className="app-header">
-        <div className="header-top">
-          <div className="title">Xesco Mercé</div>
-          <LanguageSelector />
-        </div>
-        <div className="tab-selector">
-          <TabSelector onTabChange={handleTabChange} />
-        </div>
-      </header>
-        <Main activeTab={activeTab} setOpenPeace={setOpenPeace}/>
-        <Footer/>
+    <>{isLandPage && 
+        <LandPage 
+          setIsLandPage={setIsLandPage}
+          initialScale={initialScale}
+          setInitialScale={setInitialScale}
+        />
+      }
+      {!isLandPage && 
+        <div
+          style={{
+            backgroundColor: 'white',
+            width: '100vw',
+          }}
+          onWheel={handleWheel}
+        >
+          <div
+            style={{
+                width: '100vw',
+                height: '110vh',
+                backgroundColor: 'black',
+                zIndex: 10
+            }}
+          />
+          <Header 
+            setActiveTab={setActiveTab} 
+            activeTab={activeTab}
+            setGoToTab={setGoToTab}
+          />
+
+        <Main 
+          activeTab={activeTab} 
+          setOpenPeace={setOpenPeace} 
+          setActiveTab={setActiveTab}
+          goToTab={goToTab}
+        />
+        {/* <Footer/> */}
 
         {openPeace !== "" && 
           <Peace
@@ -38,6 +72,10 @@ function App() {
             name={openPeace}
           />
         }
+
+        </div>
+      }
+      
     </>
   )
 }

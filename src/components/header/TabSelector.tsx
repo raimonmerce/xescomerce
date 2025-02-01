@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { useTranslation } from "react-i18next";
 
 interface TabSelectorProps {
-  onTabChange: (tab: string) => void;
+  setActiveTab: React.Dispatch<React.SetStateAction<string>>;
+  activeTab: string;
+  brightness: number;
+  setGoToTab: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const TabSelector: React.FC<TabSelectorProps> = ({ onTabChange }) => {
-  const [activeTab, setActiveTab] = useState<string>("home");
+const TabSelector: React.FC<TabSelectorProps> = ({ setActiveTab, brightness, activeTab, setGoToTab }) => {
   const { t } = useTranslation();
 
   const handleTabChange = (tab: string) => {
+    setGoToTab(tab)
     setActiveTab(tab);
-    onTabChange(tab);
   };
 
   const tabs = {
-    home: t('header.home', 'Inici'),
     about: t('header.about', 'Sobre mi'),
     newsletter: t('header.newsletter', 'Butlletí'),
     gallery: t('header.gallery', 'Galeria'),
@@ -24,17 +25,29 @@ const TabSelector: React.FC<TabSelectorProps> = ({ onTabChange }) => {
   };
 
   return (
-    <div className="tab flex gap-4">
-      {Object.entries(tabs).map(([key, value]) => (
-        <button
-          key={key}
-          id={`${key}_nav`}
-          className={`tablinks ${activeTab === key ? "nav_active font-bold text-black" : "text-gray-500"}`}
-          lng-tag={key}
-          onClick={() => handleTabChange(key)}
-        >
-          {value.charAt(0).toUpperCase() + value.slice(1)}
-        </button>
+    <div 
+      className="tab flex gap-4"
+      style={{
+        filter: `brightness(${brightness})`,
+        transition: "filter 0.3s ease",
+        padding: "10px",
+      }}
+    >
+      {Object.entries(tabs).map(([key, value], index, array) => (
+        <Fragment key={value}>
+          <button
+            key={key}
+            id={`${key}_nav`}
+            onClick={() => handleTabChange(key)}
+            className={`lenguage-button-text ${(activeTab === key) ? "lenguage-button-selected" : ""}`}
+            style={{
+              pointerEvents: (activeTab === key) ? "none" : "auto",
+            }}
+          >
+            {value.toUpperCase()}
+          </button>
+          {index < array.length - 1 && <span className="separator">|</span>}
+        </Fragment>
       ))}
     </div>
   );
