@@ -1,0 +1,182 @@
+{
+    "tau" : {
+        "name" : "Exemple 1",
+        "description" : "bla bla bla bla ",
+        "thumbnail": "images/gallery/test4.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "draws",
+        "link" : "Adsadsdasd"
+    },
+
+    "obra2" : {
+        "name" : "Exemple 2",
+        "description" : "bla bla bla bla 2",
+        "thumbnail": "images/gallery/test2.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "big_formats",
+        "link" : "Adsadsdasd"
+    },
+
+    "tau3" : {
+        "name" : "Exemple 3",
+        "description" : "bla bla bla bla ",
+        "thumbnail": "images/gallery/test1.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "performances",
+        "link" : "Adsadsdasd"
+    },
+
+    "obra4" : {
+        "name" : "Exemple 4",
+        "description" : "bla bla bla bla 2",
+        "thumbnail": "images/gallery/test2.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "facilities",
+        "link" : "Adsadsdasd"
+    },
+
+    "tau5" : {
+        "name" : "Exemple 5",
+        "description" : "bla bla bla bla ",
+        "thumbnail": "images/gallery/test4.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "facilities",
+        "link" : "Adsadsdasd"
+    },
+
+    "obra6" : {
+        "name" : "Exemple 6",
+        "description" : "bla bla bla bla 2",
+        "thumbnail": "images/gallery/test5.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "draws",
+        "link" : "Adsadsdasd"
+    },
+
+    "tau7" : {
+        "name" : "Exemple 1",
+        "description" : "bla bla bla bla ",
+        "thumbnail": "images/gallery/test6.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "draws",
+        "link" : "Adsadsdasd"
+    },
+
+    "obra8" : {
+        "name" : "Exemple 2",
+        "description" : "bla bla bla bla 2",
+        "thumbnail": "images/gallery/test1.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "big_formats",
+        "link" : "Adsadsdasd"
+    },
+
+    "tau9" : {
+        "name" : "Exemple 3",
+        "description" : "bla bla bla bla ",
+        "thumbnail": "images/gallery/test2.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "performances",
+        "link" : "Adsadsdasd"
+    },
+
+    "obra10" : {
+        "name" : "Exemple 4",
+        "description" : "bla bla bla bla 2",
+        "thumbnail": "images/gallery/test3.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "facilities",
+        "link" : "Adsadsdasd"
+    },
+
+    "tau11" : {
+        "name" : "Exemple 5",
+        "description" : "bla bla bla bla ",
+        "thumbnail": "images/gallery/test4.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "draws",
+        "link" : "Adsadsdasd"
+    },
+
+    "obra12" : {
+        "name" : "Exemple 6",
+        "description" : "bla bla bla bla 2",
+        "thumbnail": "images/gallery/test5.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "draws",
+        "link" : "Adsadsdasd"
+    },
+
+    "obra13" : {
+        "name" : "Exemple 4",
+        "description" : "bla bla bla bla 2",
+        "thumbnail": "images/gallery/test6.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "draws",
+        "link" : "Adsadsdasd"
+    },
+
+    "tau14" : {
+        "name" : "Exemple 5",
+        "description" : "bla bla bla bla ",
+        "thumbnail": "images/gallery/test6.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "draws",
+        "link" : "Adsadsdasd"
+    },
+
+    "obra15" : {
+        "name" : "Exemple 6",
+        "description" : "bla bla bla bla 2",
+        "thumbnail": "images/gallery/test5.jpg",
+        "imatges" : [
+            "images/gallery/test1.jpg",
+            "images/gallery/test2.jpg"
+        ],
+        "type" : "draws",
+        "link" : "Adsadsdasd"
+    }
+
+}
