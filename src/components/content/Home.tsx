@@ -1,7 +1,3 @@
-import {useState} from "react";
-import Peace from "../peace/Peace";
-import PeaceThumbnail from "../peace/PeaceThumbnail";
-import TempPeaceThumbnail from "../peace/TempPeaceThumbnail";
 import GridPeaces from "../peace/GridPeaces";
 
 interface HomeProps {

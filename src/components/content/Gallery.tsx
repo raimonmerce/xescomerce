@@ -1,10 +1,10 @@
 import React from "react";
 
-interface GalleryProps {
-  setOpenPeace: React.Dispatch<React.SetStateAction<string>>;
-}
+// interface GalleryProps {
+//   setOpenPeace: React.Dispatch<React.SetStateAction<string>>;
+// }
 
-const Gallery: React.FC<GalleryProps> = ({setOpenPeace}) => {
+const Gallery: React.FC = () => {
   return (
     <section className="gallery-section">
       <h2>Gallery</h2>

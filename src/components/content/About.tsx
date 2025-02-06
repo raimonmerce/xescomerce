@@ -1,6 +1,4 @@
 import React from "react";
-import Peace from "../peace/Peace";
-import PeaceThumbnail from "../peace/PeaceThumbnail";
 
 const About: React.FC = () => {
   return (

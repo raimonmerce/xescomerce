@@ -18,7 +18,7 @@ const Main: React.FC<MainProps> = ({ activeTab, setOpenPeace }) => {
           case "newsletter":
             return <Newsletter/>;
           case "gallery":
-            return <Gallery setOpenPeace={setOpenPeace}/>;
+            return <Gallery/>;
           case "contact":
             return <Contact/>;
           case "books":

@@ -8,7 +8,7 @@ interface PeaceProps {
 
 const Peace: React.FC<PeaceProps> = ({ name, onClose }) => {
   const gallery = GalleryManager.getInstance();
-  const peace = gallery.getPiece(name)
+  const peace = gallery.getPiece(name) as GalleryPiece;
   
   const handleOutsideClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
