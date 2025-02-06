@@ -6,7 +6,7 @@ import React from "react";
 
 const Gallery: React.FC = () => {
   return (
-    <section className="gallery-section">
+    <>
       <h2>Gallery</h2>
       <div className="grid grid-cols-3 gap-4">
         <div className="image-item">
@@ -19,7 +19,31 @@ const Gallery: React.FC = () => {
           <img src="https://via.placeholder.com/150" alt="Image 3" />
         </div>
       </div>
-    </section>
+      <p>
+        A
+      </p>
+      <p>
+        A
+      </p>
+      <p>
+        A
+      </p>
+      <p>
+        A
+      </p>
+      <p>
+        A
+      </p>
+      <p>
+        A
+      </p>
+      <p>
+        A
+      </p>
+      <p>
+        A
+      </p>
+    </>
   );
 };
 
