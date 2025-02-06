@@ -1,4 +1,3 @@
-import { useState } from "react";
 import heartImage from "../../assets/heart.png";
 import "./LandPage.css";
 

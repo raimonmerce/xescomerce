@@ -10,9 +10,6 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({activeTab, setActiveTab, setGoToTab }) => {
     const [brightness, setBrightness] = useState(1);
-    const handleTabChange = (tab: string) => {
-        setActiveTab(tab);
-    };
 
     useEffect(() => {
     const handleScroll = () => {

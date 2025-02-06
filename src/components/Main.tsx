@@ -2,18 +2,15 @@ import { useEffect } from "react";
 import About from "./content/About";
 import Contact from "./content/Contact";
 import Books from "./content/Books";
-import Home from "./content/Home";
 import Gallery from "./content/Gallery";
 import Newsletter from "./content/Newsletter";
 
 interface MainProps {
-  activeTab: string;
-  setOpenPeace: React.Dispatch<React.SetStateAction<string>>;
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
   goToTab: string;
 }
 
-const Main: React.FC<MainProps> = ({ activeTab, setOpenPeace, setActiveTab, goToTab }) => {
+const Main: React.FC<MainProps> = ({ setActiveTab, goToTab }) => {
   const sections = [
     { id: "about", component: <About /> },
     { id: "newsletter", component: <Newsletter /> },

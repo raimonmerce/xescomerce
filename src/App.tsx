@@ -58,9 +58,7 @@ function App() {
             setGoToTab={setGoToTab}
           />
 
-        <Main 
-          activeTab={activeTab} 
-          setOpenPeace={setOpenPeace} 
+        <Main
           setActiveTab={setActiveTab}
           goToTab={goToTab}
         />
