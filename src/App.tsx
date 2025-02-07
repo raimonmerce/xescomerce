@@ -1,6 +1,6 @@
 import Main from './components/Main'
 import './App.css'
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Peace from "./components/peace/Peace";
 import LandPage from "./components/content/LandPage";
 import Header from "./components/header/Header";
@@ -13,6 +13,8 @@ function App() {
   const [activeTab, setActiveTab] = useState<string>("about");
   const [goToTab, setGoToTab] = useState<string>("");
   const [openPeace, setOpenPeace] = useState("");
+  
+  const touchStartRef = useRef<number | null>(null);
 
   useEffect(() => {
     setGoToTab("");
@@ -24,12 +26,34 @@ function App() {
 
   const handleWheel = (event: React.WheelEvent) => {
     if (window.scrollY === 0 && event.deltaY < 0) {
-        setIsLandPage(true);
+      setIsLandPage(true);
     }
-};
+  };
+
+  const handleTouchStart = (event: React.TouchEvent) => {
+    if (event.touches.length === 1) {
+      touchStartRef.current = event.touches[0].clientY;
+    }
+  };
+
+  const handleTouchMove = (event: React.TouchEvent) => {
+    if (event.touches.length === 1 && touchStartRef.current !== null) {
+      const touchY = event.touches[0].clientY;
+      const deltaY = touchY - touchStartRef.current; 
+
+      if (window.scrollY === 0 && deltaY > 50) {
+        setIsLandPage(true);
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    touchStartRef.current = null;
+  };
 
   return (
-    <>{isLandPage && 
+    <>
+      {isLandPage && 
         <LandPage 
           setIsLandPage={setIsLandPage}
           initialScale={initialScale}
@@ -43,6 +67,9 @@ function App() {
             width: '100vw',
           }}
           onWheel={handleWheel}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div
             style={{
@@ -58,24 +85,23 @@ function App() {
             setGoToTab={setGoToTab}
           />
 
-        <Main
-          setActiveTab={setActiveTab}
-          goToTab={goToTab}
-        />
-        {/* <Footer/> */}
-
-        {openPeace !== "" && 
-          <Peace
-            onClose={togglePopup}
-            name={openPeace}
+          <Main
+            setActiveTab={setActiveTab}
+            goToTab={goToTab}
           />
-        }
 
+          {/* <Footer/> */}
+
+          {openPeace !== "" && 
+            <Peace
+              onClose={togglePopup}
+              name={openPeace}
+            />
+          }
         </div>
       }
-      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

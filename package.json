@@ -1,5 +1,5 @@
 {
-  "homepege" : "https://raimonmerce.github.io/xescomerce/",
+  "homepege": "https://raimonmerce.github.io/xescomerce/",
   "name": "xescomerce",
   "private": true,
   "version": "0.0.0",
@@ -7,13 +7,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "framer-motion": "^12.0.6",
+    "gh-pages": "^6.3.0",
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.2",
     "i18next-http-backend": "^3.0.2",
