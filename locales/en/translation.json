@@ -12,6 +12,9 @@
       "welcomeMessage": "Welcome to Our Website",
       "bodyText": "This is the body of the main page. Add your content here to share details about your site or project."
     },
+    "contact": {
+      "message": "Contaam per aquí"
+    },
     "footer": {
       "rights": "All rights reserved."
     },

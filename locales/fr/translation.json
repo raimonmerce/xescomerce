@@ -12,6 +12,9 @@
       "welcomeMessage": "Bonjour",
       "bodyText": "This is the body of the main page. Add your content here to share details about your site or project."
     },
+    "contact": {
+      "message": "Contaam per aquí"
+    },
     "footer": {
       "rights": "Tous droits réservés"
     },
