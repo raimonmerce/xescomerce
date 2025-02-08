@@ -14,5 +14,8 @@
     },
     "footer": {
       "rights": "Todos los derechos reservados."
+    },
+    "metadata": {
+      "description": "Descripción web"
     }
 }
