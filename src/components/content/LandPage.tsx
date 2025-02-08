@@ -14,6 +14,12 @@ const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, initialScale, setIni
   const touchStartRef = useRef<number | null>(null);
   const initialScaleRef = useRef<number>(initialScale); // Store initial scale
 
+  const handleWheel = (event: React.WheelEvent) => {
+    const newScale = Math.max(minZoom, Math.min(maxZoom, initialScale - event.deltaY * -0.01));
+    if (newScale >= maxZoom) setIsLandPage(false);
+    setInitialScale(newScale);
+  };
+
   useEffect(() => {
     const handleTouchMove = (event: TouchEvent) => {
       if (event.touches.length === 1 && touchStartRef.current !== null) {
@@ -53,6 +59,7 @@ const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, initialScale, setIni
   return (
     <div
       className="background-container"
+      onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       style={{
@@ -66,7 +73,8 @@ const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, initialScale, setIni
         className="heart-image"
         style={{
           transform: `translate(-50%, -50%) scale(${initialScale})`,
-          transition: "transform 0.1s linear, filter 0.5s ease-in-out",
+          //transition: "transform 0.1s linear, filter 0.5s ease-in-out",
+          transition: "transform 0.3s ease-in-out, filter 0.5s ease-in-out",
           filter: `brightness(${1 - fadeAmount})`,
         }}
       />
