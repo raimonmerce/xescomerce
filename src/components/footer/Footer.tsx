@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-import SocialLink from "./SocialLink";
+import SocialLink from "../commons/SocialLink";
 import './Footer.css'; 
 
 const Footer: React.FC = () => {
