@@ -12,6 +12,20 @@
       "welcomeMessage": "Bonjour",
       "bodyText": "This is the body of the main page. Add your content here to share details about your site or project."
     },
+    "about": {
+      "descripcio": "Qui soc, descripció asd asd asd as sd sfffsd a"
+    },
+    "gallery": {
+      "descripcio": "Descripciño de la galeria asd asd asd as sd sfffsd a"
+    },
+    "books": {
+      "desertQuimic": "Descripció del Desert Quimic asdasda asd as as dasd",
+      "obres": "Descripció de ´ conxinxina asdasda asd as as dasd",
+      "conxinxina": "Descripció de la conxinxina asdasda asd as as dasd"
+    },
+    "newsletter": {
+      "descripcio": "Descripció de les noticies asd asd asd as sd sfffsd a"
+    },
     "contact": {
       "message": "Contaam per aquí"
     },

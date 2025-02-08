@@ -1,13 +1,12 @@
 import React from "react";
-
-// interface GalleryProps {
-//   setOpenPeace: React.Dispatch<React.SetStateAction<string>>;
-// }
+import { useTranslation } from "react-i18next";
 
 const Gallery: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <h2>Gallery</h2>
+      <h2>{t("header.gallery")}</h2>
+      <p>{t("gallery.description")}</p>
       <div className="grid grid-cols-3 gap-4">
         <div className="image-item">
           <img src="https://via.placeholder.com/150" alt="Image 1" />

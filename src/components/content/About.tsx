@@ -1,36 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import retratImg from "../../assets/web/about/retrat.jpg"
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <h2>About Me</h2>
+      <h2>{t("header.about")}</h2>
       <p>
-        Welcome to the About section! Here you can introduce yourself or give more details about your work, background, and experiences.
+      {t("about.description")}
       </p>
-      <p>
-        A
-      </p>
-      <p>
-        A
-      </p>
-      <p>
-        A
-      </p>
-      <p>
-        A
-      </p>
-      <p>
-        A
-      </p>
-      <p>
-        A
-      </p>
-      <p>
-        A
-      </p>
-      <p>
-        A
-      </p>
+      <img src={retratImg} alt="conxinxina" />
     </>
   );
 };

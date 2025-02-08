@@ -1,12 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Newsletter: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <h2>Newsletter</h2>
-      <p>
-        Stay updated by subscribing to our newsletter! You can offer your users some insightful content or news.
-      </p>
+      <h2>{t("header.newsletter")}</h2>
+      <p>{t("newsletter.description")}</p>
       <form>
         <input type="email" placeholder="Your Email" className="p-2" />
         <button type="submit" className="btn-submit">Subscribe</button>
