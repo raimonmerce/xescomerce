@@ -10,7 +10,7 @@ const About: React.FC = () => {
       <p>
       {t("about.description")}
       </p>
-      <img src={retratImg} alt="conxinxina" />
+      <img src={retratImg} alt="conxinxina" style={{ width: "80%" }}/>
     </>
   );
 };
