@@ -56,7 +56,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>My Awesome App</title>
+        <title>Xesco Mercé</title>
         <meta name="description" content={t('metadata.description')} />
 
         {/* Open Graph Meta (Facebook, LinkedIn, etc.) */}
