@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Peace from "./components/peace/Peace";
 import LandPage from "./components/content/LandPage";
 import Header from "./components/header/Header";
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
 function App() {
   const minZoom = 1.7;
@@ -13,8 +15,8 @@ function App() {
   const [activeTab, setActiveTab] = useState<string>("about");
   const [goToTab, setGoToTab] = useState<string>("");
   const [openPeace, setOpenPeace] = useState("");
-  
   const touchStartRef = useRef<number | null>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setGoToTab("");
@@ -53,6 +55,24 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <title>My Awesome App</title>
+        <meta name="description" content={t('metadata.description')} />
+
+        {/* Open Graph Meta (Facebook, LinkedIn, etc.) */}
+        <meta property="og:title" content="Xesco Mercé" />
+        <meta property="og:description" content={t('metadata.description')} />
+        <meta property="og:image" content="https://www.xescomerce.com/thumbnail.jpg" />
+        <meta property="og:url" content="https://www.xescomerce.com" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Xesco Mercé" />
+        <meta name="twitter:description" content={t('metadata.description')} />
+        <meta name="twitter:image" content="https://www.xescomerce.com/thumbnail.jpg" />
+      </Helmet>
+
       {isLandPage && 
         <LandPage 
           setIsLandPage={setIsLandPage}

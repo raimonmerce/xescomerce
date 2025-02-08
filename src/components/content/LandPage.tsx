@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import heartImage from "../../assets/heart.png";
+import useDevice from "../../hooks/useDevice";
 import "./LandPage.css";
 
 interface LandPageProps {
@@ -12,7 +13,8 @@ const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, initialScale, setIni
   const minZoom = 1.7;
   const maxZoom = 20;
   const touchStartRef = useRef<number | null>(null);
-  const initialScaleRef = useRef<number>(initialScale); // Store initial scale
+  const initialScaleRef = useRef<number>(initialScale);
+  const isPhone = useDevice();
 
   const handleWheel = (event: React.WheelEvent) => {
     const newScale = Math.max(minZoom, Math.min(maxZoom, initialScale - event.deltaY * -0.01));
@@ -73,8 +75,7 @@ const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, initialScale, setIni
         className="heart-image"
         style={{
           transform: `translate(-50%, -50%) scale(${initialScale})`,
-          //transition: "transform 0.1s linear, filter 0.5s ease-in-out",
-          transition: "transform 0.3s ease-in-out, filter 0.5s ease-in-out",
+          transition: isPhone?"transform 0.1s linear, filter 0.5s ease-in-out" : "transform 0.3s ease-in-out, filter 0.5s ease-in-out",
           filter: `brightness(${1 - fadeAmount})`,
         }}
       />
