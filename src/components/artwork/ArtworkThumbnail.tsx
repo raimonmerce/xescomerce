@@ -1,23 +1,19 @@
 import React from "react";
-import { GalleryManager } from '../../../data/GalleryManager';
-import { PublicacionsArtwork } from '../../../types';
-import './PublicationThumbnail.css'; // Import the CSS file
+import { GalleryManager } from '../../data/GalleryManager';
+import { PublicacionsArtwork } from '../../types';
+import './ArtworkThumbnail.css'; // Import the CSS file
 
-interface PublicationThumbnailProps {
+interface ArtworkThumbnailProps {
     id: string;
     setOpenPopup: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const PublicationThumbnail: React.FC<PublicationThumbnailProps> = ({ id, setOpenPopup }) => {
+const ArtworkThumbnail: React.FC<ArtworkThumbnailProps> = ({ id, setOpenPopup }) => {
     const galleryManager = GalleryManager.getInstance();
     const artwork = galleryManager.getById(id);
 
     if (!artwork) {
         return <div>Artwork not found</div>;
-    }
-
-    if (artwork.type !== "Publicacions") {
-        return <div>Error: This artwork is not a Publication.</div>;
     }
 
     const handleClick = () => {
@@ -26,12 +22,14 @@ const PublicationThumbnail: React.FC<PublicationThumbnailProps> = ({ id, setOpen
 
     return (
         <div
-            className="publication-thumbnail"
+            className="artwork-thumbnail"
             onClick={handleClick} // Correct usage of onClick
         >
             <div className="text-content">
                 <h2><i>{artwork.name}</i></h2>
-                <p className="editor">{(artwork as PublicacionsArtwork).editor}</p>
+                {artwork.type === "Publicacions" &&
+                    <p className="editor">{(artwork as PublicacionsArtwork).editor}</p>
+                }
                 <p className="year">{artwork.year}</p>
             </div>
             <div className="image-content">
@@ -41,4 +39,4 @@ const PublicationThumbnail: React.FC<PublicationThumbnailProps> = ({ id, setOpen
     );
 };
 
-export default PublicationThumbnail;
+export default ArtworkThumbnail;

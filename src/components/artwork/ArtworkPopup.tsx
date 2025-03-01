@@ -42,7 +42,7 @@ const ArtworkPopup: React.FC<ArtworkPopupProps> = ({ id, onClose }) => {
       <div className="peace-content">
       <p className="artwork-title"><i>{artwork.name}</i></p>
         <button className="close-button" onClick={onClose}>
-          <img src={xSVG} style={{ width: '16px', height: '16px' }} alt="Close" />
+          <img src={xSVG} style={{ color: 'red', width: '16px', height: '16px' }} alt="Close" />
         </button>
         <div className="main-content">
           <ArtworkPeace id={id} />
