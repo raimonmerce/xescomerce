@@ -1,4 +1,5 @@
 import { Artwork } from '../types';
+import artworks from './GalleryData'; // Adjust the path as necessary
 
 export class GalleryManager {
     private static instance: GalleryManager | null = null;
@@ -16,8 +17,7 @@ export class GalleryManager {
     }
 
     private loadArtworks(): { [id: string]: Artwork } {
-        const artworksData = require('./Gallery.ts').artworks;
-        return artworksData;
+        return artworks;
     }
 
     getById(id: string): Artwork | null {

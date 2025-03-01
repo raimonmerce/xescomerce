@@ -1,7 +1,7 @@
 import Main from './components/Main'
 import './App.css'
 import { useState, useEffect, useRef } from "react";
-import Peace from "./components/peace/Peace";
+import ArtworkPopup from "./components/artwork/ArtworkPopup";
 import LandPage from "./components/content/LandPage";
 import Header from "./components/header/Header";
 import { Helmet } from "react-helmet-async";
@@ -14,7 +14,8 @@ function App() {
   const [initialScale, setInitialScale] = useState(minZoom);
   const [activeTab, setActiveTab] = useState<string>("about");
   const [goToTab, setGoToTab] = useState<string>("");
-  const [openPeace, setOpenPeace] = useState("");
+  // const [openPeace, setOpenPeace] = useState("");
+  const [openPopup, setOpenPopup] = useState<string|null>(null);
   const touchStartRef = useRef<number | null>(null);
   const { t } = useTranslation();
 
@@ -23,7 +24,7 @@ function App() {
   }, [isLandPage]);
 
   const togglePopup = () => {
-    setOpenPeace("");
+    setOpenPopup(null);
   };
 
   const handleWheel = (event: React.WheelEvent) => {
@@ -108,14 +109,15 @@ function App() {
           <Main
             setActiveTab={setActiveTab}
             goToTab={goToTab}
+            setOpenPopup={setOpenPopup}
           />
 
           {/* <Footer/> */}
 
-          {openPeace !== "" && 
-            <Peace
+          {openPopup && 
+            <ArtworkPopup
               onClose={togglePopup}
-              name={openPeace}
+              id={openPopup}
             />
           }
         </div>

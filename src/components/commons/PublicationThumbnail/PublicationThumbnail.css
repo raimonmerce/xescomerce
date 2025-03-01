@@ -1,0 +1,47 @@
+.publication-thumbnail {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+.text-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-content h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.text-content .editor {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.text-content .year {
+    font-size: 1em;
+    color: #777;
+}
+
+.image-content {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

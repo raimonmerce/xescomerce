@@ -1,22 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import About from "./content/About";
 import Contact from "./content/Contact";
 import Books from "./content/Books";
 import Gallery from "./content/Gallery";
 import Newsletter from "./content/Newsletter";
+import ArtworkPopup from "./artwork/ArtworkPopup";
 
 interface MainProps {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
   goToTab: string;
+  setOpenPopup: React.Dispatch<React.SetStateAction<string|null>>;
 }
 
-const Main: React.FC<MainProps> = ({ setActiveTab, goToTab }) => {
+const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => { 
   const sections = [
     { id: "about", component: <About /> },
     { id: "newsletter", component: <Newsletter /> },
-    { id: "gallery", component: <Gallery/> },
-    { id: "books", component: <Books /> },
-    { id: "contact", component: <Contact /> },
+    { id: "gallery", component: <Gallery setOpenPopup={setOpenPopup}/> },
+    { id: "books", component: <Books setOpenPopup={setOpenPopup}/> },
+    { id: "contact", component: <Contact/> },
   ];
 
   useEffect(() => {
@@ -56,20 +58,23 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab }) => {
   }, [setActiveTab]);
 
     return (
-      <div>
-        {sections.map(({ id, component }) => (
-          <div 
-            id={id} 
-            key={id}
-            style={{
-              paddingTop: "15vh", // Adjust this value based on your sticky header height
-              marginTop: "-15vh", // Negative margin to offset the padding
-            }}
-          >
-            {component}
-          </div>
-        ))}
-      </div>
+      <>
+        <div>
+          {sections.map(({ id, component }) => (
+            <div 
+              id={id} 
+              key={id}
+              style={{
+                paddingTop: "15vh",
+                marginTop: "-15vh",
+              }}
+            >
+              {component}
+            </div>
+          ))}
+        </div>
+      </>
+
     );
 };
 

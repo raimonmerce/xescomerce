@@ -1,0 +1,42 @@
+.artwork-peace {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.artwork-content {
+    position: relative;
+}
+
+.floating-image {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    shape-outside: margin-box;
+}
+
+.text-section {
+    text-align: justify;
+    overflow: hidden; /* Ensure text flows around the image */
+}
+
+.text-section p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.text-section strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Clear the float after the text section */
+.text-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
