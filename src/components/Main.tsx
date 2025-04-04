@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import About from "./content/About";
 import Contact from "./content/Contact";
 import Books from "./content/Books";
 import Gallery from "./content/Gallery";
 import Newsletter from "./content/Newsletter";
-import ArtworkPopup from "./artwork/ArtworkPopup";
 
 interface MainProps {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
@@ -59,22 +58,18 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => {
 
     return (
       <>
-        <div>
+        <div className="main">
           {sections.map(({ id, component }) => (
             <div 
               id={id} 
               key={id}
-              style={{
-                paddingTop: "15vh",
-                marginTop: "-15vh",
-              }}
+              className="section"
             >
               {component}
             </div>
           ))}
         </div>
       </>
-
     );
 };
 

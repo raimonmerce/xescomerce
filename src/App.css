@@ -1,19 +1,21 @@
-/* General header styling */
+* {
+  font-family: Candara, sans-serif;
+}
+
 .app-header {
-  position: fixed; /* Keeps the header fixed at the top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;  /* Optional: Set background color for the header */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow */
-  padding: 20px 20px 10px 20px;  /* Adjust padding to make it look better */
-  z-index: 10;  /* Ensure the header stays on top of other content */
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px 10px 20px;
+  z-index: 10;
   display: flex;
-  flex-direction: column;  /* Stack the elements vertically */
+  flex-direction: column;
   align-items: center;
 }
 
-/* Header top section (title and language selector) */
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -22,7 +24,6 @@
   align-items: center;
 }
 
-/* Center the title */
 .title-web {
   font-size: 3rem;
   font-weight: bold;
@@ -31,18 +32,16 @@
   color: white;
 }
 
-/* Position Language Selector at the top right */
 .language-selector {
-  position: absolute;  /* Position it absolutely inside the parent */
+  position: absolute;
   top: 30px;
   right: 50px;
 }
 
-/* Tab Selector styling (position it at the bottom of the header) */
 .tab-selector {
-  margin-top: 10px;  /* Add space between the title section and tab selector */
-  width: 100%;  /* Ensure it stretches across the entire width */
-  text-align: center;  /* Center the tab content */
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -91,3 +90,22 @@ html {
   outline: none;
 }
 
+.main {
+  padding: 0 30px 0 30px;
+  text-align: justify;
+  color: #444444;
+  background-color: #FAF9F6;
+}
+
+.image-portail {
+  width: 80%;
+  max-width: 500px ;
+  margin-left: 15px;
+  float: right;
+}
+
+.section {
+  padding-top: 20vh;
+  margin-top: -15vh;
+  min-height: 80vh;
+}

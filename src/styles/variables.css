@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #3498db;  /* Blue */
+    --secondary-color: #2ecc71;  /* Green */
+    --tertiary-color: #e74c3c;  /* Red */
+    --background-color: #f5f5f5;  /* Light Gray */
+    --text-color: #333333;  /* Dark Text */
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --primary-color: #9b59b6;  /* Purple */
+        --secondary-color: #f39c12;  /* Orange */
+        --font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --primary-color: #e74c3c;  /* Red */
+        --secondary-color: #1abc9c;  /* Teal */
+        --font-size: 12px;
+    }
+}
+  

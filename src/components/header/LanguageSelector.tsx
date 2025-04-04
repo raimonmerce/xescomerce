@@ -13,7 +13,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({brightness}) => {
     i18n.changeLanguage(lang);
   };
 
-  const languages = ["cat", "es", "en", "fr"];
+  const languages = ["cat", "es", "en"]; //, "fr"
   const currentLang = i18n.language;
 
   return (

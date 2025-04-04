@@ -46,4 +46,21 @@ export class GalleryManager {
     getAllArtworks(): Artwork[] {
         return Object.values(this.artworks);
     }
+
+    getRandomArtworkKey(): string | null {
+        const keys = Object.keys(this.artworks);
+        if (keys.length === 0) return null;
+        const randomIndex = Math.floor(Math.random() * keys.length);
+        return keys[randomIndex];
+    }
+
+    getRandomArtworkByTypeKey(type: string): string | null {
+        const keysByType = Object.entries(this.artworks)
+            .filter(([_, artwork]) => artwork.type.toLowerCase() === type.toLowerCase())
+            .map(([key, _]) => key);
+        
+        if (keysByType.length === 0) return null;
+        const randomIndex = Math.floor(Math.random() * keysByType.length);
+        return keysByType[randomIndex];
+    }
 }

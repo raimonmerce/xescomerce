@@ -60,14 +60,12 @@ function App() {
         <title>Xesco Mercé</title>
         <meta name="description" content={t('metadata.description')} />
 
-        {/* Open Graph Meta (Facebook, LinkedIn, etc.) */}
         <meta property="og:title" content="Xesco Mercé" />
         <meta property="og:description" content={t('metadata.description')} />
         <meta property="og:image" content="https://www.xescomerce.com/thumbnail.jpg" />
         <meta property="og:url" content="https://www.xescomerce.com" />
         <meta property="og:type" content="website" />
 
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Xesco Mercé" />
         <meta name="twitter:description" content={t('metadata.description')} />

@@ -1,35 +1,36 @@
 export type ArtworkType = 
-    "PetitsFormats" |
-    "GransFormats" |
-    "Experiments" |
-    "Escultures" |
-    "Murals" |
-    "Accions" |
-    "Instalacions" | 
-    "Cartells" |
-    "Publicacions";
+    "accions" |
+    "cartells" |
+    "escultures" |
+    "experiments" |
+    "gransformats" |
+    "instalacions" | 
+    "murals" |
+    "publicacions" |  
+    "series";
 
-export interface BaseArtwork  {
-  name: string;
-  description: string;
-  thumbnail: string;
-  images: string[];
-  year: number;
-  type: ArtworkType;
+export interface Artwork {
+    name: string;
+    description: string;
+    thumbnail: string;
+    year: number | string;
+    type: ArtworkType;
+
+    // Optional properties (specific to certain types)
+    images?: string[];
+    subtitol?: string;  
+    technique?: string;
+    dimensions?: string;
+    location?: string;
+    editor?: string;
 }
 
-export interface GransFormatsArtwork extends BaseArtwork {
-    type: "GransFormats";
-    technique: string;
-    dimensions: string;
+export interface News  {
+    name: string;
+    description: string;
+    thumbnail: string;
+    images: string[];
+    date: number | string;
+    type: string
+    location: string
 }
-
-export interface PublicacionsArtwork extends BaseArtwork {
-    type: "Publicacions";
-    editor: string;
-}
-
-export type Artwork = 
-    BaseArtwork |
-    GransFormatsArtwork |
-    PublicacionsArtwork

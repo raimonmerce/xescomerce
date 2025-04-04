@@ -1,0 +1,65 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--primary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.contactItem:hover {
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+.contactLocation {
+  color: #000000;
+  transition: color 0.3s ease-in-out;
+}
+
+.contactLocation:hover {
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+.contactSpace {
+  color: #000000;
+}
+
+.contactSpace:hover {
+  color: #000000;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.socialLinks a {
+  color: black;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.socialLinks a:hover {
+  color: red;
+}
+
+.footer {
+  margin-top: auto; /* Pushes footer to the bottom */
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}

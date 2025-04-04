@@ -2,26 +2,32 @@
     background-color: #fff;
     max-width: 800px;
     margin: 20px auto;
+    padding: 20px;
+    overflow: hidden;
 }
 
 .artwork-content {
-    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .floating-image {
+    margin-left: 15px;
     float: right;
-    margin-left: 20px;
-    margin-bottom: 20px;
     max-width: 40%;
 }
 
 .image-carrusel {
     max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .text-section {
+    flex: 1;
     text-align: justify;
-    overflow: hidden; /* Ensure text flows around the image */
+    min-width: 50%;
 }
 
 .text-section p {
@@ -34,9 +40,18 @@
     color: #333;
 }
 
-/* Clear the float after the text section */
-.text-section::after {
-    content: "";
-    display: table;
-    clear: both;
+@media (max-width: 600px) {
+    .artwork-content {
+        flex-direction: column;
+    }
+
+    .floating-image {
+        float: none;
+        max-width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .text-section {
+        text-align: left;
+    }
 }

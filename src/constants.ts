@@ -1,2 +1,3 @@
 export const MAIN_EMAIL = "xescomb@gmail.com";
-export const API_URL = "https://api.example.com";
+export const LOCATION_1 = "Esplugues de Llobregat";
+export const LOCATION_2 = "Ivars d'Urgell";

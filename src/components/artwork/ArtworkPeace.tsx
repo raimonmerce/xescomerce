@@ -1,12 +1,14 @@
 import React from "react";
 import { GalleryManager } from '../../data/GalleryManager';
-import { GransFormatsArtwork, PublicacionsArtwork } from '../../types';
+import { Artwork } from '../../types';
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './ArtworkPeace.css'; // Import the CSS file
+import './ArtworkPeace.css';
+import { useTranslation } from "react-i18next";
+
 
 interface ArtworkPeaceProps {
     id: string;
@@ -15,6 +17,7 @@ interface ArtworkPeaceProps {
 const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
     const galleryManager = GalleryManager.getInstance();
     const artwork = galleryManager.getById(id);
+    const { t } = useTranslation();
 
     if (!artwork) return null;
 
@@ -35,7 +38,7 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
             
             <div className="artwork-content">
                 <div className="floating-image">
-                    {artwork.images.length <= 1 ? (
+                    {artwork.images && artwork.images.length <= 1 ? (
                         <img
                             className="image-carrusel"
                             src={artwork.thumbnail}
@@ -43,7 +46,7 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
                         />
                     ) : (
                         <Slider {...settings}>
-                            {artwork.images.map((image, index) => (
+                            {artwork.images && artwork.images.map((image, index) => (
                                 <div key={index}>
                                     <img
                                         className="image-carrusel"
@@ -56,17 +59,21 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
                     )}
                 </div>
                 <div className="text-section">
-                    {artwork.type === "GransFormats" && (
-                        <>
-                            <p><strong>Technique:</strong> {(artwork as GransFormatsArtwork).technique}</p>
-                            <p><strong>Dimensions:</strong> {(artwork as GransFormatsArtwork).dimensions}</p>
-                        </>
+                    {artwork.editor && (
+                        <p><strong>Editor:</strong> {artwork.editor}</p>
                     )}
-                    {artwork.type === "Publicacions" && (
-                        <p><strong>Editor:</strong> {(artwork as PublicacionsArtwork).editor}</p>
+                    {artwork.technique && (
+                        <p>
+                            <strong>Technique:</strong>{" "}
+                            {artwork.technique.startsWith("assets.") ? t(artwork.technique) : artwork.technique}
+                        </p>                    
                     )}
+                    {artwork.dimensions && (
+                        <p><strong>Dimensions:</strong> {artwork.dimensions}</p>
+                    )}
+
                     <p><strong>Year:</strong> {artwork.year}</p>
-                    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{artwork.description}</ReactMarkdown>
+                    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{t(artwork.description)}</ReactMarkdown>
                 </div>
             </div>
         </div>

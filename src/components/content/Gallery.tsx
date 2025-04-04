@@ -7,6 +7,7 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ setOpenPopup }) => {
   const { t } = useTranslation();
+  //setOpenPopup(null)
   return (
     <>
       <h2>{t("header.gallery")}</h2>
