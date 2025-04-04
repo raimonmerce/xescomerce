@@ -1,83 +1,54 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import heartImage from "../../assets/heart.png";
-import useDevice from "../../hooks/useDevice";
 import "./LandPage.css";
 
 interface LandPageProps {
   setIsLandPage: React.Dispatch<React.SetStateAction<boolean>>;
-  initialScale: number;
-  setInitialScale: React.Dispatch<React.SetStateAction<number>>;
+  returnLandPage: boolean;
+  setReturnLandPage: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, initialScale, setInitialScale }) => {
-  const minZoom = 1.7;
-  const maxZoom = 20;
-  const touchStartRef = useRef<number | null>(null);
-  const initialScaleRef = useRef<number>(initialScale);
-  const isPhone = useDevice();
+const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, returnLandPage, setReturnLandPage }) => {
+  const [scale, setScale] = useState(returnLandPage ? 10 : 1);
 
-  const handleWheel = (event: React.WheelEvent) => {
-    const newScale = Math.max(minZoom, Math.min(maxZoom, initialScale - event.deltaY * -0.01));
-    if (newScale >= maxZoom) setIsLandPage(false);
-    setInitialScale(newScale);
+  const handleOnClick = () => {
+    setScale(10);
+    setTimeout(() => {
+      setScale(10);
+      setIsLandPage(false);
+    }, 2000);
   };
 
   useEffect(() => {
-    const handleTouchMove = (event: TouchEvent) => {
-      if (event.touches.length === 1 && touchStartRef.current !== null) {
-        event.preventDefault();
+    console.log("returnLandPage", returnLandPage, scale);
+    if (!returnLandPage) return;
 
-        const touchY = event.touches[0].clientY;
-        const deltaY = touchStartRef.current - touchY;
+    setScale(1);
+    const timeoutId = setTimeout(() => {
+      setReturnLandPage(false);
+    }, 2000);
 
-        const sensitivity = 0.01;
-        const newScale = Math.max(minZoom, Math.min(maxZoom, initialScaleRef.current + deltaY * sensitivity));
-
-        if (newScale >= maxZoom) setIsLandPage(false);
-        setInitialScale(newScale);
-      }
-    };
-
-    document.addEventListener("touchmove", handleTouchMove, { passive: false });
-
-    return () => {
-      document.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, [setIsLandPage, setInitialScale, initialScale]);
-
-  const handleTouchStart = (event: React.TouchEvent) => {
-    if (event.touches.length === 1) {
-      touchStartRef.current = event.touches[0].clientY;
-      initialScaleRef.current = initialScale;
-    }
-  };
-
-  const handleTouchEnd = () => {
-    touchStartRef.current = null;
-  };
-
-  const fadeAmount = Math.min((initialScale - minZoom) / (maxZoom - 1), minZoom);
+    return () => clearTimeout(timeoutId);
+  }, [returnLandPage]);
 
   return (
     <div
       className="background-container"
-      onWheel={handleWheel}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
       style={{
-        backgroundColor: `rgba(0, 0, 0, ${fadeAmount})`,
-        filter: `brightness(${1 - fadeAmount})`,
+        backgroundColor: `rgba(0, 0, 0, ${scale / 10})`,
+        filter: `brightness(${1 - scale / 10})`,
+        transition: "background-color 2s ease-in-out, filter 2s ease-in-out",
       }}
     >
       <img
         src={heartImage}
         alt="Floating Center Image"
-        className="heart-image"
-        style={{
-          transform: `translate(-50%, -50%) scale(${initialScale})`,
-          transition: isPhone?"transform 0.1s linear, filter 0.5s ease-in-out" : "transform 0.3s ease-in-out, filter 0.5s ease-in-out",
-          filter: `brightness(${1 - fadeAmount})`,
-        }}
+        className={`heartImage
+          ${scale === 1 ? "pulseAnimation" : ""}
+          ${!returnLandPage && scale === 10 ? "scaleUpAnimation" : ""}
+          ${returnLandPage ? "scaleDownAnimation" : ""}
+        `}
+        onClick={handleOnClick}
       />
     </div>
   );

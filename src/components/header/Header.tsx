@@ -29,6 +29,7 @@ const Header: React.FC<HeaderProps> = ({activeTab, setActiveTab, setGoToTab }) =
 
     return (
         <div
+            id="header"
             style={{
                 backgroundColor: 'black',
                 position: "sticky",

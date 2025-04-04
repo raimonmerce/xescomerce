@@ -55,9 +55,9 @@ const Contact: React.FC = () => {
 
 
       </div>
-      <div className={styles.footer}>
+      {/* <div className={styles.footer}>
         &copy; {new Date().getFullYear()} Xesco Mercé. {t("footer.rights")}
-      </div>
+      </div> */}
     </>
   );
 };

@@ -8,13 +8,10 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 function App() {
-  const minZoom = 1.7;
-
   const [isLandPage, setIsLandPage] = useState(true);
-  const [initialScale, setInitialScale] = useState(minZoom);
+  const [returnLandPage, setReturnLandPage] = useState(false);
   const [activeTab, setActiveTab] = useState<string>("about");
   const [goToTab, setGoToTab] = useState<string>("");
-  // const [openPeace, setOpenPeace] = useState("");
   const [openPopup, setOpenPopup] = useState<string|null>(null);
   const touchStartRef = useRef<number | null>(null);
   const { t } = useTranslation();
@@ -23,12 +20,36 @@ function App() {
     setGoToTab("");
   }, [isLandPage]);
 
+  useEffect(() => {
+    if (isLandPage) {
+      // Block scrolling when `isLandPage` is true
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Enable scrolling when `isLandPage` is false
+      document.body.style.overflow = 'auto';
+    }
+  }, [isLandPage]);
+
   const togglePopup = () => {
     setOpenPopup(null);
   };
 
+  useEffect(() => {
+    if (!isLandPage) {
+      const targetElement = document.getElementById("header");
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [isLandPage]);
+
   const handleWheel = (event: React.WheelEvent) => {
-    if (window.scrollY === 0 && event.deltaY < 0) {
+    if (window.scrollY <= 50 && event.deltaY < 0) {
+      setReturnLandPage(true)
       setIsLandPage(true);
     }
   };
@@ -44,7 +65,8 @@ function App() {
       const touchY = event.touches[0].clientY;
       const deltaY = touchY - touchStartRef.current; 
 
-      if (window.scrollY === 0 && deltaY > 50) {
+      if (window.scrollY <= 50 && deltaY > 50) {
+        setReturnLandPage(true)
         setIsLandPage(true);
       }
     }
@@ -71,55 +93,43 @@ function App() {
         <meta name="twitter:description" content={t('metadata.description')} />
         <meta name="twitter:image" content="https://www.xescomerce.com/thumbnail.jpg" />
       </Helmet>
-
-      {isLandPage && 
+      <div
+        style={{
+          backgroundColor: 'white',
+          width: '100vw',
+        }}
+        onWheel={handleWheel}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <LandPage 
           setIsLandPage={setIsLandPage}
-          initialScale={initialScale}
-          setInitialScale={setInitialScale}
+          returnLandPage={returnLandPage}
+          setReturnLandPage={setReturnLandPage}
         />
-      }
-      {!isLandPage && 
-        <div
-          style={{
-            backgroundColor: 'white',
-            width: '100vw',
-          }}
-          onWheel={handleWheel}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          <div
-            style={{
-                width: '100vw',
-                height: '110vh',
-                backgroundColor: 'black',
-                zIndex: 10
-            }}
-          />
-          <Header 
-            setActiveTab={setActiveTab} 
-            activeTab={activeTab}
-            setGoToTab={setGoToTab}
-          />
 
-          <Main
-            setActiveTab={setActiveTab}
-            goToTab={goToTab}
-            setOpenPopup={setOpenPopup}
+        <Header 
+          setActiveTab={setActiveTab} 
+          activeTab={activeTab}
+          setGoToTab={setGoToTab}
+        />
+
+        <Main
+          setActiveTab={setActiveTab}
+          goToTab={goToTab}
+          setOpenPopup={setOpenPopup}
+        />
+
+        {/* <Footer/> */}
+
+        {openPopup && 
+          <ArtworkPopup
+            onClose={togglePopup}
+            id={openPopup}
           />
-
-          {/* <Footer/> */}
-
-          {openPopup && 
-            <ArtworkPopup
-              onClose={togglePopup}
-              id={openPopup}
-            />
-          }
-        </div>
-      }
+        }
+      </div>
     </>
   );
 }
