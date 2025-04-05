@@ -24,7 +24,6 @@ const TabSelector: React.FC<TabSelectorProps> = ({ setActiveTab, brightness, act
     contact: t("header.contact", "Contacte"),
   };
 
-  // Use a state variable to keep track of window width.
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {

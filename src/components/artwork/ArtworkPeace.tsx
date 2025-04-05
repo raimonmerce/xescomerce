@@ -60,19 +60,23 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
                 </div>
                 <div className="text-section">
                     {artwork.editor && (
-                        <p><strong>Editor:</strong> {artwork.editor}</p>
+                        <p><strong>{t('assets.terms.editor')}:</strong> {artwork.editor}</p>
                     )}
                     {artwork.technique && (
                         <p>
-                            <strong>Technique:</strong>{" "}
+                            <strong>{t('assets.terms.technique')}:</strong>{" "}
                             {artwork.technique.startsWith("assets.") ? t(artwork.technique) : artwork.technique}
                         </p>                    
                     )}
                     {artwork.dimensions && (
-                        <p><strong>Dimensions:</strong> {artwork.dimensions}</p>
+                        <p><strong>{t('assets.terms.dimensions')}:</strong> {artwork.dimensions}</p>
                     )}
 
-                    <p><strong>Year:</strong> {artwork.year}</p>
+                    {artwork.location && (
+                        <p><strong>{t('assets.terms.location')}:</strong> {artwork.location}</p>
+                    )}
+
+                    <p><strong>{t('assets.terms.year')}:</strong> {artwork.year}</p>
                     <ReactMarkdown rehypePlugins={[rehypeRaw]}>{t(artwork.description)}</ReactMarkdown>
                 </div>
             </div>

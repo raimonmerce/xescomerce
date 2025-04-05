@@ -8,9 +8,9 @@ const About: React.FC = () => {
 
   return (
     <>
-      <h2>{t("header.about")}</h2>
+      <p className="text-[20px] md:text-[30px]">{t("header.about")}</p>
       <img src={retratImg} alt="portail" 
-        className="image-portail" />
+        className="w-4/5 max-w-[500px] ml-[15px] float-right" />
       <Text id={"about.description"}/>
     </>
   );

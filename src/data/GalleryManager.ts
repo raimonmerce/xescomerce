@@ -24,27 +24,27 @@ export class GalleryManager {
         return this.artworks[id] || null;
     }
 
-    getByName(name: string): Artwork | null {
-        const foundArtwork = Object.values(this.artworks).find(
-            (artwork) => artwork.name.toLowerCase() === name.toLowerCase()
+    getIdByName(name: string): string | null {
+        const foundEntry = Object.entries(this.artworks).find(
+            ([_, artwork]) => artwork.name.toLowerCase() === name.toLowerCase()
         );
-        return foundArtwork || null;
+        return foundEntry ? foundEntry[0] : null;
     }
-
-    getByType(type: string): Artwork[] {
-        return Object.values(this.artworks).filter(
-            (artwork) => artwork.type.toLowerCase() === type.toLowerCase()
-        );
+    
+    getIdsByType(type: string): string[] {
+        return Object.entries(this.artworks)
+            .filter(([_, artwork]) => artwork.type.toLowerCase() === type.toLowerCase())
+            .map(([id, _]) => id);
     }
-
-    getByYear(year: number): Artwork[] {
-        return Object.values(this.artworks).filter(
-            (artwork) => artwork.year === year
-        );
+    
+    getIdsByYear(year: number): string[] {
+        return Object.entries(this.artworks)
+            .filter(([_, artwork]) => artwork.year === year)
+            .map(([id, _]) => id);
     }
-
-    getAllArtworks(): Artwork[] {
-        return Object.values(this.artworks);
+    
+    getAllArtworkIds(): string[] {
+        return Object.keys(this.artworks);
     }
 
     getRandomArtworkKey(): string | null {

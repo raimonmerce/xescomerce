@@ -39,6 +39,13 @@
     "description": "Descripció web"
   },
   "assets": {
+    "terms": {
+      "technique": "Tècnica",
+      "editor": "Editora",
+      "dimensions": "Dimensions",
+      "year": "Any",
+      "location": "Ubicació"
+    },
     "techniques": {
       "accioGastronomia": "Acció d’art i gastronomia",
       "duetPerformatic": "Duet performàtic",

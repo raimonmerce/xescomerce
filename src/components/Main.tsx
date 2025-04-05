@@ -32,12 +32,13 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
+
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setActiveTab(entry.target.id);
         }
       });
-    }, { threshold: 1.0 });
+    }, { threshold: 0.5 });
 
     sections.forEach(section => {
       const element = document.getElementById(section.id);
@@ -47,6 +48,7 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => {
     });
 
     return () => {
+      
       sections.forEach(section => {
         const element = document.getElementById(section.id);
         if (element) {
@@ -58,12 +60,12 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => {
 
     return (
       <>
-        <div className="main">
+        <div className="px-[30px] text-justify text-[#444444] bg-[#FAF9F6]">
           {sections.map(({ id, component }) => (
             <div 
               id={id} 
               key={id}
-              className="section"
+              className="pt-[20vh] -mt-[15vh] min-h-screen"
             >
               {component}
             </div>

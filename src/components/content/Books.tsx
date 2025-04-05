@@ -16,7 +16,7 @@ const Books: React.FC<BooksProps> = ({ setOpenPopup }) => {
   if (!keyA || !keyB || !keyC) return(null)
   return (
     <>
-      <h2>{t("header.books")}</h2>
+      <p className="text-[20px] md:text-[30px]">{t("header.books")}</p>
       <PublicationTumbnail id={keyA} setOpenPopup={setOpenPopup}/>
       <PublicationTumbnail id={keyB} setOpenPopup={setOpenPopup}/>
       <PublicationTumbnail id={keyC} setOpenPopup={setOpenPopup}/>
