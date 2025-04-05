@@ -18,7 +18,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({brightness}) => {
 
   return (
     <div 
-      className="language-selector"
+      className="absolute right-[50px]"
       style={{
         filter: `brightness(${brightness})`,
         transition: "filter 0.3s ease"
