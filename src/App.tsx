@@ -22,10 +22,8 @@ function App() {
 
   useEffect(() => {
     if (isLandPage) {
-      // Block scrolling when `isLandPage` is true
       document.body.style.overflow = 'hidden';
     } else {
-      // Enable scrolling when `isLandPage` is false
       document.body.style.overflow = 'auto';
     }
   }, [isLandPage]);

@@ -1,3 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-pulseheart: pulseheart 1.5s infinite ease-in-out;
+
+  @keyframes pulseheart {
+    0%, 20%, 40% {
+      transform: scale(1);
+    }
+    10%, 30% {
+      transform: scale(1.05);
+    }
+  }
+  
+  --animate-scaleup: scaleup 2s ease-in-out forwards;
+  
+  @keyframes scaleup {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(10);
+    }
+  }
+  
+  --animate-scaledown: scaledown 2s ease-in-out forwards;
+  
+  @keyframes scaledown {
+    0% {
+      transform: scale(10);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
 * {
   font-family: Candara, sans-serif;
 }

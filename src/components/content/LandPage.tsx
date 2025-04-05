@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import heartImage from "../../assets/heart.png";
-import "./LandPage.css";
+import backgroundImage from "../../assets/taller.jpg";
 
 interface LandPageProps {
   setIsLandPage: React.Dispatch<React.SetStateAction<boolean>>;
@@ -8,7 +8,11 @@ interface LandPageProps {
   setReturnLandPage: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, returnLandPage, setReturnLandPage }) => {
+const LandPage: React.FC<LandPageProps> = ({
+  setIsLandPage,
+  returnLandPage,
+  setReturnLandPage,
+}) => {
   const [scale, setScale] = useState(returnLandPage ? 10 : 1);
 
   const handleOnClick = () => {
@@ -20,7 +24,6 @@ const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, returnLandPage, setR
   };
 
   useEffect(() => {
-    console.log("returnLandPage", returnLandPage, scale);
     if (!returnLandPage) return;
 
     setScale(1);
@@ -31,23 +34,28 @@ const LandPage: React.FC<LandPageProps> = ({ setIsLandPage, returnLandPage, setR
     return () => clearTimeout(timeoutId);
   }, [returnLandPage]);
 
+  const backgroundStyles = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundColor: `rgba(0, 0, 0, ${scale / 10})`,
+    filter: `brightness(${1 - scale / 10})`,
+    transition: "background-color 2s ease-in-out, filter 2s ease-in-out",
+  };
+
+  const animationClass = returnLandPage
+    ? "animate-scaledown"
+    : scale === 10
+    ? "animate-scaleup"
+    : "animate-pulseheart";
+
   return (
     <div
-      className="background-container"
-      style={{
-        backgroundColor: `rgba(0, 0, 0, ${scale / 10})`,
-        filter: `brightness(${1 - scale / 10})`,
-        transition: "background-color 2s ease-in-out, filter 2s ease-in-out",
-      }}
+      className="relative w-screen h-screen bg-cover bg-center overflow-hidden flex justify-center items-center"
+      style={backgroundStyles}
     >
       <img
         src={heartImage}
         alt="Floating Center Image"
-        className={`heartImage
-          ${scale === 1 ? "pulseAnimation" : ""}
-          ${!returnLandPage && scale === 10 ? "scaleUpAnimation" : ""}
-          ${returnLandPage ? "scaleDownAnimation" : ""}
-        `}
+        className={`object-contain ${animationClass}`}
         onClick={handleOnClick}
       />
     </div>
