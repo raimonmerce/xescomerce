@@ -30,15 +30,9 @@ const Header: React.FC<HeaderProps> = ({activeTab, setActiveTab, setGoToTab }) =
     return (
         <div
             id="header"
-            style={{
-                backgroundColor: 'black',
-                position: "sticky",
-                top: 0,
-                zIndex: 1000,
-                paddingBottom: "10px",
-            }}
+            className="bg-black sticky top-0 z-50 pt-2.5 pb-2.5"
         >
-            <div className="title-web">Xesco Mercé</div>
+            <div className="text-3xl lg:text-5xl font-bold text-center flex-grow text-white">Xesco Mercé</div>
             <LanguageSelector brightness={brightness}/>
             <TabSelector 
                 brightness={brightness}

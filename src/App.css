@@ -61,14 +61,6 @@
   align-items: center;
 }
 
-.title-web {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  flex-grow: 1; 
-  color: white;
-}
-
 .language-selector {
   position: absolute;
   top: 30px;
@@ -99,32 +91,6 @@ html {
 .separator {
   color: #777;
   padding: 0 10px;
-}
-
-.lenguage-button-text {
-  background: none;
-  border: none;
-  color: #777;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 0;
-  transition: color 0.3s ease;
-  outline: none; 
-}
-
-.lenguage-button-text:hover {
-  color: white;
-}
-
-.lenguage-button-selected {
-  color: white;
-  font-weight: bold;
-  outline: none; 
-}
-
-.lenguage-button-text:focus {
-  outline: none;
 }
 
 .main {

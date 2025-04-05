@@ -29,15 +29,17 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({brightness}) => {
           <button
             id={lang}
             onClick={() => !(currentLang === lang) && changeLanguage(lang)}
-            className={`lenguage-button-text ${(currentLang === lang) ? "lenguage-button-selected" : ""}`}
+            className={`outline-none bg-none border-0 text-gray-500 text-base cursor-pointer
+              no-underline  p-0 transition-colors duration-300 ease-in-out hover:text-white  
+              focus:outline-none ${currentLang === lang ? 'text-white font-bold' : ''}`}
             style={{
-              pointerEvents: (currentLang === lang) ? "none" : "auto",
+              pointerEvents: currentLang === lang ? 'none' : 'auto',
             }}
           >
             {lang.toUpperCase()}
           </button>
           {index < languages.length - 1 && 
-            <span className="separator">|</span>}
+            <span className="text-gray-500 px-2">|</span>}
         </Fragment>
       ))}
     </div>
