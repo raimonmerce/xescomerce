@@ -6,6 +6,7 @@ import LandPage from "./components/content/LandPage";
 import Header from "./components/header/Header";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import '@styles/variables.css';
 
 function App() {
   const [isLandPage, setIsLandPage] = useState(true);
@@ -46,6 +47,7 @@ function App() {
   }, [isLandPage]);
 
   const handleWheel = (event: React.WheelEvent) => {
+    if (isLandPage) return
     if (window.scrollY <= 50 && event.deltaY < 0) {
       setReturnLandPage(true)
       setIsLandPage(true);
@@ -59,6 +61,7 @@ function App() {
   };
 
   const handleTouchMove = (event: React.TouchEvent) => {
+    if (isLandPage) return
     if (event.touches.length === 1 && touchStartRef.current !== null) {
       const touchY = event.touches[0].clientY;
       const deltaY = touchY - touchStartRef.current; 
@@ -93,7 +96,6 @@ function App() {
       </Helmet>
       <div
         style={{
-          backgroundColor: 'white',
           width: '100vw',
         }}
         onWheel={handleWheel}

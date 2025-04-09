@@ -43,7 +43,7 @@ const ArtworkPopup: React.FC<ArtworkPopupProps> = ({ id, onClose }) => {
       onClick={handleOutsideClick}
     >
       <div className="bg-white rounded-lg shadow-lg w-[80%] h-[80%] flex flex-col relative overflow-hidden">
-        <p className="text-center w-full text-xl font-medium italic mt-2">
+        <p className="text-center w-full text-2xl font-medium italic mt-2">
           <i>{artwork.name}</i>
         </p>
         <button 
@@ -52,7 +52,7 @@ const ArtworkPopup: React.FC<ArtworkPopupProps> = ({ id, onClose }) => {
         >
           <img src={xSVG} className="w-4 h-4" alt="Close" />
         </button>
-        <div className="overflow-y-auto flex-grow mt-2 px-2">
+        <div className="overflow-y-auto flex-grow m-2">
           <ArtworkPeace id={id} />
         </div>
       </div>

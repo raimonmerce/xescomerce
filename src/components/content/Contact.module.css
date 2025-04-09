@@ -11,7 +11,7 @@
   align-items: center;
   gap: 10px;
   margin-top: 10px;
-  color: var(--primary-color);
+  color: var(--color-black);
   transition: color 0.3s ease-in-out;
 }
 
@@ -26,16 +26,16 @@
 }
 
 .contactLocation:hover {
-  color: #aaaaaa;
+  color: var(--color-gray);
   cursor: pointer;
 }
 
 .contactSpace {
-  color: #000000;
+  color: var(--color-black);
 }
 
 .contactSpace:hover {
-  color: #000000;
+  color: var(--color-black);
 }
 
 .socialLinks {
@@ -45,21 +45,19 @@
 }
 
 .socialLinks a {
-  color: black;
+  color: var(--color-black);
   transition: color 0.3s ease-in-out;
   text-decoration: none;
 }
 
 .socialLinks a:hover {
-  color: red;
+  color: var(--color-gray);
 }
 
 .footer {
   margin-top: auto; /* Pushes footer to the bottom */
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   padding: 10px 0;
   width: 100%;
-  position: absolute;
-  bottom: 10px;
 }

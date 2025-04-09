@@ -27,13 +27,15 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup }) => {
   return (
     <>
       <p className="text-[20px] md:text-[30px] mb-4">{t("header.gallery")}</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {types.map((type) => {
-          const ids = galleryManager.getIdsByType(type);
-          return ids.map((id) => (
-            <FrameThumbnail key={id} id={id} setOpenPopup={setOpenPopup} />
-          ));
-        })}
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {types.map((type) => {
+            const ids = galleryManager.getIdsByType(type);
+            return ids.map((id) => (
+              <FrameThumbnail key={id} id={id} setOpenPopup={setOpenPopup} />
+            ));
+          })}
+        </div>
       </div>
     </>
   );

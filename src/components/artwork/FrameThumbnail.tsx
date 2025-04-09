@@ -22,7 +22,7 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ id, setOpenPopup }) => 
 
   return (
     <div
-      className="relative w-[250px] h-[250px] bg-cover bg-center cursor-pointer"
+      className="relative w-[220px] h-[220px] bg-cover bg-center cursor-pointer mx-auto my-4"
       style={{ backgroundImage: `url(${diapo})` }}
       onClick={handleClick}
       onMouseEnter={() => setHovered(true)}
@@ -33,7 +33,7 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ id, setOpenPopup }) => 
         <img
           src={artwork.thumbnail}
           alt={artwork.name}
-          className={`w-[172px] h-[115px] max-w-[172px] object-cover object-center transition-all duration-300 ${
+          className={`w-[153px] h-[100px] max-w-[153px] object-cover object-center transition-all duration-300 ${
             hovered ? "filter brightness-150" : ""
           }`}
         />
@@ -41,7 +41,7 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ id, setOpenPopup }) => 
 
       {/* Text element */}
       <h2
-        className={`absolute top-[190px] left-1/2 -translate-x-1/2 z-20 text-lg text-center max-w-[90%] max-h-[3.6em] overflow-hidden pointer-events-auto transition-colors duration-300 ${
+        className={`absolute top-[165px] left-1/2 -translate-x-1/2 z-20 text-center max-w-[90%] max-h-[3.6em] overflow-hidden pointer-events-auto transition-colors duration-300 ${
             hovered ? "text-gray-500" : "text-black"
         }`}
         style={{

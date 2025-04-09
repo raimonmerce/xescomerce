@@ -22,7 +22,7 @@ const ArtworkThumbnail: React.FC<ArtworkThumbnailProps> = ({ id, setOpenPopup })
     return (
         <div
             className="artwork-thumbnail"
-            onClick={handleClick} // Correct usage of onClick
+            onClick={handleClick}
         >
             <div className="text-content">
                 <h2><i>{artwork.name}</i></h2>

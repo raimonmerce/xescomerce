@@ -4,7 +4,7 @@ import SocialLink from "../commons/SocialLink";
 import { FaLinkedin, FaInstagram, FaFacebook, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { MAIN_EMAIL, LOCATION_1, LOCATION_2 } from "../../constants";
 import styles from "./Contact.module.css";
-import '@styles/variables.css';
+import heartImage from "../../assets/heart.png";
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -47,6 +47,16 @@ const Contact: React.FC = () => {
           <span className={styles.contactLocation} onClick={goToEsplugues}>{LOCATION_1} </span>
         </div>
 
+        <div
+          className="relative w-screen h-[40vh] bg-cover bg-center overflow-hidden flex justify-center items-center"
+        >
+          <img
+            src={heartImage}
+            alt="Floating Center Image"
+            className={`object-contain animate-pulseheart`}
+          />
+        </div>
+
         <div className={styles.socialLinks}>
           <SocialLink href="https://www.linkedin.com/in/xesco-merce-0b266610b" icon={<FaLinkedin size={30} />} label="LinkedIn" />
           <SocialLink href="https://www.instagram.com/xescomerce/" icon={<FaInstagram size={30} />} label="Instagram" />
@@ -55,9 +65,9 @@ const Contact: React.FC = () => {
 
 
       </div>
-      {/* <div className={styles.footer}>
+      <div className={styles.footer}>
         &copy; {new Date().getFullYear()} Xesco Mercé. {t("footer.rights")}
-      </div> */}
+      </div>
     </>
   );
 };

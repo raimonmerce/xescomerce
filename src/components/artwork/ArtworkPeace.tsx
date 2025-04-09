@@ -26,12 +26,12 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
     slidesToScroll: 1,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
   };
 
   return (
-    <div className="bg-white max-w-3xl mx-auto my-5 p-5 overflow-hidden">
+    <div className="bg-white mx-auto my-5 p-5 overflow-hidden">
       <div className="flex flex-col md:flex-row items-start">
         {/* Image Container */}
         <div className="order-1 md:order-2 w-full md:w-[40%] max-h-[300px] md:max-h-full mb-4 md:mb-0 md:ml-4">
@@ -49,7 +49,7 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
             </Slider>
           ) : (
             <img
-              className="w-full h-auto block object-contain"
+              className="w-full mb-[15px] h-auto block object-contain"
               src={artwork.thumbnail}
               alt={artwork.name}
             />
@@ -57,7 +57,7 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
         </div>
 
         {/* Text Container */}
-        <div className="order-2 md:order-1 flex-1 min-w-[50%] text-justify">
+        <div className="order-2 md:order-1 flex-1 min-w-[50%] text-justify text-gray-900">
           {artwork.editor && (
             <p className="my-2 text-gray-700">
               <strong className="text-gray-900">{t('assets.terms.editor')}:</strong> {artwork.editor}
