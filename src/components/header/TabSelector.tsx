@@ -60,7 +60,7 @@ const TabSelector: React.FC<TabSelectorProps> = ({ setActiveTab, brightness, act
 
   return (
     <div
-      className="tab flex gap-4 p-2.5 transition-filter duration-300 ease-in-out"
+      className="tab flex gap-4 px-4 py-2.5 transition-filter duration-300 ease-in-out"
       style={{ filter: `brightness(${brightness})` }}
     >
       {Object.entries(tabs).map(([key, value], index, array) => (

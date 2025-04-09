@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
 
   return (
     <>
-      <p className="text-[20px] md:text-[30px]">{t("header.contact")}</p>
+      <p className="text-[20px] md:text-[30px] p-3">{t("header.contact")}</p>
       <div className={styles.contactContainer}>
         <div className={styles.contactItem} onClick={copyEmailToClipboard}>
             <FaEnvelope size={20} />

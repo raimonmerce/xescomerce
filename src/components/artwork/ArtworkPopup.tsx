@@ -3,7 +3,6 @@ import ArtworkPeace from './ArtworkPeace';
 import xSVG from '../../assets/svg/x.svg';
 import { GalleryManager } from '../../data/GalleryManager';
 
-
 interface ArtworkPopupProps {
   id: string;
   onClose: () => void;
@@ -34,11 +33,9 @@ const ArtworkPopup: React.FC<ArtworkPopupProps> = ({ id, onClose }) => {
     };
   }, [onClose]);
 
-  if (!id) return null;
-
   return (
-    <div 
-      className="fixed inset-0 flex items-center justify-center z-[1000]" 
+    <div
+      className="fixed inset-0 flex items-center justify-center z-[1000]"
       style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
       onClick={handleOutsideClick}
     >
@@ -46,8 +43,8 @@ const ArtworkPopup: React.FC<ArtworkPopupProps> = ({ id, onClose }) => {
         <p className="text-center w-full text-2xl font-medium italic mt-2">
           <i>{artwork.name}</i>
         </p>
-        <button 
-          className="absolute top-2.5 right-2.5 bg-transparent border-none cursor-pointer text-gray-400 hover:text-black transition-colors duration-300" 
+        <button
+          className="absolute top-2.5 right-2.5 bg-transparent border-none cursor-pointer text-gray-400 hover:text-black transition-colors duration-300"
           onClick={onClose}
         >
           <img src={xSVG} className="w-4 h-4" alt="Close" />

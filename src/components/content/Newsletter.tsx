@@ -5,7 +5,7 @@ const Newsletter: React.FC = () => {
   const { t } = useTranslation();
   return (
     <>
-      <p className="text-[20px] md:text-[30px]">{t("header.newsletter")}</p>
+      <p className="text-[20px] md:text-[30px] p-3">{t("header.newsletter")}</p>
       <form>
         <input type="email" placeholder="Your Email" className="p-2" />
         <button type="submit" className="btn-submit">Subscribe</button>

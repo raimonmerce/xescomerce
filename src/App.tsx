@@ -1,5 +1,5 @@
-import Main from './components/Main'
-import './App.css'
+import Main from './components/Main';
+import './App.css';
 import { useState, useEffect, useRef } from "react";
 import ArtworkPopup from "./components/artwork/ArtworkPopup";
 import LandPage from "./components/content/LandPage";
@@ -13,7 +13,7 @@ function App() {
   const [returnLandPage, setReturnLandPage] = useState(false);
   const [activeTab, setActiveTab] = useState<string>("about");
   const [goToTab, setGoToTab] = useState<string>("");
-  const [openPopup, setOpenPopup] = useState<string|null>(null);
+  const [openPopup, setOpenPopup] = useState<string | null>(null);
   const touchStartRef = useRef<number | null>(null);
   const { t } = useTranslation();
 
@@ -22,12 +22,12 @@ function App() {
   }, [isLandPage]);
 
   useEffect(() => {
-    if (isLandPage) {
+    if (isLandPage || openPopup) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, [isLandPage]);
+  }, [isLandPage, openPopup]);
 
   const togglePopup = () => {
     setOpenPopup(null);
@@ -36,7 +36,6 @@ function App() {
   useEffect(() => {
     if (!isLandPage) {
       const targetElement = document.getElementById("header");
-
       if (targetElement) {
         targetElement.scrollIntoView({
           behavior: "smooth",
@@ -47,9 +46,9 @@ function App() {
   }, [isLandPage]);
 
   const handleWheel = (event: React.WheelEvent) => {
-    if (isLandPage) return
+    if (isLandPage) return;
     if (window.scrollY <= 50 && event.deltaY < 0) {
-      setReturnLandPage(true)
+      setReturnLandPage(true);
       setIsLandPage(true);
     }
   };
@@ -61,13 +60,13 @@ function App() {
   };
 
   const handleTouchMove = (event: React.TouchEvent) => {
-    if (isLandPage) return
+    if (isLandPage) return;
     if (event.touches.length === 1 && touchStartRef.current !== null) {
       const touchY = event.touches[0].clientY;
-      const deltaY = touchY - touchStartRef.current; 
+      const deltaY = touchY - touchStartRef.current;
 
       if (window.scrollY <= 50 && deltaY > 50) {
-        setReturnLandPage(true)
+        setReturnLandPage(true);
         setIsLandPage(true);
       }
     }
@@ -103,14 +102,14 @@ function App() {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <LandPage 
+        <LandPage
           setIsLandPage={setIsLandPage}
           returnLandPage={returnLandPage}
           setReturnLandPage={setReturnLandPage}
         />
 
-        <Header 
-          setActiveTab={setActiveTab} 
+        <Header
+          setActiveTab={setActiveTab}
           activeTab={activeTab}
           setGoToTab={setGoToTab}
         />
@@ -123,12 +122,12 @@ function App() {
 
         {/* <Footer/> */}
 
-        {openPopup && 
+        {openPopup && (
           <ArtworkPopup
             onClose={togglePopup}
             id={openPopup}
           />
-        }
+        )}
       </div>
     </>
   );

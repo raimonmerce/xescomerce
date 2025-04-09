@@ -8,7 +8,7 @@ const About: React.FC = () => {
 
   return (
     <>
-      <p className="text-[20px] md:text-[30px]">{t("header.about")}</p>
+      <p className="text-[20px] md:text-[30px] p-3">{t("header.about")}</p>
       <div className="order-1 md:order-2 w-full md:w-[100%] max-h-[500px] md:max-h-full mb-4 md:mb-0 md:ml-4">
         <img src={retratImg} alt="portail" 
           className="w-full md:max-w-[500px] mb-[15px] ml-[15px] float-right" />
