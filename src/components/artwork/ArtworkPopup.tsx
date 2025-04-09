@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import './ArtworkPopup.css';
 import ArtworkPeace from './ArtworkPeace';
 import xSVG from '../../assets/svg/x.svg';
 import { GalleryManager } from '../../data/GalleryManager';
@@ -38,13 +37,22 @@ const ArtworkPopup: React.FC<ArtworkPopupProps> = ({ id, onClose }) => {
   if (!id) return null;
 
   return (
-    <div className="peace-overlay" onClick={handleOutsideClick}>
-      <div className="peace-content">
-      <p className="artwork-title"><i>{artwork.name}</i></p>
-        <button className="close-button" onClick={onClose}>
-          <img src={xSVG} style={{ color: 'red', width: '16px', height: '16px' }} alt="Close" />
+    <div 
+      className="fixed inset-0 flex items-center justify-center z-[1000]" 
+      style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+      onClick={handleOutsideClick}
+    >
+      <div className="bg-white rounded-lg shadow-lg w-[80%] h-[80%] flex flex-col relative overflow-hidden">
+        <p className="text-center w-full text-xl font-medium italic mt-2">
+          <i>{artwork.name}</i>
+        </p>
+        <button 
+          className="absolute top-2.5 right-2.5 bg-transparent border-none cursor-pointer text-gray-400 hover:text-black transition-colors duration-300" 
+          onClick={onClose}
+        >
+          <img src={xSVG} className="w-4 h-4" alt="Close" />
         </button>
-        <div className="main-content">
+        <div className="overflow-y-auto flex-grow mt-2 px-2">
           <ArtworkPeace id={id} />
         </div>
       </div>

@@ -20,7 +20,7 @@ const TabSelector: React.FC<TabSelectorProps> = ({ setActiveTab, brightness, act
     about: t("header.about", "Sobre mi"),
     newsletter: t("header.newsletter", "Butlletí"),
     gallery: t("header.gallery", "Galeria"),
-    books: t("header.books", "Llibres"),
+    //books: t("header.books", "Llibres"),
     contact: t("header.contact", "Contacte"),
   };
 

@@ -16,7 +16,7 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => {
     { id: "about", component: <About /> },
     { id: "newsletter", component: <Newsletter /> },
     { id: "gallery", component: <Gallery setOpenPopup={setOpenPopup}/> },
-    { id: "books", component: <Books setOpenPopup={setOpenPopup}/> },
+    //{ id: "books", component: <Books setOpenPopup={setOpenPopup}/> },
     { id: "contact", component: <Contact/> },
   ];
 

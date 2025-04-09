@@ -1,6 +1,5 @@
 import React from "react";
 import { GalleryManager } from '../../data/GalleryManager';
-import { PublicacionsArtwork } from '../../types';
 import './ArtworkThumbnail.css'; // Import the CSS file
 
 interface ArtworkThumbnailProps {
@@ -27,10 +26,6 @@ const ArtworkThumbnail: React.FC<ArtworkThumbnailProps> = ({ id, setOpenPopup })
         >
             <div className="text-content">
                 <h2><i>{artwork.name}</i></h2>
-                {artwork.type === "Publicacions" &&
-                    <p className="editor">{(artwork as PublicacionsArtwork).editor}</p>
-                }
-                <p className="year">{artwork.year}</p>
             </div>
             <div className="image-content">
                 <img src={artwork.thumbnail} alt={artwork.name} />

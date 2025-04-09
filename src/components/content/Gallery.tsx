@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import PublicationTumbnail from "../artwork/ArtworkThumbnail";
+import ArtworkThumbnail from "../artwork/ArtworkThumbnail";
+import FrameThumbnail from "../artwork/FrameThumbnail";
 import { GalleryManager } from '../../data/GalleryManager';
 
 interface GalleryProps {
@@ -30,7 +31,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup }) => {
         {types.map((type) => {
           const ids = galleryManager.getIdsByType(type);
           return ids.map((id) => (
-            <PublicationTumbnail key={id} id={id} setOpenPopup={setOpenPopup} />
+            <FrameThumbnail key={id} id={id} setOpenPopup={setOpenPopup} />
           ));
         })}
       </div>
