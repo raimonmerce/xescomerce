@@ -13,7 +13,7 @@
       "bodyText": "This is the body of the main page. Add your content here to share details about your site or project."
     },
     "about": {
-      "descripcio": "Qui soc, descripció asd asd asd as sd sfffsd a"
+      "description": "Xesco (Francesc Xavier) Mercé Balagué. Ivars d’Urgell (Pla d’Urgell, 1965).<br><br> Artiste multidisciplinaire. Diplômé en Beaux-Arts de l’Université de Barcelone (1988). Membre fondateur du collectif d’artistes La Xina A.R.T. (1997) et du réseau européen d’espaces d’art contemporain <i>Kanîbal’hopox</i> (2008). Il a formé le duo de performance \"Deluxe\" avec Luis Casado. Il est professeur de dessin à l'école Isabel de Villena. Il a été rédacteur en chef et directeur de la revue d’arts et d’essais <i>La Conxinxina</i>. Jusqu'à présent, il a réalisé plus de 50 expositions individuelles et plus de 140 expositions collectives, en plus de nombreuses actions, installations et sculptures publiques. Son travail a été exposé dans tout le pays et l'État, ainsi que dans une douzaine de pays en Europe et en Asie.<br><br> Son œuvre plastique englobe presque toutes les disciplines et techniques : de la <i>performance</i> à la poésie, en passant par le dessin et la musique expérimentale. Selon Lucien Verneuil, son œuvre \"se situe à mi-chemin entre la poésie, l’ironie, la critique (et l’autocritique de l’art), l’expérimentation et l’agitation sociale\". Le critique d’art Joan Maria Minguet Batllori et l’historien Pau Minguet ont écrit à son sujet : \"Son œuvre est une succession de dénouements, de réponses à de nouvelles questions et de réponses à des questions qui existaient déjà depuis de nombreuses années. Des réponses qui ne sont pas séquentielles et qui éliminent les précédentes, s’entrelacent dans une série de conclusions toujours provisoires. C’est un artiste qui cherche à nous amener à la question, à l’instabilité. Les certitudes jouent toujours en faveur du pouvoir, pense-t-il sûrement. Les incertitudes invitent le spectateur à sortir de la mollesse ou de l’aliénation.\"<br><br> Il a également publié quatre livres : <i>10 artistes méditerranéens à N.Y.</i>, 1998, <i>Mille neuf cent quatre-vingt-dix dix</i>, 1999, <i>Le désert chimique</i>, 2023, et <i>´ (Accent fermé)</i>, 2024. Il vit et travaille à Esplugues de Llobregat et à Ivars d’Urgell, où il a son atelier.<br>"
     },
     "gallery": {
       "descripcio": "Descripciño de la galeria asd asd asd as sd sfffsd a"
@@ -24,7 +24,10 @@
       "conxinxina": "Descripció de la conxinxina asdasda asd as as dasd"
     },
     "newsletter": {
-      "descripcio": "Descripció de les noticies asd asd asd as sd sfffsd a"
+      "descripcio": "Descripció de les noticies asd asd asd as sd sfffsd a",
+      "news": {
+        "1": "News 1"
+      }
     },
     "contact": {
       "message": "Contaam per aquí"
@@ -34,5 +37,104 @@
     },
     "metadata": {
       "description": "Descripcion web"
+    },
+    "assets": {
+      "accions": {
+        "allen": "Allen",
+        "bubble": "Bubble",
+        "cccp": "Cccp",
+        "craven": "Craven",
+        "deluxe": "Deluxe",
+        "langue": "Langue",
+        "marinada": "Marinada",
+        "ps": "Ps",
+        "samurais": "Samurais"
+      },
+      "cartells": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      },
+      "escultures": {
+        "age": "Age",
+        "arca": "Arca",
+        "artistaman": "Artistaman",
+        "crida": "Crida",
+        "dormida": "Dormida",
+        "galop": "Galop",
+        "lleixiu": "Lleixiu",
+        "m": "M",
+        "poemari": "Poemari",
+        "sabates": "Sabates"
+      },
+      "experiments": {
+        "10ny": "10ny",
+        "desert": "Desert",
+        "designis": "Designis",
+        "expoxesco": "Expoxesco",
+        "grans": "Grans",
+        "machine": "Machine",
+        "mon": "Mon",
+        "solipsisme": "Solipsisme",
+        "totes": "Totes",
+        "transtemps": "Transtemps"
+      },
+      "gransformats": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      },
+      "instalacions": {
+        "animes": "Animes",
+        "basar": "Basar",
+        "boig": "Boig",
+        "casa": "Casa",
+        "domestic": "Domestic",
+        "flams": "Flams",
+        "mar": "Mar",
+        "ombres": "Ombres",
+        "poder": "Poder",
+        "puniques": "Puniques"
+      },
+      "murals": {
+        "aigua": "Aigua",
+        "anatomia": "Anatomia",
+        "carbo": "Carbo",
+        "txjm": "Txjm",
+        "pilota": "Pilota"
+      },
+      "publicacions": {
+        "1": "1",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      },
+      "series": {
+        "crusoe": "Crusoe",
+        "diccionari": "Diccionari",
+        "ictio": "Ictio",
+        "melville": "Melville",
+        "paperama": "Paperama",
+        "standard": "Standard",
+        "tatuats": "Tatuats",
+        "tauro": "Tauro",
+        "univers": "Univers",
+        "xove": "Xove"
+      }
     }
 }
