@@ -398,6 +398,9 @@ import xove3 from './series/xescomerce_series_xove3.jpg'
 import xove4 from './series/xescomerce_series_xove4.jpg'
 import xove5 from './series/xescomerce_series_xove5.jpg'
 
+//News
+import new1 from './news/xescomerce_noticies_1.jpg'
+
 export const photos = {
     about: {
         about1: about1,
@@ -771,5 +774,8 @@ export const photos = {
         xove: {
             xove1: xove1, xove2: xove2, xove3: xove3, xove4: xove4, xove5: xove5
         }
+    },
+    news: {
+        new1: new1
     }   
 };

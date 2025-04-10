@@ -1,44 +1,39 @@
 {
-    "header": {
-      "title": "Main Name of the Web",
-      "home": "Inicio",
-      "about": "Acerca de mi",
-      "newsletter": "Boletín",
-      "gallery": "Galería",
-      "books": "Libros",
-      "contact": "Contacto"
-    },
-    "main": {
-      "welcomeMessage": "Hola",
-      "bodyText": "This is the body of the main page. Add your content here to share details about your site or project."
-    },
-    "about": {
-      "description": "Xesco (Francesc Xavier) Mercé Balagué. Ivars d’Urgell (Pla d’Urgell, 1965).<br><br> Artista multidisciplinar. Licenciado en Bellas Artes por la Universidad de Barcelona (1988). Miembro fundador del grupo colectivo de artistas La Xina A.R.T. (1997) y de la red europea de espacios de arte contemporáneo <i>Kanîbal’hopox</i> (2008). Formó el dúo de performance \"Deluxe\" con Luis Casado. Es profesor de dibujo en la Escuela Isabel de Villena. Ha sido editor y director de la revista de artes y ensayos <i>La Conxinxina</i>. Hasta ahora, ha realizado más de 50 exposiciones individuales y más de 140 colectivas, además de numerosas acciones, instalaciones y esculturas públicas. Su trabajo se ha expuesto en todo el país y el estado, así como en una docena de países de Europa y Asia. <br><br> Su obra plástica abarca casi todas las disciplinas y técnicas: desde la <i>performance</i> hasta la poesía, pasando por el dibujo o la música experimental. Según ha dicho Lucien Verneuil, su obra \"está a medio camino entre la poesía, la ironía, la crítica (y autocrítica del arte), la experimentación y la agitación social\". El crítico de arte Joan Maria Minguet Batllori y el historiador Pau Minguet han escrito sobre él: \"Su obra es una sucesión de desenlaces, respuestas a preguntas nuevas y respuestas a preguntas que ya existían hace muchos años. Respuestas que no son secuenciales y que eliminan las precedentes, entrelazándose en una serie de conclusiones siempre provisionales. Es un artista que tiene la voluntad de trasladarnos a la pregunta, a la inestabilidad. Las certezas siempre juegan a favor del poder, debe pensar. Las incertidumbres invitan al espectador a salir de la molicie o la alienación.\" <br><br> También ha publicado cuatro libros: <i>10 artistas mediterráneos en N.Y.</i>, 1998, <i>Mil novecientos noventa diez</i>, 1999, <i>El desierto químico</i>, 2023, y <i>´ (acento cerrado)</i>, 2024. Vive y trabaja en Esplugues de Llobregat y en Ivars d’Urgell, donde tiene su taller.<br>"
-    },
-    "gallery": {
-      "descripcio": "Descripciño de la galeria asd asd asd as sd sfffsd a"
-    },
-    "books": {
-      "desertQuimic": "Descripció del Desert Quimic asdasda asd as as dasd",
-      "obres": "Descripció de ´ conxinxina asdasda asd as as dasd",
-      "conxinxina": "Descripció de la conxinxina asdasda asd as as dasd"
-    },
-    "newsletter": {
-      "descripcio": "Descripció de les noticies asd asd asd as sd sfffsd a",
-      "news": {
-        "1": "News 1"
+  "header": {
+    "about": "Acerca de mi",
+    "newsletter": "Boletín",
+    "gallery": "Galería",
+    "contact": "Contacto"
+  },
+  "about": {
+    "description": "Xesco (Francesc Xavier) Mercé Balagué. Ivars d’Urgell (Pla d’Urgell, 1965).<br><br> Artista multidisciplinar. Licenciado en Bellas Artes por la Universidad de Barcelona (1988). Miembro fundador del grupo colectivo de artistas La Xina A.R.T. (1997) y de la red europea de espacios de arte contemporáneo <i>Kanîbal’hopox</i> (2008). Formó el dúo de performance \"Deluxe\" con Luis Casado. Es profesor de dibujo en la Escuela Isabel de Villena. Ha sido editor y director de la revista de artes y ensayos <i>La Conxinxina</i>. Hasta ahora, ha realizado más de 50 exposiciones individuales y más de 140 colectivas, además de numerosas acciones, instalaciones y esculturas públicas. Su trabajo se ha expuesto en todo el país y el estado, así como en una docena de países de Europa y Asia. <br><br> Su obra plástica abarca casi todas las disciplinas y técnicas: desde la <i>performance</i> hasta la poesía, pasando por el dibujo o la música experimental. Según ha dicho Lucien Verneuil, su obra \"está a medio camino entre la poesía, la ironía, la crítica (y autocrítica del arte), la experimentación y la agitación social\". El crítico de arte Joan Maria Minguet Batllori y el historiador Pau Minguet han escrito sobre él: \"Su obra es una sucesión de desenlaces, respuestas a preguntas nuevas y respuestas a preguntas que ya existían hace muchos años. Respuestas que no son secuenciales y que eliminan las precedentes, entrelazándose en una serie de conclusiones siempre provisionales. Es un artista que tiene la voluntad de trasladarnos a la pregunta, a la inestabilidad. Las certezas siempre juegan a favor del poder, debe pensar. Las incertidumbres invitan al espectador a salir de la molicie o la alienación.\" <br><br> También ha publicado cuatro libros: <i>10 artistas mediterráneos en N.Y.</i>, 1998, <i>Mil novecientos noventa diez</i>, 1999, <i>El desierto químico</i>, 2023, y <i>´ (acento cerrado)</i>, 2024. Vive y trabaja en Esplugues de Llobregat y en Ivars d’Urgell, donde tiene su taller.<br>"
+  },
+  "newsletter": {
+    "description": "Descripció de les noticies asd asd asd as sd sfffsd a",
+    "news": {
+      "new1": {
+        "title" : "Title N",
+        "description" : "Description N"
       }
+    }
+  },
+  "contact": {
+    "message": "Contaam per aquí"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "metadata": {
+    "description": "Descripción web"
+  },
+  "assets": {
+    "terms": {
+      "technique": "Tècnica",
+      "editor": "Editora",
+      "dimensions": "Dimensions",
+      "year": "Any",
+      "location": "Ubicació"
     },
-    "contact": {
-      "message": "Contaam per aquí"
-    },
-    "footer": {
-      "rights": "Todos los derechos reservados."
-    },
-    "metadata": {
-      "description": "Descripción web"
-    },
-    "assets": {
     "techniques": {
       "accioGastronomia": "Acció d’art i gastronomia",
       "duetPerformatic": "Duet performàtic",

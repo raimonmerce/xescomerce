@@ -13,9 +13,8 @@ interface MainProps {
 const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => { 
   const sections = [
     { id: "about", component: <About /> },
-    { id: "newsletter", component: <Newsletter /> },
+    { id: "newsletter", component: <Newsletter setOpenPopup={setOpenPopup}/> },
     { id: "gallery", component: <Gallery setOpenPopup={setOpenPopup}/> },
-    //{ id: "books", component: <Books setOpenPopup={setOpenPopup}/> },
     { id: "contact", component: <Contact/> },
   ];
 
@@ -64,7 +63,7 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => {
             <div 
               id={id} 
               key={id}
-              className="pt-[20vh] -mt-[15vh] min-h-screen"
+              className="pt-[15vh] -mt-[10vh] min-h-screen"
             >
               {component}
             </div>

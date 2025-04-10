@@ -1,7 +1,6 @@
 import TabSelector from "./TabSelector";
 import {useState, useEffect} from "react";
 import LanguageSelector from "./LanguageSelector";
-import LanguageSelectorPhone from "./LanguageSelectorPhone";
 
 interface HeaderProps {
     setActiveTab: React.Dispatch<React.SetStateAction<string>>;
@@ -33,19 +32,23 @@ const Header: React.FC<HeaderProps> = ({activeTab, setActiveTab, setGoToTab }) =
             id="header"
             className="bg-black sticky top-0 z-50 pt-2.5 pb-2.5"
         >
-            <div className="text-3xl md:text-5xl font-bold text-center flex-grow text-white">Xesco Mercé</div>
-            <div className="hidden md:block">
-                <LanguageSelector brightness={brightness} />
+            <div className="text-3xl md:text-5xl font-bold text-center text-white mb-2">
+                Xesco Mercé
             </div>
-            <div className="block md:hidden">
-                <LanguageSelectorPhone brightness={brightness} />
+    
+            <div className="flex justify-between items-center px-[30px] pb-[10px]">
+                <div>
+                    <TabSelector 
+                        brightness={brightness}
+                        setActiveTab={setActiveTab}
+                        activeTab={activeTab}
+                        setGoToTab={setGoToTab}
+                    />
+                </div>
+                <div>
+                    <LanguageSelector brightness={brightness} />
+                </div>
             </div>
-            <TabSelector 
-                brightness={brightness}
-                setActiveTab={setActiveTab}
-                activeTab={activeTab}
-                setGoToTab={setGoToTab}
-            />
         </div>
     );
 };

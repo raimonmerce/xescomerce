@@ -1,7 +1,7 @@
 import Main from './components/Main';
 import './App.css';
 import { useState, useEffect, useRef } from "react";
-import ArtworkPopup from "./components/artwork/ArtworkPopup";
+import ContentPopup from "./components/artwork/ContentPopup";
 import LandPage from "./components/content/LandPage";
 import Header from "./components/header/Header";
 import { Helmet } from "react-helmet-async";
@@ -123,7 +123,7 @@ function App() {
         {/* <Footer/> */}
 
         {openPopup && (
-          <ArtworkPopup
+          <ContentPopup
             onClose={togglePopup}
             id={openPopup}
           />

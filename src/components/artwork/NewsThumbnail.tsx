@@ -1,61 +1,46 @@
-import React, { useState } from "react";
-import { GalleryManager } from "../../data/GalleryManager";
-import diapo from "../../assets/diapositiva.png";
+import React from "react";
+import { NewsManager } from '../../data/NewsManager';
+import './ArtworkThumbnail.css';
+import { useTranslation } from "react-i18next";
 
-interface FrameThumbnailProps {
-  id: string;
-  setOpenPopup: React.Dispatch<React.SetStateAction<string | null>>;
+interface ArtworkThumbnailProps {
+    id: string;
+    setOpenPopup: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ id, setOpenPopup }) => {
-  const galleryManager = GalleryManager.getInstance();
-  const artwork = galleryManager.getById(id);
-  const [hovered, setHovered] = useState(false);
+const NewsThumbnail: React.FC<ArtworkThumbnailProps> = ({ id, setOpenPopup }) => {
+    const newsManager = NewsManager.getInstance();
+    const newItem = newsManager.getById(id);7
+    const { t } = useTranslation();
 
-  if (!artwork) {
-    return <div>Artwork not found</div>;
-  }
+    if (!newItem) {
+        return <div>New not found</div>;
+    }
 
-  const handleClick = () => {
-    setOpenPopup(id);
-  };
+    const handleClick = () => {
+        setOpenPopup(id);
+    };
 
-  return (
-    <div
-      className="relative w-[220px] h-[220px] bg-cover bg-center cursor-pointer mx-auto my-4"
-      style={{ backgroundImage: `url(${diapo})` }}
-      onClick={handleClick}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {/* Image container */}
-      <div className="absolute top-[27%] left-1/2 -translate-x-1/2 z-10">
-        <img
-          src={artwork.thumbnail}
-          alt={artwork.name}
-          className={`w-[153px] h-[100px] max-w-[153px] object-cover object-center transition-all duration-300 ${
-            hovered ? "filter brightness-150" : ""
-          }`}
-        />
-      </div>
+    const formattedDate = new Date(newItem.date).toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
 
-      {/* Text element */}
-      <h2
-        className={`absolute top-[165px] left-1/2 -translate-x-1/2 z-20 text-center max-w-[90%] max-h-[3.6em] overflow-hidden pointer-events-auto transition-colors duration-300 ${
-            hovered ? "text-gray-500" : "text-black"
-        }`}
-        style={{
-          textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-          fontFamily: "'Indie Flower', cursive",
-          display: "-webkit-box",
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: "vertical"
-        }}
-      >
-        {artwork.name}
-      </h2>
-    </div>
-  );
+    return (
+        <div
+            className="artwork-thumbnail"
+            onClick={handleClick}
+        >
+            <div className="text-content">
+                <h2><i>{t(newItem.name)}</i></h2>
+                <h3><i>{formattedDate}</i></h3>
+            </div>
+            <div className="image-content">
+                <img src={newItem.thumbnail} alt={newItem.name} />
+            </div>
+        </div>
+    );
 };
 
-export default FrameThumbnail;
+export default NewsThumbnail;
