@@ -29,8 +29,7 @@ export interface News  {
     name: string;
     description: string;
     thumbnail: string;
-    images: string[];
-    date: number | string;
-    type: string
+    images?: string[];
+    date: Date;
     location: string
 }

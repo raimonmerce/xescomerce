@@ -324,9 +324,6 @@ import pilota3 from './murals/xescomercemurals_pilota3.jpg'
 import pilota4 from './murals/xescomercemurals_pilota4.jpg'
 import pilota5 from './murals/xescomercemurals_pilota5.jpg'
 
-//Noticies
-import noticies1 from './noticies/xescomerce_noticies_1.jpg'
-
 //Publicacions
 import pub1 from './publicacions/xescomerce_publicacions_01.jpg'
 import pub4 from './publicacions/xescomerce_publicacions_04.jpg'
@@ -729,9 +726,6 @@ export const photos = {
         pilota: {
             pilota1: pilota1, pilota2: pilota2, pilota3: pilota3, pilota4: pilota4, pilota5: pilota5
         }
-    },
-    noticies: {
-        noticies1: noticies1
     },
     publicacions: {
         pub1: pub1, 

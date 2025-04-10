@@ -1,5 +1,5 @@
 import { Artwork } from '../types';
-import artworks from './GalleryData'; // Adjust the path as necessary
+import artworks from './GalleryData';
 
 export class GalleryManager {
     private static instance: GalleryManager | null = null;
