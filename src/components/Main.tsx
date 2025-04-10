@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import About from "./content/About";
 import Contact from "./content/Contact";
-import Books from "./content/Books";
 import Gallery from "./content/Gallery";
 import Newsletter from "./content/Newsletter";
 

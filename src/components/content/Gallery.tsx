@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import ArtworkThumbnail from "../artwork/ArtworkThumbnail";
 import FrameThumbnail from "../artwork/FrameThumbnail";
 import { GalleryManager } from '../../data/GalleryManager';
 

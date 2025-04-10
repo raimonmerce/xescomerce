@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import SocialLink from "../commons/SocialLink";
 import { FaLinkedin, FaInstagram, FaFacebook, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
@@ -8,14 +8,11 @@ import heartImage from "../../assets/heart.png";
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const [copySuccess, setCopySuccess] = useState(false);
 
   const copyEmailToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(MAIN_EMAIL);
-      setCopySuccess(true);
       alert("Email copied")
-      setTimeout(() => setCopySuccess(false), 2000);
     } catch (error) {
       console.error("Failed to copy: ", error);
     }
