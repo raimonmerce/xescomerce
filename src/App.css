@@ -39,8 +39,9 @@
   font-family: Candara, sans-serif;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 html {

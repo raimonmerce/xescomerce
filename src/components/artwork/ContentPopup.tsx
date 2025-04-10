@@ -54,10 +54,12 @@ const ContentPopup: React.FC<ContentPopupProps> = ({ id, onClose }) => {
           <i>{title}</i>
         </p>
         <button
-          className="absolute top-2.5 right-2.5 bg-transparent border-none cursor-pointer text-gray-400 hover:text-black transition-colors duration-300"
+          className="absolute top-4 right-4 bg-transparent border-none cursor-pointer text-gray-400 hover:text-black transition-colors duration-300"
           onClick={onClose}
         >
-          <img src={xSVG} className="w-4 h-4" alt="Close" />
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
         <div className="overflow-y-auto flex-grow m-2">
           {isArtwork ? <ArtworkPeace id={id} /> : <NewsPeace id={id} />}

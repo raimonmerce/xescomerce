@@ -95,7 +95,7 @@ function App() {
       </Helmet>
       <div
         style={{
-          width: '100vw',
+          width: '100%',
         }}
         onWheel={handleWheel}
         onTouchStart={handleTouchStart}

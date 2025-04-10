@@ -49,7 +49,7 @@ const LandPage: React.FC<LandPageProps> = ({
 
   return (
     <div
-      className="relative w-screen h-screen bg-cover bg-center overflow-hidden flex justify-center items-center"
+      className="relative h-screen bg-cover bg-center overflow-hidden flex justify-center items-center"
       style={backgroundStyles}
     >
       <img

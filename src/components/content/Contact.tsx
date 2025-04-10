@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div
-          className="relative w-screen h-[40vh] bg-cover bg-center overflow-hidden flex justify-center items-center"
+          className="relative  h-[40vh] bg-cover bg-center overflow-hidden flex justify-center items-center"
         >
           <img
             src={heartImage}
