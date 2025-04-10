@@ -26,7 +26,10 @@
   "newsletter": {
     "description": "Descripció de les noticies asd asd asd as sd sfffsd a",
     "news": {
-      "1": "News 1"
+      "new1": {
+        "title" : "Title N",
+        "description" : "Description N"
+      }
     }
   },
   "contact": {
