@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { useTranslation } from "react-i18next";
 import { NewsManager } from '../../data/NewsManager';
-import NewsThumbnail from "../artwork/NewsThumbnail";
+//import NewsThumbnail from "../artwork/NewsThumbnail";
 import FrameThumbnail from "../artwork/FrameThumbnail";
 
 interface NewsletterProps {

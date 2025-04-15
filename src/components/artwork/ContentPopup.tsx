@@ -61,7 +61,7 @@ const ContentPopup: React.FC<ContentPopupProps> = ({ id, onClose }) => {
       <div className={`bg-white rounded-lg shadow-lg w-[80%] h-[80%] flex flex-col relative overflow-hidden transform transition-all duration-750 ease-in-out
         ${fadeIn && !fadeOut ? 'translate-y-0' : '-translate-y-200'}
       `}>
-        <p className="w-[80%] mx-auto text-center text-2xl font-medium italic mt-2">
+        <p className="w-[75%] mx-auto text-center text-2xl font-medium italic mt-2">
           {title}
         </p>
         <button
