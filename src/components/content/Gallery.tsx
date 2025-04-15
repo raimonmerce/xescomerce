@@ -18,9 +18,10 @@ const thumbnails = {
 
 interface GalleryProps {
   setOpenPopup: React.Dispatch<React.SetStateAction<string | null>>;
+  setGoToTab: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Gallery: React.FC<GalleryProps> = ({ setOpenPopup }) => {
+const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
   const { t } = useTranslation();
   const galleryManager = GalleryManager.getInstance();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -30,48 +31,53 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup }) => {
   };
 
   const handleSelectCategory = (name: string) => {
-    console.log("name", name)
     setSelectedCategory(name)
+    setGoToTab("gallery")
   };
-
-  const types = [
-    "accions",
-    "cartells",
-    "escultures",
-    "experiments",
-    "gransformats",
-    "instalacions",
-    "murals",
-    "publicacions", 
-    "series"
-  ];
 
   return (
     <>
-      <p className="text-[20px] md:text-[30px] mb-4 p-3">{t("header.gallery")}</p>
+      <p className="text-[20px] md:text-[30px] p-3">{t("header.gallery")}</p>
       <div className="max-w-6xl mx-auto">
         {selectedCategory ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {(() => {
-              const ids = galleryManager.getIdsByType(selectedCategory);
+          <>
+            <button
+              className="text-[15px] md:text-[20px] text-gray-600 hover:text-black transition-colors duration-300 cursor-pointer flex items-center gap-2 mb-[20px]"
+              onClick={() => setSelectedCategory(null)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              {t("gallery.back")}
+            </button>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              {(() => {
+                const ids = galleryManager.getIdsByType(selectedCategory);
 
-              return ids.map((id) => {
-                const artwork = galleryManager.getById(id);
-                if (!artwork) return null;
+                return ids.map((id) => {
+                  const artwork = galleryManager.getById(id);
+                  if (!artwork) return null;
 
-                return (
-                  <FrameThumbnail
-                    key={id}
-                    name={artwork.name}
-                    imageUrl={artwork.thumbnail}
-                    onClick={() => handleClick(id)}
-                  />
-                );
-              });
-            })()}
-          </div>
+                  return (
+                    <FrameThumbnail
+                      key={id}
+                      name={artwork.name}
+                      imageUrl={artwork.thumbnail}
+                      onClick={() => handleClick(id)}
+                    />
+                  );
+                });
+              })()}
+            </div>
+          </>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {Object.entries(thumbnails).map(([name, imageUrl]) => (
                 <FrameThumbnail
                   key={name}

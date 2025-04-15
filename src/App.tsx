@@ -118,6 +118,7 @@ function App() {
           setActiveTab={setActiveTab}
           goToTab={goToTab}
           setOpenPopup={setOpenPopup}
+          setGoToTab={setGoToTab}
         />
 
         {/* <Footer/> */}

@@ -8,13 +8,14 @@ interface MainProps {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
   goToTab: string;
   setOpenPopup: React.Dispatch<React.SetStateAction<string|null>>;
+  setGoToTab: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup }) => { 
+const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup, setGoToTab }) => { 
   const sections = [
     { id: "about", component: <About /> },
+    { id: "gallery", component: <Gallery setOpenPopup={setOpenPopup} setGoToTab={setGoToTab}/> },
     { id: "newsletter", component: <Newsletter setOpenPopup={setOpenPopup}/> },
-    { id: "gallery", component: <Gallery setOpenPopup={setOpenPopup}/> },
     { id: "contact", component: <Contact/> },
   ];
 
