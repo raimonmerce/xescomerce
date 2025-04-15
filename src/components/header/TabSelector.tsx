@@ -42,7 +42,7 @@ const TabSelector: React.FC<TabSelectorProps> = ({ setActiveTab, brightness, act
         <select
           value={activeTab}
           onChange={(e) => handleTabChange(e.target.value)}
-          className="outline-none text-[20px] bg-none border-none rounded 
+          className="outline-none text-[15px] bg-none border-none rounded 
           text-white cursor-pointer p-1 transition-colors duration-300 
           ease-in-out focus:outline-none"
         >

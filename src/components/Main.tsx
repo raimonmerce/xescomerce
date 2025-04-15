@@ -59,7 +59,7 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup, setGoT
 
     return (
       <>
-        <div className="px-[50px] text-justify text-[#444444] bg-[#FAF9F6]">
+        <div className="px-[25px] md:px-[50px] text-justify text-[#444444] bg-[#FAF9F6]">
           {sections.map(({ id, component }) => (
             <div 
               id={id} 

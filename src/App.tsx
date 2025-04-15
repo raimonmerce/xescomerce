@@ -121,8 +121,6 @@ function App() {
           setGoToTab={setGoToTab}
         />
 
-        {/* <Footer/> */}
-
         {openPopup && (
           <ContentPopup
             onClose={togglePopup}

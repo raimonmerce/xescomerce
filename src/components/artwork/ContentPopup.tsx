@@ -59,8 +59,8 @@ const ContentPopup: React.FC<ContentPopupProps> = ({ id, onClose }) => {
       onClick={handleOutsideClick}
     >
       <div className="bg-white rounded-lg shadow-lg w-[80%] h-[80%] flex flex-col relative overflow-hidden">
-        <p className="text-center w-full text-2xl font-medium italic mt-2">
-          <i>{title}</i>
+        <p className="w-[80%] mx-auto text-center text-2xl font-medium italic mt-2">
+          {title}
         </p>
         <button
           className="absolute top-4 right-4 bg-transparent border-none cursor-pointer text-gray-400 hover:text-black transition-colors duration-300"

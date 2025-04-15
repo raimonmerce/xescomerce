@@ -32,11 +32,11 @@ const Header: React.FC<HeaderProps> = ({activeTab, setActiveTab, setGoToTab }) =
             id="header"
             className="bg-black sticky top-0 z-50 pt-2.5 pb-2.5"
         >
-            <div className="text-3xl md:text-5xl font-bold text-center text-white mb-2">
+            <div className="text-3xl md:text-5xl font-bold text-center text-white my-2">
                 Xesco Mercé
             </div>
     
-            <div className="flex justify-between items-center px-[30px] pb-[10px]">
+            <div className="flex justify-between items-center px-[30px]">
                 <div>
                     <TabSelector 
                         brightness={brightness}
