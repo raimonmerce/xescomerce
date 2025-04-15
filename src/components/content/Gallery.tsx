@@ -67,7 +67,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
                 </button>
                 <p className="flex-grow text-[20px] md:text-[25px] text-center">{t(thumbnails[selectedCategory as keyof typeof thumbnails]?.name ?? "")}</p>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-max mx-auto">
                 {(() => {
                   const ids = galleryManager.getIdsByType(selectedCategory);
                   return ids.map((id) => {
@@ -80,6 +80,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
                         name={artwork.name}
                         imageUrl={artwork.thumbnail}
                         onClick={() => handleClick(id)}
+                        isBig={false}
                       />
                     );
                   });
@@ -93,7 +94,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -300 }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-2 md:grid-cols-3 gap-4"
+              className="grid grid-cols-2 md:grid-cols-3 gap-4 w-max mx-auto"
             >
               {Object.entries(thumbnails).map(([name, thumbnail]) => (
                 <FrameThumbnail
@@ -101,6 +102,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
                   name={thumbnail.name}
                   imageUrl={thumbnail.image}
                   onClick={() => handleSelectCategory(name)}
+                  isBig={false}
                 />
               ))}
             </motion.div>
