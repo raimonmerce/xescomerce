@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import diapo from "../../assets/diapositiva.png";
+import { useTranslation } from "react-i18next";
 
 interface FrameThumbnailProps {
   name: string;
@@ -9,6 +10,7 @@ interface FrameThumbnailProps {
 
 const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick }) => {
   const [hovered, setHovered] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div
@@ -34,13 +36,13 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick
         }`}
         style={{
           textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-          fontFamily: "'Indie Flower', cursive",
+          fontFamily: "'Courier New', Courier, monospace",
           display: "-webkit-box",
           WebkitLineClamp: 1,
           WebkitBoxOrient: "vertical"
         }}
       >
-        {name}
+        {t(name)}
       </h2>
     </div>
   );
