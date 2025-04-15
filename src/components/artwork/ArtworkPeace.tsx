@@ -76,7 +76,8 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
           )}
           {artwork.location && (
             <p className="my-2 text-gray-700">
-              <strong className="text-gray-900">{t('assets.terms.location')}:</strong> {artwork.location}
+              <strong className="text-gray-900">{t('assets.terms.location')}:</strong>{" "}
+              {artwork.location.startsWith("assets.") ? t(artwork.location) : artwork.location}
             </p>
           )}
           <p className="my-2 text-gray-700">

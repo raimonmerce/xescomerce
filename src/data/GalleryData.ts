@@ -668,7 +668,7 @@ const artworks: { [id: string]: Artwork } = {
     //Murals
     "Mur1": {
         name: "La pilota automàtica",
-        description: "assets.description.murals.flams",
+        description: "assets.description.murals.pilota",
         thumbnail: photos.murals.pilota.pilota1,
         images: [
             photos.murals.pilota.pilota1,
@@ -793,7 +793,7 @@ const artworks: { [id: string]: Artwork } = {
 
     //Series
     "Ser1": {
-        name: "L’exili dels profetes",
+        name: "Chove na terra",
         description: "assets.description.series.xove",
         thumbnail: photos.series.xove.xove1,
         images: [
