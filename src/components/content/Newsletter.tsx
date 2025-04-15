@@ -19,7 +19,11 @@ const Newsletter: React.FC<NewsletterProps> = ({ setOpenPopup }) => {
 
   return (
     <>
-      <p className="text-[20px] md:text-[30px] p-3">{t("header.newsletter")}</p>
+      <div className="flex items-center w-full px-4 pb-4">
+        <div className="flex-grow border-t border-gray-300"></div>
+        <p className="text-[25px] md:text-[30px] px-4 text-center whitespace-nowrap">{t("header.newsletter")}</p>
+        <div className="flex-grow border-t border-gray-300"></div>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {news.map((item, num) => {
           const newItem = newsManager.getById(item);

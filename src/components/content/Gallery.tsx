@@ -38,7 +38,11 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
 
   return (
     <>
-      <p className="text-[20px] md:text-[30px] p-3">{t("header.gallery")}</p>
+      <div className="flex items-center w-full px-4 pb-4">
+        <div className="flex-grow border-t border-gray-300"></div>
+        <p className="text-[25px] md:text-[30px] px-4 text-center whitespace-nowrap">{t("header.gallery")}</p>
+        <div className="flex-grow border-t border-gray-300"></div>
+      </div>
       <div className="max-w-6xl mx-auto">
         <AnimatePresence mode="wait">
           {selectedCategory ? (
@@ -49,7 +53,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
               exit={{ opacity: 0, x: 300 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center justify-between mb-[20px]">
+              <div className="flex items-center justify-between">
                 <button
                   className="text-[15px] md:text-[20px] text-gray-600 hover:text-black transition-colors duration-300 cursor-pointer flex items-center gap-2"
                   onClick={() => setSelectedCategory(null)}
@@ -65,8 +69,8 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
                   </svg>
                   {t("gallery.back")}
                 </button>
-                <p className="flex-grow text-[20px] md:text-[25px] text-center">{t(thumbnails[selectedCategory as keyof typeof thumbnails]?.name ?? "")}</p>
               </div>
+              <p className="flex-grow text-[20px] md:text-[25px] text-center mb-[20px]">{t(thumbnails[selectedCategory as keyof typeof thumbnails]?.name ?? "")}</p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-max mx-auto">
                 {(() => {
                   const ids = galleryManager.getIdsByType(selectedCategory);
