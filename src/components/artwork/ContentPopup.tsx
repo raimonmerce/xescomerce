@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ArtworkPeace from './ArtworkPeace';
 import NewsPeace from './NewsPeace';
-import xSVG from '../../assets/svg/x.svg';
 import { GalleryManager } from '../../data/GalleryManager';
 import { NewsManager } from '../../data/NewsManager';
 import { useTranslation } from "react-i18next";
@@ -18,35 +17,45 @@ const ContentPopup: React.FC<ContentPopupProps> = ({ id, onClose }) => {
   const artwork = galleryManager.getById(id);
   const news = newsManager.getById(id);
 
+  const [fadeIn, setFadeIn] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
+
   const handleOutsideClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      onClose();
+      triggerFadeOut();
     }
   };
 
-  useEffect(() => {
-    const handleKeydown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose();
-      }
-    };
-    window.addEventListener('keydown', handleKeydown);
-    return () => {
-      window.removeEventListener('keydown', handleKeydown);
-    };
-  }, [onClose]);
+  const handleCloseClick = () => {
+    triggerFadeOut();
+  };
 
-  // If ID is not found in either, return null
+  const triggerFadeOut = () => {
+    setFadeOut(true);
+    setTimeout(() => {
+      onClose();
+    }, 500);
+  };
+
+  useEffect(() => {
+    setFadeIn(true);
+  }, []);
+
+  useEffect(() => {
+    if (fadeOut) {
+      setFadeIn(false);
+    }
+  }, [fadeOut]);
+
   if (!artwork && !news) return null;
 
-  // Determine which type it is
   const isArtwork = !!artwork;
   const title = isArtwork ? artwork.name : (news ? t(news.name) : '');
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center z-[1000]"
-      style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+    className={`fixed inset-0 flex items-center justify-center z-[1000] transition-opacity duration-500 ease-in-out ${fadeIn ? 'opacity-100' : 'opacity-0'} ${fadeOut ? 'opacity-0' : ''}`}
+    style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
       onClick={handleOutsideClick}
     >
       <div className="bg-white rounded-lg shadow-lg w-[80%] h-[80%] flex flex-col relative overflow-hidden">
@@ -55,7 +64,7 @@ const ContentPopup: React.FC<ContentPopupProps> = ({ id, onClose }) => {
         </p>
         <button
           className="absolute top-4 right-4 bg-transparent border-none cursor-pointer text-gray-400 hover:text-black transition-colors duration-300"
-          onClick={onClose}
+          onClick={handleCloseClick}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />

@@ -33,3 +33,8 @@ export interface News  {
     date: Date;
     location: string
 }
+
+export interface Thumbnail  {
+    name: string;
+    thumbnail: string;
+}
