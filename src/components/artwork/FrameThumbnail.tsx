@@ -10,10 +10,9 @@ interface FrameThumbnailProps {
   date?: string;
 }
 
-const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick, isBig, date }) => {
+const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick, isBig, date = null }) => {
   const [hovered, setHovered] = useState(false);
   const { t } = useTranslation();
-
   return (
     <div
       className={`relative bg-cover bg-center cursor-pointer mx-auto ${

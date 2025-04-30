@@ -28,10 +28,12 @@ export interface Artwork {
 export interface News  {
     name: string;
     description: string;
+    subtitle?: string;
     thumbnail: string;
     images?: string[];
-    date: Date;
-    location: string
+    date?: Date;
+    location?: string,
+    space?: string
 }
 
 export interface Thumbnail  {

@@ -399,7 +399,9 @@ import xove4 from './series/xescomerce_series_xove4.jpg'
 import xove5 from './series/xescomerce_series_xove5.jpg'
 
 //News
-import new1 from './news/xescomerce_noticies_1.jpg'
+import desertnivi from './news/xescomerce_noticies_desertnivi.jpg'
+import lliga from './news/xescomerce_noticies_lliga.jpg'
+import videos from './news/xescomerce_noticies_videos.jpg'
 
 export const photos = {
     about: {
@@ -776,6 +778,8 @@ export const photos = {
         }
     },
     news: {
-        new1: new1
+        desertnivi: desertnivi,
+        lliga: lliga,
+        videos: videos
     }   
 };

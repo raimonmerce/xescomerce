@@ -26,8 +26,7 @@ export class NewsManager {
                 const data = newsData[id];
                 newsObj[id] = {
                     ...data,
-                    // Ensure the date property is converted to a Date object.
-                    date: new Date(data.date)
+                    ...(data.date && { date: new Date(data.date) })
                 };
             }
         }

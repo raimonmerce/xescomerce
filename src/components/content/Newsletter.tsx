@@ -28,7 +28,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ setOpenPopup }) => {
         {news.map((item, num) => {
           const newItem = newsManager.getById(item);
           if (!newItem) return;
-          const formattedDate = new Date(newItem.date).toLocaleDateString('en-GB');
+          const formattedDate = newItem.date? new Date(newItem.date).toLocaleDateString('en-GB') : null;
           return (
           <FrameThumbnail
             key={num}
@@ -36,7 +36,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ setOpenPopup }) => {
             imageUrl={newItem.thumbnail}
             onClick={() => handleClick(item)}
             isBig={true}
-            date={formattedDate}
+            {...(formattedDate ? { date: formattedDate } : {})}
           />
         )})}
       </div>
