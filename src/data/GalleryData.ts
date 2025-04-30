@@ -388,7 +388,166 @@ const artworks: { [id: string]: Artwork } = {
         technique: "assets.techniques.collagePintura"
     },
     //Experiments
-
+    "Exp1": {
+        name: "10 artistes mediterranis a NY",
+        description: "assets.description.experiments.10ny",
+        thumbnail: photos.experiments.ny10.ny101,
+        images: [
+            photos.experiments.ny10.ny101,
+            photos.experiments.ny10.ny102,
+            photos.experiments.ny10.ny103,
+            photos.experiments.ny10.ny104,
+            photos.experiments.ny10.ny105
+        ],
+        year: 1997,
+        type: "experiments",
+        subtitol: "Exposició d’obres inventades",
+        technique: "assets.techniques.variades"
+    },
+    "Exp2": {
+        name: "Grandes éxitos",
+        description: "assets.description.experiments.grans",
+        thumbnail: photos.experiments.grans.grans1,
+        images: [
+            photos.experiments.grans.grans1,
+            photos.experiments.grans.grans2,
+            photos.experiments.grans.grans3,
+            photos.experiments.grans.grans4,
+            photos.experiments.grans.grans5
+        ],
+        year: 2001,
+        type: "experiments",
+        location: "La Xina A.R.T., Barcelona",
+        technique: "assets.techniques.variades"
+    },
+    "Exp3": {
+        name: "Totes direccions 03",
+        description: "assets.description.experiments.totes",
+        thumbnail: photos.experiments.totes.totes1,
+        images: [
+            photos.experiments.totes.totes1,
+            photos.experiments.totes.totes2,
+            photos.experiments.totes.totes3,
+            photos.experiments.totes.totes4,
+            photos.experiments.totes.totes5
+        ],
+        year: 2003,
+        type: "experiments",
+        dimensions: "70 a 170 cm",
+        technique: "quadres intervinguts"
+    },
+    "Exp4": {
+        name: "Expoxesco",
+        description: "assets.description.experiments.expoxesco",
+        thumbnail: photos.experiments.expoxesco.expoxesco1,
+        images: [
+            photos.experiments.expoxesco.expoxesco1,
+            photos.experiments.expoxesco.expoxesco2,
+            photos.experiments.expoxesco.expoxesco3,
+            photos.experiments.expoxesco.expoxesco4,
+            photos.experiments.expoxesco.expoxesco5
+        ],
+        year: 2007,
+        type: "experiments",
+        subtitol: "Muntage expositiu",
+        location: "La Xina A.R.T., Barcelona"
+    },
+    "Exp5": {
+        name: "The Xesc Machine (Placard exquise)",
+        description: "assets.description.experiments.machine",
+        thumbnail: photos.experiments.machine.machine1,
+        images: [
+            photos.experiments.machine.machine1,
+            photos.experiments.machine.machine2,
+            photos.experiments.machine.machine3,
+            photos.experiments.machine.machine4,
+            photos.experiments.machine.machine5
+        ],
+        year: 2011,
+        type: "experiments",
+        dimensions: "100x200 cm",
+        technique: "assets.techniques.espraiPlasticCartro"
+    },
+    "Exp6": {
+        name: "Je suis (Solipsisme en commun)",
+        description: "assets.description.experiments.solipsisme",
+        thumbnail: photos.experiments.solipsisme.solipsisme1,
+        images: [
+            photos.experiments.solipsisme.solipsisme1,
+            photos.experiments.solipsisme.solipsisme2,
+            photos.experiments.solipsisme.solipsisme3,
+            photos.experiments.solipsisme.solipsisme4,
+            photos.experiments.solipsisme.solipsisme5
+        ],
+        year: 2015,
+        type: "experiments",
+        dimensions: "30cm x 21cm",
+        technique: "tècniques diverses"
+    },
+    "Exp7": {
+        name: "Transtemps 02",
+        description: "assets.description.experiments.transtemps",
+        thumbnail: photos.experiments.transtemps.transtemps1,
+        images: [
+            photos.experiments.transtemps.transtemps1,
+            photos.experiments.transtemps.transtemps2,
+            photos.experiments.transtemps.transtemps3,
+            photos.experiments.transtemps.transtemps4,
+            photos.experiments.transtemps.transtemps5
+        ],
+        year: "1988-2018",
+        type: "experiments",
+        dimensions: "30cm a 50 cm",
+        technique: "Tècnica mixta i collage sobre paper"
+    },
+    "Exp8": {
+        name: "De Signis",
+        description: "assets.description.experiments.designis",
+        thumbnail: photos.experiments.designig.designig1,
+        images: [
+            photos.experiments.designig.designig1,
+            photos.experiments.designig.designig2,
+            photos.experiments.designig.designig3,
+            photos.experiments.designig.designig4,
+            photos.experiments.designig.designig5
+        ],
+        year: 2021,
+        type: "experiments",
+        dimensions: "15cm a 65cm",
+        technique: "assets.techniques.rotoladorCollagePaper"
+    },
+    "Exp9": {
+        name: "El desert químic",
+        description: "assets.description.experiments.desert",
+        thumbnail: photos.experiments.desert.desert1,
+        images: [
+            photos.experiments.desert.desert1,
+            photos.experiments.desert.desert2,
+            photos.experiments.desert.desert3,
+            photos.experiments.desert.desert4,
+            photos.experiments.desert.desert5
+        ],
+        year: 2022,
+        type: "experiments",
+        dimensions: "35x25 cm ",
+        technique: "assets.techniques.rotoladorCollagePaper"
+    },
+    "Exp10": {
+        name: "El món accidental 002",
+        description: "assets.description.experiments.mon",
+        thumbnail: photos.experiments.mon.mon1,
+        images: [
+            photos.experiments.mon.mon1,
+            photos.experiments.mon.mon2,
+            photos.experiments.mon.mon3,
+            photos.experiments.mon.mon4,
+            photos.experiments.mon.mon5
+        ],
+        year: 2023,
+        type: "experiments",
+        dimensions: "170x70 x15 cm",
+        technique: "Tècniques Mixtes"
+    },
     //GransFormats
     "GF1": {
         name: "L’exili dels profetes",
@@ -745,7 +904,7 @@ const artworks: { [id: string]: Artwork } = {
     //Publicaciones
     "Pub1": {
         name: "10 artistes mediterranis a NY",
-        description: "assets.publicacions.pub1",
+        description: "assets.description.publicacions.pub1",
         thumbnail: photos.publicacions.pub1,
         year: 1997,
         type: "publicacions",
@@ -753,7 +912,7 @@ const artworks: { [id: string]: Artwork } = {
     },
     "Pub2": {
         name: "La Conxinxina",
-        description: "assets.publicacions.pub2",
+        description: "assets.description.publicacions.pub2",
         thumbnail: photos.publicacions.pub2,
         images: [
             photos.publicacions.pub2_2,
@@ -768,7 +927,7 @@ const artworks: { [id: string]: Artwork } = {
     },
     "Pub3": {
         name: "Lo Gripau (edició especial 40 anys)",
-        description: "assets.publicacions.pub3",
+        description: "assets.description.publicacions.pub3",
         thumbnail: photos.publicacions.pub3,
         year: 2019,
         type: "publicacions",
@@ -776,7 +935,7 @@ const artworks: { [id: string]: Artwork } = {
     },
     "Pub4": {
         name: "El desert químic",
-        description: "assets.publicacions.pub4",
+        description: "assets.description.publicacions.pub4",
         thumbnail: photos.publicacions.pub4,
         year: 2022,
         type: "publicacions",
@@ -784,7 +943,7 @@ const artworks: { [id: string]: Artwork } = {
     },
     "Pub5": {
         name: "´ (accent tancat)",
-        description: "assets.publicacions.pub5",
+        description: "assets.description.publicacions.pub5",
         thumbnail: photos.publicacions.pub5,
         year: 2024,
         type: "publicacions",
