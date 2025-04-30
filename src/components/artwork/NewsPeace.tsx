@@ -30,11 +30,11 @@ const NewsPeace: React.FC<NewsPeaceProps> = ({ id }) => {
     pauseOnHover: true,
   };
 
-  const formattedDate = new Date(news.date).toLocaleDateString(undefined, {
+  const formattedDate = news.date? new Date(news.date).toLocaleDateString(undefined, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  });
+  }) : null;
 
   return (
     <div className="bg-white mx-auto my-5 p-5 overflow-hidden">
