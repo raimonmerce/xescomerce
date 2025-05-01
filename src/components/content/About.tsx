@@ -2,9 +2,21 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import retratImg from "@assets/photos/about/xescomerce_sobremi_03.jpg";
 import Text from "../commons/Text"; 
+import cv from "../../assets/cv/XescoMercéCV2025.pdf"
+import { CV_NAME } from "../../constants";
+
 
 const About: React.FC = () => {
   const { t } = useTranslation();
+
+  function handelClick() {
+    const a = document.createElement("a");
+    a.href = cv;
+    a.download = CV_NAME;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
 
   return (
     <>
@@ -18,6 +30,17 @@ const About: React.FC = () => {
           className="w-full md:max-w-[500px] mb-[15px] ml-[15px] float-right" />
       </div>
       <Text id={"about.description"}/>
+      <div className="flex justify-center mt-6">
+        <button
+          onClick={handelClick}
+          className="px-6 py-2 bg-[#dedde2] text-black rounded hover:bg-[#bebdc2] transition"
+          style={{
+            fontFamily: "'Courier New', Courier, monospace"
+          }}
+        >
+          {t("header.cv")}
+        </button>
+      </div>    
     </>
   );
 };

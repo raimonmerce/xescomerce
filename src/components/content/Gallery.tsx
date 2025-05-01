@@ -9,7 +9,7 @@ const thumbnails = {
   "accions" : {"name": "thumbnails.accions", "image": photos.accions.samurais.samurais1},
   "cartells" : {"name": "thumbnails.cartells", "image": photos.cartells.cartell2},
   "escultures" : {"name": "thumbnails.escultures", "image": photos.escultura.m.m1},
-  "experiments" : {"name": "thumbnails.experiments", "image": photos.escultura.m.m1},
+  "experiments" : {"name": "thumbnails.experiments", "image": photos.experiments.totes.totes1},
   "gransformats" : {"name": "thumbnails.gransformats", "image": photos.gransFormats.gf6.gf6},
   "instalacions" : {"name": "thumbnails.instalacions", "image": photos.instalacions.boig.boig1},
   "murals" : {"name": "thumbnails.murals", "image": photos.murals.pilota.pilota1},
