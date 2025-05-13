@@ -25,22 +25,26 @@ const About: React.FC = () => {
         <p className="text-[25px] md:text-[30px] px-4 text-center whitespace-nowrap">{t("header.about")}</p>
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
-      <div className="order-1 md:order-2 w-full md:w-[100%] max-h-[500px] md:max-h-full mb-4 md:mb-0 md:ml-4">
-        <img src={retratImg} alt="portail" 
-          className="w-full md:max-w-[500px] mb-[15px] ml-[15px] float-right" />
+      <div className="flex justify-center px-4">
+        <div className="max-w-[1000px]">
+          <div className="order-1 md:order-2 w-full md:w-[100%] max-h-[500px] md:max-h-full mb-4 md:mb-0 md:ml-4">
+            <img src={retratImg} alt="portail" 
+              className="w-full md:max-w-[500px] mb-[15px] ml-[15px] float-right" />
+          </div>
+          <Text id={"about.description"}/>
+          <div className="flex justify-center mt-6">
+            <button
+              onClick={handelClick}
+              className="px-6 py-2 bg-[#dedde2] text-black rounded hover:bg-[#bebdc2] transition"
+              style={{
+                fontFamily: "'Courier New', Courier, monospace"
+              }}
+            >
+              {t("header.cv")}
+            </button>
+          </div>
+        </div>
       </div>
-      <Text id={"about.description"}/>
-      <div className="flex justify-center mt-6">
-        <button
-          onClick={handelClick}
-          className="px-6 py-2 bg-[#dedde2] text-black rounded hover:bg-[#bebdc2] transition"
-          style={{
-            fontFamily: "'Courier New', Courier, monospace"
-          }}
-        >
-          {t("header.cv")}
-        </button>
-      </div>    
     </>
   );
 };
