@@ -11,6 +11,18 @@ const news: { [id: string]: News } = {
         space: "Lo Pardal – Fundació Guillem Viladot",
         location: "Agramunt, Lleida"
     },
+    "New3": {
+        name: "newsletter.news.new3.title",
+        subtitle: "newsletter.news.new3.title",
+        description: "newsletter.news.new3.description",
+        thumbnail: photos.news.newsViT,
+        images: [
+            photos.news.newsVi
+        ],
+        date: new Date("2025-05-08T00:00:00Z"),
+        space: "Can Xerta, Sant Pere de Riudebitlles",
+        location: "Culla, Castelló"
+    },
     "New2": {
         name: "newsletter.news.new2.title",
         subtitle: "newsletter.news.new2.subtitle",
@@ -19,15 +31,6 @@ const news: { [id: string]: News } = {
         date: new Date("2025-10-01T00:00:00Z"),
         space: "Espai Nivi",
         location: "Culla, Castelló"
-    },
-    "New3": {
-        name: "newsletter.news.new3.title",
-        subtitle: "newsletter.news.new2.title",
-        description: "newsletter.news.new3.description",
-        thumbnail: photos.news.newsViT,
-        images: [
-            photos.news.newsVi
-        ]
     }
 }
 
