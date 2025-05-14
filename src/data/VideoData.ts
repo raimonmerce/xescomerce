@@ -5,7 +5,7 @@ const videos: { [id: string]: Video } = {
     "videoDesert": {
         name: "Lo Desert Químic",
         thumbnail: photos.videos.videoDesert,
-        url: "https://www.tarrega.tv/lo-desert-quimic-de-xesco-merce-fins-al-27-dagost-a-lo-pardaldagramunt/",
+        url: "https://www.tarrega.tv/lo-desert-quimic-de-xesco-merce-fins-al-27-dagost-a-lo-pardal-dagramunt/",
         subtitle: "Tàrrega TV"
     },
     "videoEscarabajo": {

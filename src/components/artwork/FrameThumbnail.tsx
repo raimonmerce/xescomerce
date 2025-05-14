@@ -13,6 +13,7 @@ interface FrameThumbnailProps {
 const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick, isBig, subtitle = null }) => {
   const [hovered, setHovered] = useState(false);
   const { t } = useTranslation();
+  const topClass = isBig ? "top-[240px]" : "top-[15px]";
   return (
     <div
       className={`relative bg-cover bg-center cursor-pointer mx-auto ${
@@ -53,7 +54,7 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick
       </h2>
       {subtitle && (
         <h2
-          className={`absolute top-[${isBig ? "240px": "15px"}] text-[20px] left-1/2 -translate-x-1/2 z-20 text-center w-[90%] max-h-[3.6em] overflow-hidden pointer-events-auto transition-colors duration-300
+          className={`absolute ${topClass} text-[20px] left-1/2 -translate-x-1/2 z-20 text-center w-[90%] max-h-[3.6em] overflow-hidden pointer-events-auto transition-colors duration-300
             ${hovered ? "text-gray-500" : "text-black"}
           `}
           style={{
