@@ -10,7 +10,7 @@ interface NewsletterProps {
 const Newsletter: React.FC<NewsletterProps> = ({ setOpenPopup }) => {
   const { t } = useTranslation();
   const newsManager = NewsManager.getInstance();
-  const [news, _setNews] = useState(newsManager.getAllNewsIDs());
+  const [news] = useState(newsManager.getAllNewsIDs());
 
   const handleClick = (id: string) => {
     setOpenPopup(id);
@@ -18,7 +18,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ setOpenPopup }) => {
 
   return (
     <>
-      <div className="flex items-center w-full px-4 pb-4">
+      <div className="flex items-center w-full px-4 pb-10">
         <div className="flex-grow border-t border-gray-300"></div>
         <p className="text-[25px] md:text-[30px] px-4 text-center whitespace-nowrap">{t("header.newsletter")}</p>
         <div className="flex-grow border-t border-gray-300"></div>
@@ -36,7 +36,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ setOpenPopup }) => {
             imageUrl={newItem.thumbnail}
             onClick={() => handleClick(item)}
             isBig={true}
-            {...(formattedDate ? { date: formattedDate } : {})}
+            {...(formattedDate ? { subtitle: formattedDate } : {})}
           />
         )})}
       </div>

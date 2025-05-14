@@ -32,11 +32,18 @@ export interface News  {
     thumbnail: string;
     images?: string[];
     date?: Date;
-    location?: string,
-    space?: string
+    location?: string;
+    space?: string;
 }
 
 export interface Thumbnail  {
     name: string;
     thumbnail: string;
+}
+
+export interface Video  {
+    name: string;
+    url: string;
+    thumbnail: string;
+    subtitle?: string;
 }

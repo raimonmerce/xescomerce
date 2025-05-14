@@ -7,10 +7,10 @@ interface FrameThumbnailProps {
   imageUrl: string;
   onClick: () => void;
   isBig: boolean;
-  date?: string;
+  subtitle?: string;
 }
 
-const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick, isBig, date = null }) => {
+const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick, isBig, subtitle = null }) => {
   const [hovered, setHovered] = useState(false);
   const { t } = useTranslation();
   return (
@@ -51,9 +51,9 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick
       >
         {t(name)}
       </h2>
-      {date && (
+      {subtitle && (
         <h2
-          className={`absolute top-[240px] text-[20px] left-1/2 -translate-x-1/2 z-20 text-center w-[90%] max-h-[3.6em] overflow-hidden pointer-events-auto transition-colors duration-300
+          className={`absolute top-[${isBig ? "240px": "15px"}] text-[20px] left-1/2 -translate-x-1/2 z-20 text-center w-[90%] max-h-[3.6em] overflow-hidden pointer-events-auto transition-colors duration-300
             ${hovered ? "text-gray-500" : "text-black"}
           `}
           style={{
@@ -64,7 +64,7 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick
             WebkitBoxOrient: "vertical"
           }}
         >
-          {date}
+          {subtitle}
         </h2>
       )}
     </div>

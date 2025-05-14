@@ -20,7 +20,7 @@ const About: React.FC = () => {
 
   return (
     <>
-      <div className="flex items-center w-full px-4 pb-4">
+      <div className="flex items-center w-full px-4 pb-10">
         <div className="flex-grow border-t border-gray-300"></div>
         <p className="text-[25px] md:text-[30px] px-4 text-center whitespace-nowrap">{t("header.about")}</p>
         <div className="flex-grow border-t border-gray-300"></div>

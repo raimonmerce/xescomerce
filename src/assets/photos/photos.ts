@@ -409,6 +409,7 @@ import videoDesert from './videos/xescomerce_videos_desert.jpg'
 import videoEscarabajo from './videos/xescomerce_videos_escarabajo.jpg'
 import videoKaunas from './videos/xescomerce_videos_kaunas.jpg'
 import videoLaLliga from './videos/xescomerce_videos_lalliga.jpg'
+import videoLaSalle from './videos/xescomerce_videos_lasalle.jpg'
 import videoMiralls from './videos/xescomerce_videos_miralls.jpg'
 import videoOmne from './videos/xescomerce_videos_omne.jpg'
 import videoPortada from './videos/xescomerce_videos_portada.jpg'
@@ -800,6 +801,7 @@ export const photos = {
         videoEscarabajo: videoEscarabajo,
         videoKaunas: videoKaunas,
         videoLaLliga: videoLaLliga,
+        videoLaSalle: videoLaSalle,
         videoMiralls: videoMiralls,
         videoOmne: videoOmne,
         videoPortada: videoPortada,

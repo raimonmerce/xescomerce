@@ -3,6 +3,7 @@ import About from "./content/About";
 import Contact from "./content/Contact";
 import Gallery from "./content/Gallery";
 import Newsletter from "./content/Newsletter";
+import Videos from "./content/Videos";
 
 interface MainProps {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
@@ -16,6 +17,7 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup, setGoT
     { id: "about", component: <About /> },
     { id: "gallery", component: <Gallery setOpenPopup={setOpenPopup} setGoToTab={setGoToTab}/> },
     { id: "newsletter", component: <Newsletter setOpenPopup={setOpenPopup}/> },
+    { id: "videos", component: <Videos/> },
     { id: "contact", component: <Contact/> },
   ];
 
@@ -58,19 +60,17 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup, setGoT
   }, [setActiveTab]);
 
     return (
-      <>
-        <div className="px-[25px] md:px-[50px] text-justify text-[#444444] bg-[#FAF9F6]">
-          {sections.map(({ id, component }) => (
-            <div 
-              id={id} 
-              key={id}
-              className="pt-[15vh] -mt-[10vh] min-h-screen"
-            >
-              {component}
-            </div>
-          ))}
-        </div>
-      </>
+      <div className="px-[25px] md:px-[50px] text-justify text-[#444444] bg-[#FAF9F6]">
+        {sections.map(({ id, component }) => (
+          <div 
+            id={id} 
+            key={id}
+            className="pt-[15vh] -mt-[10vh]"
+          >
+            {component}
+          </div>
+        ))}
+      </div>
     );
 };
 
