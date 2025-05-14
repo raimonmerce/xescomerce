@@ -399,9 +399,21 @@ import xove4 from './series/xescomerce_series_xove4.jpg'
 import xove5 from './series/xescomerce_series_xove5.jpg'
 
 //News
-import desertnivi from './news/xescomerce_noticies_desertnivi.jpg'
-import lliga from './news/xescomerce_noticies_lliga.jpg'
-import videos from './news/xescomerce_noticies_videos.jpg'
+import newsDesertnivi from './news/xescomerce_noticies_desertnivi.jpg'
+import newsLliga from './news/xescomerce_noticies_lliga.jpg'
+import newsVi from './news/xescomerce_noticies_vi.jpg'
+import newsViT from './news/xescomerce_noticies_vi_thumb.jpg'
+
+//Videos
+import videoDesert from './videos/xescomerce_videos_desert.jpg'
+import videoEscarabajo from './videos/xescomerce_videos_escarabajo.jpg'
+import videoKaunas from './videos/xescomerce_videos_kaunas.jpg'
+import videoLaLliga from './videos/xescomerce_videos_lalliga.jpg'
+import videoMiralls from './videos/xescomerce_videos_miralls.jpg'
+import videoOmne from './videos/xescomerce_videos_omne.jpg'
+import videoPortada from './videos/xescomerce_videos_portada.jpg'
+import videoPortes from './videos/xescomerce_videos_portes.jpg'
+import videoViallibres from './videos/xescomerce_videos_viallibres.jpg'
 
 export const photos = {
     about: {
@@ -778,8 +790,20 @@ export const photos = {
         }
     },
     news: {
-        desertnivi: desertnivi,
-        lliga: lliga,
-        videos: videos
-    }   
+        newsDesertnivi: newsDesertnivi,
+        newsLliga: newsLliga,
+        newsVi: newsVi,
+        newsViT: newsViT
+    },
+    videos: {
+        videoDesert: videoDesert,
+        videoEscarabajo: videoEscarabajo,
+        videoKaunas: videoKaunas,
+        videoLaLliga: videoLaLliga,
+        videoMiralls: videoMiralls,
+        videoOmne: videoOmne,
+        videoPortada: videoPortada,
+        videoPortes: videoPortes,
+        videoViallibres: videoViallibres
+    }
 };

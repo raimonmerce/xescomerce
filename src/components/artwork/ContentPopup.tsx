@@ -72,7 +72,7 @@ const ContentPopup: React.FC<ContentPopupProps> = ({ id, onClose }) => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-        <div className="overflow-y-auto flex-grow m-2">
+        <div className="overflow-y-auto flex-grow m-2 mb-4">
           {isArtwork ? <ArtworkPeace id={id} /> : <NewsPeace id={id} />}
         </div>
       </div>
