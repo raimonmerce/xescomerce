@@ -3,7 +3,6 @@ import About from "./content/About";
 import Contact from "./content/Contact";
 import Gallery from "./content/Gallery";
 import Newsletter from "./content/Newsletter";
-import Videos from "./content/Videos";
 
 interface MainProps {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
@@ -17,7 +16,6 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup, setGoT
     { id: "about", component: <About /> },
     { id: "gallery", component: <Gallery setOpenPopup={setOpenPopup} setGoToTab={setGoToTab}/> },
     { id: "newsletter", component: <Newsletter setOpenPopup={setOpenPopup}/> },
-    { id: "videos", component: <Videos/> },
     { id: "contact", component: <Contact/> },
   ];
 

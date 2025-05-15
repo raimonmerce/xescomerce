@@ -14,6 +14,8 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick
   const [hovered, setHovered] = useState(false);
   const { t } = useTranslation();
   const topClass = isBig ? "top-[240px]" : "top-[15px]";
+  const isTranslationKey = name.includes('.');
+  const displayName = isTranslationKey ? t(name) : name;
   return (
     <div
       className={`relative bg-cover bg-center cursor-pointer mx-auto ${
@@ -50,7 +52,7 @@ const FrameThumbnail: React.FC<FrameThumbnailProps> = ({ name, imageUrl, onClick
           WebkitBoxOrient: "vertical"
         }}
       >
-        {t(name)}
+        {displayName}
       </h2>
       {subtitle && (
         <h2

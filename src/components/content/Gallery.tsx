@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import FrameThumbnail from "../artwork/FrameThumbnail";
 import { GalleryManager } from '../../data/GalleryManager';
+import { VideoManager } from '../../data/VideoManager';
 import { photos } from '../../assets/photos/photos';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -14,7 +15,8 @@ const thumbnails = {
   "instalacions" : {"name": "thumbnails.instalacions", "image": photos.instalacions.boig.boig1},
   "murals" : {"name": "thumbnails.murals", "image": photos.murals.pilota.pilota1},
   "publicacions" : {"name": "thumbnails.publicacions", "image": photos.publicacions.pub1},
-  "series" : {"name": "thumbnails.series", "image": photos.series.diccionari.diccionari1}
+  "series" : {"name": "thumbnails.series", "image": photos.series.diccionari.diccionari1},
+  "videos" : {"name": "thumbnails.videos", "image": photos.videos.videoPortada},
 }
 
 interface GalleryProps {
@@ -25,11 +27,17 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
   const { t } = useTranslation();
   const galleryManager = GalleryManager.getInstance();
+  const videoManager = VideoManager.getInstance();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const handleClick = (id: string) => {
     setOpenPopup(id);
   };
+
+  const handleClickVideo = (url: string) => {
+    window.open(url, "_blank");
+  };
+
 
   const handleSelectCategory = (name: string) => {
     setSelectedCategory(name)
@@ -73,21 +81,40 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
               <p className="flex-grow text-[20px] md:text-[25px] text-center mb-[20px]">{t(thumbnails[selectedCategory as keyof typeof thumbnails]?.name ?? "")}</p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-max mx-auto">
                 {(() => {
-                  const ids = galleryManager.getIdsByType(selectedCategory);
-                  return ids.map((id) => {
-                    const artwork = galleryManager.getById(id);
-                    if (!artwork) return null;
-  
-                    return (
+                  console.log(selectedCategory)
+                  if (selectedCategory === "videos") {
+                    const videos = videoManager.getAllVideosIDs();
+                    console.log("AAA", videos)
+                    return videos.map((item, num) => {
+                      const videoItem = videoManager.getById(item);
+                      if (!videoItem) return;
+                      console.log("BBB", videoItem)
+                      return (
                       <FrameThumbnail
-                        key={id}
-                        name={artwork.name}
-                        imageUrl={artwork.thumbnail}
-                        onClick={() => handleClick(id)}
+                        key={num}
+                        name={videoItem.subtitle ? videoItem.subtitle : ""}
+                        imageUrl={videoItem.thumbnail}
+                        onClick={() => handleClickVideo(videoItem.url)}
                         isBig={false}
+                        subtitle={videoItem.name}
                       />
-                    );
-                  });
+                    )})
+                  } else {
+                    const ids = galleryManager.getIdsByType(selectedCategory);
+                    return ids.map((id) => {
+                      const artwork = galleryManager.getById(id);
+                      if (!artwork) return null;
+                      return (
+                        <FrameThumbnail
+                          key={id}
+                          name={artwork.name}
+                          imageUrl={artwork.thumbnail}
+                          onClick={() => handleClick(id)}
+                          isBig={false}
+                        />
+                      );
+                    });
+                  }
                 })()}
               </div>
             </motion.div>
@@ -98,7 +125,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -300 }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 w-max mx-auto"
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-max mx-auto"
             >
               {Object.entries(thumbnails).map(([name, thumbnail]) => (
                 <FrameThumbnail
