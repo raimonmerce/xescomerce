@@ -38,6 +38,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
         const segments = path.split('/').filter(Boolean);
         if (segments.length === 0) setSelectedCategory(null);
         else if (segments.length === 1) {
+          setSelectedCategory(segments[0])
           setOpenPopup(null);
         }
         else if (segments.length === 2) {
