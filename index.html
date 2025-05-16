@@ -16,6 +16,15 @@
 
       gtag('config', 'G-2C54Z8PVKV');
     </script>
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.pathname + location.search + location.hash) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
@@ -29,7 +38,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <script type="module" crossorigin src="/assets/index-BCoVeWjI.js"></script>
+    <script type="module" crossorigin src="/assets/index-D5NxGrFR.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-YY_GqdeQ.css">
   </head>
   <body>
