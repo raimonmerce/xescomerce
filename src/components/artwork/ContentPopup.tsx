@@ -4,6 +4,7 @@ import NewsPeace from './NewsPeace';
 import { GalleryManager } from '../../data/GalleryManager';
 import { NewsManager } from '../../data/NewsManager';
 import { useTranslation } from "react-i18next";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface ContentPopupProps {
   id: string;
@@ -16,6 +17,8 @@ const ContentPopup: React.FC<ContentPopupProps> = ({ id, onClose }) => {
   const { t } = useTranslation();
   const artwork = galleryManager.getById(id);
   const news = newsManager.getById(id);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const [fadeIn, setFadeIn] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
@@ -31,6 +34,9 @@ const ContentPopup: React.FC<ContentPopupProps> = ({ id, onClose }) => {
   };
 
   const triggerFadeOut = () => {
+    const path = location.pathname.toLowerCase();
+    const segments = path.split('/').filter(Boolean);
+    navigate('/' + segments[0]);
     setFadeOut(true);
     setTimeout(() => {
       onClose();

@@ -6,6 +6,7 @@ import LandPage from "./components/content/LandPage";
 import Header from "./components/header/Header";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from 'react-router-dom';
 import '@styles/variables.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   const [openPopup, setOpenPopup] = useState<string | null>(null);
   const touchStartRef = useRef<number | null>(null);
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setGoToTab("");
@@ -42,6 +44,9 @@ function App() {
           block: "start",
         });
       }
+    } else {
+      setOpenPopup(null);
+      navigate('/');
     }
   }, [isLandPage]);
 

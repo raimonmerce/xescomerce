@@ -3,7 +3,7 @@ import { photos } from '../assets/photos/photos';
 
 const artworks: { [id: string]: Artwork } = {
     //Accions
-    "Acc1": {
+    "acc1": {
         name: "Cú Currú Cucú Paloma (C.C.C.P.)",
         description: "assets.description.accions.cccp",
         thumbnail: photos.accions.cccp.cccp1,
@@ -19,7 +19,7 @@ const artworks: { [id: string]: Artwork } = {
         location: "Barcelona-L’Hospitalet de Llobregat",
         technique: "assets.techniques.accioGastronomia"
     },
-    "Acc2": {
+    "acc2": {
         name: "DeLuXe",
         description: "assets.description.accions.deluxe",
         thumbnail: photos.accions.deluxe.deluxe1,
@@ -35,7 +35,7 @@ const artworks: { [id: string]: Artwork } = {
         location: "assets.locations.diversosEspais",
         technique: "assets.techniques.duetPerformatic"
     },
-    "Acc3": {
+    "acc3": {
         name: "Bienvenido, Mr. Allen",
         description: "assets.description.accions.allen",
         thumbnail: photos.accions.allen.allen1,
@@ -51,7 +51,7 @@ const artworks: { [id: string]: Artwork } = {
         location: "assets.locations.cascAntic",
         technique: "assets.techniques.accioReivindicativa"
     },
-    "Acc4": {
+    "acc4": {
         name: "Els 7 samurais",
         description: "assets.description.accions.samurais",
         thumbnail: photos.accions.samurais.samurais1,
@@ -66,7 +66,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "accions",
         location: "Festival IVARTS, Ivars d’Urgell"
     },
-    "Acc5": {
+    "acc5": {
         name: "Portàtil Self Portrait (P.S.P.)",
         description: "assets.description.accions.psp",
         thumbnail: photos.accions.psp.psp1,
@@ -82,7 +82,7 @@ const artworks: { [id: string]: Artwork } = {
         location: "assets.locations.diversosEspais",
         technique: "assets.techniques.accioMusical"
     },
-    "Acc6": {
+    "acc6": {
         name: "Arthur Cravan Solo",
         description: "assets.description.accions.craven",
         thumbnail: photos.accions.craven.craven1,
@@ -98,7 +98,7 @@ const artworks: { [id: string]: Artwork } = {
         location: "Torre Muntadas, El Prat de Llobregat",
         technique: "assets.techniques.accioMusical"
     },
-    "Acc7": {
+    "acc7": {
         name: "Bubble Bugle",
         description: "assets.description.accions.bubble",
         thumbnail: photos.accions.bubble.bubble1,
@@ -114,7 +114,7 @@ const artworks: { [id: string]: Artwork } = {
         location: "assets.locations.diversosEspais",
         technique: "assets.techniques.performanceMusical"
     },
-    "Acc8": {
+    "acc8": {
         name: "La marinada no és amiga de les performances",
         description: "assets.description.accions.marinada",
         thumbnail: photos.accions.marinada.marinada1,
@@ -130,7 +130,7 @@ const artworks: { [id: string]: Artwork } = {
         location: "Festival Delicadeses, El Vilosell",
         technique: "assets.techniques.performanceVisual"
     },
-    "Acc9": {
+    "acc9": {
         name: "Deconstruint Beuys o Com la Mort explica Art contemporani a una tortuga de guix",
         description: "assets.description.accions.beuys",
         thumbnail: photos.accions.beuys.beuys1,
@@ -145,7 +145,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "accions",
         location: "La Grey, Tarragona"
     },
-    "Acc10": {
+    "acc10": {
         name: "Les problemes de la langue / Els problemes del llenguatge",
         description: "assets.description.accions.langue",
         thumbnail: photos.accions.langue.langue1,
@@ -161,70 +161,70 @@ const artworks: { [id: string]: Artwork } = {
         location: "Festival Escaparate, galerie-vitirne 4,Barbier, Nîmes",
     },
     //Cartells
-    "Cart1": {
+    "cart1": {
         name: "Lovecraft a Hollywood",
         description: "assets.description.cartells.car1",
         thumbnail: photos.cartells.cartell1,
         year: 1987,
         type: "cartells"
     },
-    "Cart2": {
+    "cart2": {
         name: "Expoxesco",
         description: "assets.description.cartells.car2",
         thumbnail: photos.cartells.cartell2,
         year: 2007,
         type: "cartells",
     },
-    "Cart3": {
+    "cart3": {
         name: "Diccionari de miralls",
         description: "assets.description.cartells.car3",
         thumbnail: photos.cartells.cartell3,
         year: 2012,
         type: "cartells",
     },
-    "Cart4": {
+    "cart4": {
         name: "Ultraroig-Imfravioleta",
         description: "assets.description.cartells.car4",
         thumbnail: photos.cartells.cartell4,
         year: 2014,
         type: "cartells",
     },
-    "Cart5": {
+    "cart5": {
         name: "Borntubialaif",
         description: "assets.description.cartells.car5",
         thumbnail: photos.cartells.cartell5,
         year: 2015,
         type: "cartells",
     },
-    "Cart6": {
+    "cart6": {
         name: "Melvilliada",
         description: "assets.description.cartells.car6",
         thumbnail: photos.cartells.cartell6,
         year: 2015,
         type: "cartells",
     },
-    "Cart7": {
+    "cart7": {
         name: "Melvilliada (contes de navegants)",
         description: "assets.description.cartells.car7",
         thumbnail: photos.cartells.cartell7,
         year: 2015,
         type: "cartells",
     },
-    "Cart8": {
+    "cart8": {
         name: "Les meravelles de l’Univers",
         description: "assets.description.cartells.car8",
         thumbnail: photos.cartells.cartell8,
         year: 2018,
         type: "cartells",
     },
-    "Cart9": {
+    "cart9": {
         name: "DeSignis",
         description: "assets.description.cartells.car9",
         thumbnail: photos.cartells.cartell9,
         year: 2021,
         type: "cartells",
     },
-    "Cart10": {
+    "cart10": {
         name: "Terra de profetes",
         description: "assets.description.cartells.car10",
         thumbnail: photos.cartells.cartell10,
@@ -232,7 +232,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "cartells",
     },
     //Escultures
-    "Esc1": {
+    "esc1": {
         name: "M",
         description: "assets.description.escultures.m",
         thumbnail: photos.escultura.m.m1,
@@ -248,7 +248,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "400x250x20 cm",
         technique: "assets.techniques.ferroHeura"
     },
-    "Esc2": {
+    "esc2": {
         name: "Galop",
         description: "assets.description.escultures.galop",
         thumbnail: photos.escultura.galop.galop1,
@@ -264,7 +264,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "50x100x50 cm",
         technique: "assets.techniques.futaFerroFormigo"
     },
-    "Esc3": {
+    "esc3": {
         name: "Lleixiu llibres",
         description: "assets.description.escultures.lleixiu",
         thumbnail: photos.escultura.lleixiu.lleixiu1,
@@ -280,7 +280,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "30x22x16 cm",
         technique: "assets.techniques.paperPlastic"
     },
-    "Esc4": {
+    "esc4": {
         name: "Equipatge essencial",
         description: "assets.description.escultures.arca",
         thumbnail: photos.escultura.arca.arca1,
@@ -293,7 +293,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "65x100x45 cm",
         technique: "assets.techniques.fustaMetallPlastic"
     },
-    "Esc5": {
+    "esc5": {
         name: "Pàtria",
         description: "assets.description.escultures.sabates",
         thumbnail: photos.escultura.sabates.sabates1,
@@ -307,7 +307,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "20x33x7 cm",
         technique: "assets.techniques.cuirPlasticMetall"
     },
-    "Esc6": {
+    "esc6": {
         name: "L’Âge d’or",
         description: "assets.description.escultures.age",
         thumbnail: photos.escultura.age.age1,
@@ -323,7 +323,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "~20 a 135 cm",
         technique: "assets.techniques.trobat"
     },
-    "Esc7": {
+    "esc7": {
         name: "Poemòria",
         description: "assets.description.escultures.poemari",
         thumbnail: photos.escultura.poemari.poemari1,
@@ -339,7 +339,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "10x40x10 cm",
         technique: "assets.techniques.llibresIntervinguts"
     },
-    "Esc8": {
+    "esc8": {
         name: "Artistaman",
         description: "assets.description.escultures.artistaman",
         thumbnail: photos.escultura.artistaman.artistaman1,
@@ -355,7 +355,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "30x20x5 cm",
         technique: "assets.techniques.infografiaCartro"
     },
-    "Esc9": {
+    "esc9": {
         name: "La crida del bosc",
         description: "assets.description.escultures.crida",
         thumbnail: photos.escultura.crida.crida1,
@@ -371,7 +371,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "170x50x50 cm",
         technique: "assets.techniques.metallBanya"
     },
-    "Esc10": {
+    "esc10": {
         name: "El pijama de les postres",
         description: "assets.description.escultures.m",
         thumbnail: photos.escultura.dormida.dormida1,
@@ -388,7 +388,7 @@ const artworks: { [id: string]: Artwork } = {
         technique: "assets.techniques.collagePintura"
     },
     //Experiments
-    "Exp1": {
+    "exp1": {
         name: "10 artistes mediterranis a NY",
         description: "assets.description.experiments.10ny",
         thumbnail: photos.experiments.ny10.ny101,
@@ -404,7 +404,7 @@ const artworks: { [id: string]: Artwork } = {
         subtitol: "Exposició d’obres inventades",
         technique: "assets.techniques.variades"
     },
-    "Exp2": {
+    "exp2": {
         name: "Grandes éxitos",
         description: "assets.description.experiments.grans",
         thumbnail: photos.experiments.grans.grans1,
@@ -420,7 +420,7 @@ const artworks: { [id: string]: Artwork } = {
         location: "La Xina A.R.T., Barcelona",
         technique: "assets.techniques.variades"
     },
-    "Exp3": {
+    "exp3": {
         name: "Totes direccions 03",
         description: "assets.description.experiments.totes",
         thumbnail: photos.experiments.totes.totes1,
@@ -436,7 +436,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "70 a 170 cm",
         technique: "quadres intervinguts"
     },
-    "Exp4": {
+    "exp4": {
         name: "Expoxesco",
         description: "assets.description.experiments.expoxesco",
         thumbnail: photos.experiments.expoxesco.expoxesco1,
@@ -452,7 +452,7 @@ const artworks: { [id: string]: Artwork } = {
         subtitol: "Muntage expositiu",
         location: "La Xina A.R.T., Barcelona"
     },
-    "Exp5": {
+    "exp5": {
         name: "The Xesc Machine (Placard exquise)",
         description: "assets.description.experiments.machine",
         thumbnail: photos.experiments.machine.machine1,
@@ -468,7 +468,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "100x200 cm",
         technique: "assets.techniques.espraiPlasticCartro"
     },
-    "Exp6": {
+    "exp6": {
         name: "Je suis (Solipsisme en commun)",
         description: "assets.description.experiments.solipsisme",
         thumbnail: photos.experiments.solipsisme.solipsisme1,
@@ -484,7 +484,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "30cm x 21cm",
         technique: "tècniques diverses"
     },
-    "Exp7": {
+    "exp7": {
         name: "Transtemps 02",
         description: "assets.description.experiments.transtemps",
         thumbnail: photos.experiments.transtemps.transtemps1,
@@ -500,7 +500,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "30cm a 50 cm",
         technique: "Tècnica mixta i collage sobre paper"
     },
-    "Exp8": {
+    "exp8": {
         name: "De Signis",
         description: "assets.description.experiments.designis",
         thumbnail: photos.experiments.designig.designig1,
@@ -516,7 +516,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "15cm a 65cm",
         technique: "assets.techniques.rotoladorCollagePaper"
     },
-    "Exp9": {
+    "exp9": {
         name: "El desert químic",
         description: "assets.description.experiments.desert",
         thumbnail: photos.experiments.desert.desert1,
@@ -532,7 +532,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "35x25 cm ",
         technique: "assets.techniques.rotoladorCollagePaper"
     },
-    "Exp10": {
+    "exp10": {
         name: "El món accidental 002",
         description: "assets.description.experiments.mon",
         thumbnail: photos.experiments.mon.mon1,
@@ -549,7 +549,7 @@ const artworks: { [id: string]: Artwork } = {
         technique: "Tècniques Mixtes"
     },
     //GransFormats
-    "GF1": {
+    "gf1": {
         name: "L’exili dels profetes",
         description: "assets.description.gransformats.gf1",
         thumbnail: photos.gransFormats.gf1.gf1,
@@ -565,7 +565,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "30x180 cm",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF2": {
+    "gf2": {
         name: "064 El retaule dels monstres benignes",
         description: "assets.description.gransformats.gf2",
         thumbnail: photos.gransFormats.gf2.gf2,
@@ -574,7 +574,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "180x350 cm",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF3": {
+    "gf3": {
         name: "El Jean Genet sense cap",
         description: "assets.description.gransformats.gf3",
         thumbnail: photos.gransFormats.gf3.gf3,
@@ -590,7 +590,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "125x140 cm",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF4": {
+    "gf4": {
         name: "Tot l'Univers conegut (Barrock'n'roll)",
         description: "assets.description.gransformats.gf4",
         thumbnail: photos.gransFormats.gf4.gf4,
@@ -599,7 +599,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "200x500 cm",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF5": {
+    "gf5": {
         name: "Melvilliada",
         description: "assets.description.gransformats.gf5",
         thumbnail: photos.gransFormats.gf5.gf5,
@@ -608,7 +608,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "200x240",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF6": {
+    "gf6": {
         name: "L'ofensiva del Tet",
         description: "assets.description.gransformats.gf6",
         thumbnail: photos.gransFormats.gf6.gf6,
@@ -624,7 +624,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "200x240",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF7": {
+    "gf7": {
         name: "Gran díptic americà",
         description: "assets.description.gransformats.gf7",
         thumbnail: photos.gransFormats.gf7.gf7,
@@ -633,7 +633,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "180x100",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF8": {
+    "gf8": {
         name: "Paco Mercé, obra complerta",
         description: "assets.description.gransformats.gf8",
         thumbnail: photos.gransFormats.gf8.gf8,
@@ -642,7 +642,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "300x500",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF9": {
+    "gf9": {
         name: "Ritme de contagi (Pintura ballable) 01",
         description: "assets.description.gransformats.gf9",
         thumbnail: photos.gransFormats.gf9.gf9,
@@ -658,7 +658,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "170x150",
         technique: "assets.techniques.tecnicaMixtaTela"
     },
-    "GF10": {
+    "gf10": {
         name: "La meva zona de John Ford 02",
         description: "assets.description.gransformats.gf10",
         thumbnail: photos.gransFormats.gf10.gf10,
@@ -674,7 +674,7 @@ const artworks: { [id: string]: Artwork } = {
         technique: "assets.techniques.tecnicaMixtaTela"
     },
     //Instalacions
-    "Ins1": {
+    "ins1": {
         name: "El teorema de Parkinson-Richter",
         description: "assets.description.instalacions.flams",
         thumbnail: photos.instalacions.flams.flams1,
@@ -689,7 +689,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "instalacions",
         location: "NewArt, Hotel Barceló-Sants",
     },
-    "Ins2": {
+    "ins2": {
         name: "El basar del Xino",
         description: "assets.description.instalacions.basar",
         thumbnail: photos.instalacions.basar.basar1,
@@ -704,7 +704,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "instalacions",
         location: "La Xina A.R.T., Barcelona",
     },
-    "Ins3": {
+    "ins3": {
         name: "Què ve l’Home boig!",
         description: "assets.description.instalacions.boig",
         thumbnail: photos.instalacions.boig.boig1,
@@ -719,7 +719,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "instalacions",
         location: "La Xina A.R.T., Barcelona",
     },
-    "Ins4": {
+    "ins4": {
         name: "Ombres de La Xina",
         description: "assets.description.instalacions.ombres",
         thumbnail: photos.instalacions.ombres.ombres1,
@@ -734,7 +734,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "instalacions",
         location: "La Xina A.R.T., Barcelona",
     },
-    "Ins5": {
+    "ins5": {
         name: "Art domèstic",
         description: "assets.description.instalacions.domestic",
         thumbnail: photos.instalacions.domestic.domestic1,
@@ -749,7 +749,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "instalacions",
         location: "La Xina A.R.T., Barcelona & Espai Moritz, Cornella de Llobregat",
     },
-    "Ins6": {
+    "ins6": {
         name: "La casa museu",
         description: "assets.description.instalacions.casa",
         thumbnail: photos.instalacions.casa.casa1,
@@ -764,7 +764,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "instalacions",
         dimensions: "300x400x400 cm",
     },
-    "Ins7": {
+    "ins7": {
         name: "Qui pensa ara en el mar",
         description: "assets.description.instalacions.mar",
         thumbnail: photos.instalacions.mar.mar1,
@@ -778,7 +778,7 @@ const artworks: { [id: string]: Artwork } = {
         year: 1999,
         type: "instalacions",
     },
-    "Ins8": {
+    "ins8": {
         name: "Les guerres púniques (o punkies)",
         description: "assets.description.instalacions.puniques",
         thumbnail: photos.instalacions.puniques.puniques1,
@@ -793,7 +793,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "instalacions",
         dimensions: "210x1500 cm"
     },
-    "Ins9": {
+    "ins9": {
         name: "Ànimes de càntir",
         description: "assets.description.instalacions.animes",
         thumbnail: photos.instalacions.animes.animes1,
@@ -808,7 +808,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "instalacions",
         location: "TPK, L’Hospitalet de Llobregat",
     },
-    "Ins10": {
+    "ins10": {
         name: "Ostentació, lluites, abús, simbologia, vuit, dinàmiques i eròtica del poder",
         description: "assets.description.instalacions.poder",
         thumbnail: photos.instalacions.poder.poder1,
@@ -825,7 +825,7 @@ const artworks: { [id: string]: Artwork } = {
     },
 
     //Murals
-    "Mur1": {
+    "mur1": {
         name: "La pilota automàtica",
         description: "assets.description.murals.pilota",
         thumbnail: photos.murals.pilota.pilota1,
@@ -840,7 +840,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "murals",
         location: "Hotel Estela-Barcelona, Sitges",
     },
-    "Mur2": {
+    "mur2": {
         name: "A.I.G.U.A",
         description: "assets.description.murals.aigua",
         thumbnail: photos.murals.aigua.aigua1,
@@ -855,7 +855,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "murals",
         location: "Spa Reneix, Mollerussa",
     },
-    "Mur3": {
+    "mur3": {
         name: "The Xina Jazz Machine",
         description: "assets.description.murals.txjm",
         thumbnail: photos.murals.txjm.txjm1,
@@ -870,7 +870,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "murals",
         location: "Galerie 4, Barbier, Nîmes",
     },
-    "Mur4": {
+    "mur4": {
         name: "Anatomia comparada",
         description: "assets.description.murals.anatomia",
         thumbnail: photos.murals.anatomia.anatomia1,
@@ -885,7 +885,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "murals",
         location: "La Xina A.R.T., Barcelona",
     },
-    "Mur5": {
+    "mur5": {
         name: "...i els reis ens portaran carbó",
         description: "assets.description.murals.carbo",
         thumbnail: photos.murals.carbo.carbo1,
@@ -902,7 +902,7 @@ const artworks: { [id: string]: Artwork } = {
     },
 
     //Publicaciones
-    "Pub1": {
+    "pub1": {
         name: "10 artistes mediterranis a NY",
         description: "assets.description.publicacions.pub1",
         thumbnail: photos.publicacions.pub1,
@@ -910,7 +910,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "publicacions",
         editor: "Viaggio gallery",
     },
-    "Pub2": {
+    "pub2": {
         name: "La Conxinxina",
         description: "assets.description.publicacions.pub2",
         thumbnail: photos.publicacions.pub2,
@@ -925,7 +925,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "publicacions",
         editor: "La Xina A.R.T., Barcelona"
     },
-    "Pub3": {
+    "pub3": {
         name: "Lo Gripau (edició especial 40 anys)",
         description: "assets.description.publicacions.pub3",
         thumbnail: photos.publicacions.pub3,
@@ -933,7 +933,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "publicacions",
         editor: "Institut Lo Pla d’Urgell, Bellpuig"
     },
-    "Pub4": {
+    "pub4": {
         name: "El desert químic",
         description: "assets.description.publicacions.pub4",
         thumbnail: photos.publicacions.pub4,
@@ -941,7 +941,7 @@ const artworks: { [id: string]: Artwork } = {
         type: "publicacions",
         editor: "edicions XM, Ivars d’Urgell-Esplugues de Llobregat"
     },
-    "Pub5": {
+    "pub5": {
         name: "´ (accent tancat)",
         description: "assets.description.publicacions.pub5",
         thumbnail: photos.publicacions.pub5,
@@ -951,7 +951,7 @@ const artworks: { [id: string]: Artwork } = {
     },
 
     //Series
-    "Ser1": {
+    "ser1": {
         name: "Chove na terra",
         description: "assets.description.series.xove",
         thumbnail: photos.series.xove.xove1,
@@ -967,7 +967,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "~30x70 cm",
         technique: "assets.techniques.llapisTintesCollage"
     },
-    "Ser2": {
+    "ser2": {
         name: "Standards",
         description: "assets.description.series.standards",
         thumbnail: photos.series.standards.standards1,
@@ -983,7 +983,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "60x40 cm",
         technique: "Dibuix i collage sobre paper"
     },
-    "Ser3": {
+    "ser3": {
         name: "La tauromàquina",
         description: "assets.description.series.tauro",
         thumbnail: photos.series.tauro.tauro1,
@@ -999,7 +999,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "60x40 cm",
         technique: "Tècnica mixta i collage sobre cartró"
     },
-    "Ser4": {
+    "ser4": {
         name: "Le Nouveau Dictionnaire Crusoe",
         description: "assets.description.series.crusoe",
         thumbnail: photos.series.crusoe.crusoe1,
@@ -1015,7 +1015,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "25x25 cm",
         technique: "assemblatges sobre fusta"
     },
-    "Ser5": {
+    "ser5": {
         name: "Diccionari de miralls",
         description: "assets.description.series.diccionari",
         thumbnail: photos.series.diccionari.diccionari1,
@@ -1031,7 +1031,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "mides diverses",
         technique: "collages sobre plàstic i fusta"
     },
-    "Ser6": {
+    "ser6": {
         name: "Melvilliada",
         description: "assets.description.series.melville",
         thumbnail: photos.series.melville.melville1,
@@ -1047,7 +1047,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "~22x65 cm",
         technique: "Tècnica mixta i collage sobre paper"
     },
-    "Ser7": {
+    "ser7": {
         name: "Ictionari",
         description: "assets.description.series.ictio",
         thumbnail: photos.series.ictio.ictio1,
@@ -1063,7 +1063,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "30x30 cm",
         technique: "Collage sobre paper"
     },
-    "Ser8": {
+    "ser8": {
         name: "Les meravelles de l’univers",
         description: "assets.description.series.univers",
         thumbnail: photos.series.univers.univers1,
@@ -1079,7 +1079,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "30x70 cm",
         technique: "Mixta sobre àlbum de cromos"
     },
-    "Ser9": {
+    "ser9": {
         name: "Miralls tatuats",
         description: "assets.description.series.tatuats",
         thumbnail: photos.series.tatuats.tatuats1,
@@ -1095,7 +1095,7 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "22x22 cm",
         technique: "Retoladors i collage sobre plàstic"
     },
-    "Ser10": {
+    "ser10": {
         name: "Paperama",
         description: "assets.description.series.paperama",
         thumbnail: photos.series.paperama.paperama1,

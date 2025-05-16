@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import FrameThumbnail from "../artwork/FrameThumbnail";
 import { GalleryManager } from '../../data/GalleryManager';
 import { VideoManager } from '../../data/VideoManager';
 import { photos } from '../../assets/photos/photos';
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const thumbnails = {
   "accions" : {"name": "thumbnails.accions", "image": photos.accions.samurais.samurais1},
@@ -29,19 +30,39 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
   const galleryManager = GalleryManager.getInstance();
   const videoManager = VideoManager.getInstance();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+        const path = location.pathname.toLowerCase();
+        const segments = path.split('/').filter(Boolean);
+        if (segments.length === 0) setSelectedCategory(null);
+        else if (segments.length === 1) {
+          setOpenPopup(null);
+        }
+        else if (segments.length === 2) {
+          setOpenPopup(segments[1]);
+        }
+    }, [location.pathname]);
 
   const handleClick = (id: string) => {
     setOpenPopup(id);
+    navigate('/' + selectedCategory + "/" + id.toLowerCase());
   };
 
   const handleClickVideo = (url: string) => {
     window.open(url, "_blank");
   };
 
-
   const handleSelectCategory = (name: string) => {
     setSelectedCategory(name)
     setGoToTab("gallery")
+    navigate('/' + name);
+  };
+
+  const handleGoBack = () => {
+    setSelectedCategory(null);
+    navigate('/');
   };
 
   return (
@@ -64,7 +85,7 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
               <div className="flex items-center justify-between">
                 <button
                   className="text-[15px] md:text-[20px] text-gray-600 hover:text-black transition-colors duration-300 cursor-pointer flex items-center gap-2"
-                  onClick={() => setSelectedCategory(null)}
+                  onClick={() => handleGoBack()}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -81,14 +102,11 @@ const Gallery: React.FC<GalleryProps> = ({ setOpenPopup, setGoToTab }) => {
               <p className="flex-grow text-[20px] md:text-[25px] text-center mb-[20px]">{t(thumbnails[selectedCategory as keyof typeof thumbnails]?.name ?? "")}</p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-max mx-auto">
                 {(() => {
-                  console.log(selectedCategory)
                   if (selectedCategory === "videos") {
                     const videos = videoManager.getAllVideosIDs();
-                    console.log("AAA", videos)
                     return videos.map((item, num) => {
                       const videoItem = videoManager.getById(item);
                       if (!videoItem) return;
-                      console.log("BBB", videoItem)
                       return (
                       <FrameThumbnail
                         key={num}
