@@ -24,7 +24,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ setOpenPopup }) => {
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
       <p className="flex-grow text-[20px] md:text-[25px] text-center mb-[20px]">{t("newsletter.description")}</p>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-max mx-auto">
         {news.map((item, num) => {
           const newItem = newsManager.getById(item);
           if (!newItem) return;
@@ -35,7 +35,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ setOpenPopup }) => {
             name={newItem.name}
             imageUrl={newItem.thumbnail}
             onClick={() => handleClick(item)}
-            isBig={true}
+            isBig={false}
             {...(formattedDate ? { subtitle: formattedDate } : {})}
           />
         )})}

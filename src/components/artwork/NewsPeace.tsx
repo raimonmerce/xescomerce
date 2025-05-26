@@ -69,8 +69,13 @@ const NewsPeace: React.FC<NewsPeaceProps> = ({ id }) => {
               <strong className="text-gray-900">{t('assets.terms.location')}:</strong> {news.location}
             </p>
           )}
+          {news.space && (
+            <p className="my-2 text-gray-700">
+              <strong className="text-gray-900">{t('newsletter.space')}:</strong> {news.space}
+            </p>
+          )}
           <p className="my-2 text-gray-700">
-            <strong className="text-gray-900">{t('assets.terms.year')}:</strong> {formattedDate}
+            <strong className="text-gray-900">{t('newsletter.date')}:</strong> {formattedDate}
           </p>
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>
             {t(news.description)}

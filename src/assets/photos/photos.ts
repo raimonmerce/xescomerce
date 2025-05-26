@@ -403,6 +403,10 @@ import newsDesertnivi from './news/xescomerce_noticies_desertnivi.jpg'
 import newsLliga from './news/xescomerce_noticies_lliga.jpg'
 import newsVi from './news/xescomerce_noticies_vi.jpg'
 import newsViT from './news/xescomerce_noticies_vi_thumb.jpg'
+import newsGaza from './news/gaza/xescomerce_noticies_art4gaza.jpg'
+import newsGazaT from './news/gaza/xescomerce_noticies_art4gaza-t.jpg'
+import newsObrim from './news/obrim/xescomerce_noticies_obrim.jpg'
+import newsObrimT from './news/obrim/xescomerce_noticies_obrim-t.jpg'
 
 //Videos
 import videoDesert from './videos/xescomerce_videos_desert.jpg'
@@ -794,7 +798,15 @@ export const photos = {
         newsDesertnivi: newsDesertnivi,
         newsLliga: newsLliga,
         newsVi: newsVi,
-        newsViT: newsViT
+        newsViT: newsViT,
+        gaza: {
+            img: newsGaza,
+            thumb: newsGazaT
+        },
+        obrim: {
+            img: newsObrim,
+            thumb: newsObrimT
+        }
     },
     videos: {
         videoDesert: videoDesert,

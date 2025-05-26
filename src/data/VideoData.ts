@@ -44,12 +44,6 @@ const videos: { [id: string]: Video } = {
         url: "https://www.youtube.com/watch?v=9Qs7QadKl1s",
         subtitle: "Bretanya"
     },
-    "videoPortada": {
-        name: "El Paisaje en el Divan",
-        thumbnail: photos.videos.videoPortada,
-        url: "https://www.rtve.es/television/20081111/paisaje-divan-escarabajo-verde/193298.shtml",
-        subtitle: "RTVE"
-    },
     "videoPortes": {
         name: "Portes Endins",
         thumbnail: photos.videos.videoPortes,

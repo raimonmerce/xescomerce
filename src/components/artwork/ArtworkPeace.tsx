@@ -35,7 +35,7 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
       <div className="flex flex-col md:flex-row items-start">
         {/* Image Container */}
         <div className="order-1 md:order-2 w-full md:w-[40%] max-h-[300px] md:max-h-full mb-4 md:mb-0 md:ml-4">
-          {artwork.images && artwork.images.length >= 1 ? (
+          {artwork.images && artwork.images.length > 1 ? (
             <Slider {...settings}>
               {artwork.images.map((image, index) => (
                 <div key={index}>
@@ -50,7 +50,7 @@ const ArtworkPeace: React.FC<ArtworkPeaceProps> = ({ id }) => {
           ) : (
             <img
               className="w-full mb-[15px] h-auto block object-contain"
-              src={artwork.thumbnail}
+              src={artwork.images?.length === 1? artwork.images[0] : artwork.thumbnail}
               alt={artwork.name}
             />
           )}

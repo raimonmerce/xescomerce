@@ -27,6 +27,8 @@
   },
   "newsletter": {
     "description": "Consulta les últimes novetats",
+    "date": "Data",
+    "space": "Espai",
     "news": {
       "new1": {
         "title" : "La lliga de la justícia poètica",
@@ -42,6 +44,16 @@
         "title" : "El Vi fa la Sang",
         "subtitle" : "Exposició col·lectiva",
         "description" : "Convidat, un cop més, per la gent de Riudebitlles Territori d’Art, he tingut la sort de participar en aquesta proposta, de la qual us en penjo la nota de premsa: <br/><br/>22 artistes interpreten el vi a cal Xerta<br/><br/>El proper dijous 8 de maig, a les 20 h, s’inaugura a cal Xerta (Riudebitlles) l'exposició <i>El vi fa sang</i>, una mostra col·lectiva organitzada per l’Associació Riudebitlles Territori d'Art, en el marc dels actes del Riudevins que enguany es celebrarà el dissabte 10 de maig al Barri Vell.<br/><br/>La mostra reuneix 22 artistes de diferents disciplines, que han creat obres inspirades pel vi: Abdellah Ahaddaf, August Rosell, Aura Gumà i Susana Domínguez (xuquin & lajarlei), Camil·la Pérez Salvà, Clàudia Carbó, David Ribas Boldú, elenamusa, Fabrice de Lapparent, Fèlix Plantalech, Isabel Feliu Fabra, Jaume Amigó, Jaume Felipe Villa, Joan Gispert, Marga Casas, Maria Martínez Miró, Mireia Feliu Fabra, Pere Pascual, Salvador Rafecas, Sílvia Isach, Teresa Pla Belío, Victòria Rabal i Xesco Mercè.<br/><br/>Amb motiu de l'exposició, s'ha editat un catàleg que recull totes les obres i compta amb un text introductori de l’escriptor Pep Antoni Roig, que ofereix una mirada literària sobre la relació entre art i vi."
+      },
+      "new4": {
+        "title" : "Obrim!",
+        "subtitle" : "Presentació col·lectiva",
+        "description" : "Desprès d’una dècada d’activitats culturals de tota mena, l’Espai de lliure creació Carme Malaret, va prendre’s una pausa per replantejar-se el futur. Jo hi havia participat en diverses propostes grupals (Siguis original, Expressa’t) i fet una mostra individual (De Signis) i un aparador (Objectes performàtics, poemes objecte). L’amic Pau Minguet, membre de l’antic Petit Comitè de l’entitat, va ser l’encarregat d’entabanar-me per participar en la nova etapa del projecte. Una bona colla d’artistes, gestors culturals, artesans i gent inquieta culturalment, de diverses procedències, hem formar el Nou Petit Comitè: (en ordre alfabètic): Carme Malaret, Edu Escobar, Iona Quesada, Iona Palau, Nil Nebot, Pau Minguet, Teresa Farro, Toni López, Toni Malaret, Txell Mateu, un servidor de vostès i l’enyorat Antoni Mercader, que ens va deixar una setmana abans de reobrir l’espai. Em Quim Deu hi seguirà vinculat, en labors de disseny gràfic. Per començar vam fer un muntatge, simulant uns treballs de reforma que va ser tan convincents que fins i tot un veí va fer una denúncia a la policia local, avisant que no teníem el permís pertinent per fer les obres. Creieu que cal demanar permís per fer una performance?"
+      },
+      "new5": {
+        "title" : "Art4Gaza",
+        "subtitle" : "Exposició col·lectiva",
+        "description" : "Una proposta de l’artista del Vallespir Etienne Sabench,que em va arribar a través del Joan Maria Minguet, absolutament necessària. L’Esteve (o Etienne) va aplegar 102 artistes per conformar aquestes dues exposicions consecutives (a Ille-sur-Tet i a Céret) amb la finalitat de recaptar fons per Palestina, víctima actual d’un tan cruel i inexplicable genocidi. Rellegint el llarg llistat de participants i he trobat una bona colla de vells amics, amics, coneguts i saludats, antics professors i artistes de les terres de ponent: Nora Ancarola, Marga Ximenez, Christophe Massé, Joan Fontcuberta, Francesca Llopis, David Ymbernon, Sara Assens, Tom Carr i Perico Pastor. Tots artistes compromesos amb aquesta causa, com amb l’Art en general. Si us podeu apropar a la Catalunya nord, que sempre val la pena, no dubter en visitar aquesta mostra."
       }
     }
   },
