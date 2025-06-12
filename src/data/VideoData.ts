@@ -56,6 +56,12 @@ const videos: { [id: string]: Video } = {
         url: "https://www.3cat.cat/3cat/xesco-merce/video/4038370/",
         subtitle: "TV3"
     },
+    "videoBeuys": {
+        name: "Deconstruïnt Beuys",
+        thumbnail: photos.videos.videoBeuys,
+        url: "https://lagreytarragona.wixsite.com/lagrey/deconstuint-a-beuys",
+        subtitle: "Le Grey"
+    },
 
 }
 

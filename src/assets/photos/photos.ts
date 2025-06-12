@@ -419,6 +419,7 @@ import videoOmne from './videos/xescomerce_videos_omne.jpg'
 import videoPortada from './videos/xescomerce_videos_portada.jpg'
 import videoPortes from './videos/xescomerce_videos_portes.jpg'
 import videoViallibres from './videos/xescomerce_videos_viallibres.jpg'
+import videoBeuys from './videos/xescomerce_videos_desconstruintbeuys.jpg'
 
 export const photos = {
     about: {
@@ -818,6 +819,7 @@ export const photos = {
         videoOmne: videoOmne,
         videoPortada: videoPortada,
         videoPortes: videoPortes,
-        videoViallibres: videoViallibres
+        videoViallibres: videoViallibres,
+        videoBeuys: videoBeuys
     }
 };
