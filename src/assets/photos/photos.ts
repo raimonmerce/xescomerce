@@ -407,6 +407,8 @@ import newsGaza from './news/gaza/xescomerce_noticies_art4gaza.jpg'
 import newsGazaT from './news/gaza/xescomerce_noticies_art4gaza-t.jpg'
 import newsObrim from './news/obrim/xescomerce_noticies_obrim.jpg'
 import newsObrimT from './news/obrim/xescomerce_noticies_obrim-t.jpg'
+import newsErrant from './news/errant/xescomerce_noticies_errant.jpg'
+import newsComacasa from './news/comacasa/xescomerce_noticies_comacasa.jpg'
 
 //Videos
 import videoDesert from './videos/xescomerce_videos_desert.jpg'
@@ -807,6 +809,14 @@ export const photos = {
         obrim: {
             img: newsObrim,
             thumb: newsObrimT
+        },
+        comacasa: {
+            img: newsComacasa,
+            thumb: newsComacasa
+        },
+        errant: {
+            img: newsErrant,
+            thumb: newsErrant
         }
     },
     videos: {

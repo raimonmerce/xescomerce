@@ -11,6 +11,29 @@ const news: { [id: string]: News } = {
         space: "Espai Nivi",
         location: "Culla, Castelló"
     },
+    "Errant": {
+        name: "Errant 25",
+        subtitle: "Festival",
+        description: "newsletter.news.errant.description",
+        thumbnail: photos.news.errant.thumb,
+        images: [
+            photos.news.errant.img
+        ],
+        date: new Date("2025-07-17T00:00:00Z"),
+        location: "Coll de Nargó, Alt Urgell, Lleida"
+    },
+    "Comacasa": {
+        name: "Com a Casa",
+        subtitle: "newsletter.news.new5.subtitle",
+        description: "newsletter.news.comacasa.description",
+        thumbnail: photos.news.comacasa.thumb,
+        images: [
+            photos.news.gaza.img
+        ],
+        date: new Date("2025-06-12T00:00:00Z"),
+        space: "Espai de lliure creació Carme Malaret",
+        location: "Sant Just Desvern, Barcelona"
+    },
     "New5": {
         name: "newsletter.news.new5.title",
         subtitle: "newsletter.news.new5.title",
