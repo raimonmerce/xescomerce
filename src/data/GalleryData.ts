@@ -548,6 +548,36 @@ const artworks: { [id: string]: Artwork } = {
         dimensions: "170x70 x15 cm",
         technique: "Tècniques Mixtes"
     },
+    "exp11": {
+        name: "La lliga de la justícia poètica",
+        description: "assets.description.experiments.lliga",
+        thumbnail: photos.experiments.lliga.lliga1,
+        images: [
+            photos.experiments.lliga.lliga1,
+            photos.experiments.lliga.lliga2,
+            photos.experiments.lliga.lliga3,
+            photos.experiments.lliga.lliga4,
+            photos.experiments.lliga.lliga5
+        ],
+        year: 2025,
+        type: "experiments",
+        location: "Lo Pardal – Fundació Guillem Viladot, Agramunt"
+    },
+    "exp12": {
+        name: "Espai de lliure creació Carme Malaret",
+        description: "assets.description.experiments.carmeMalaret",
+        thumbnail: photos.experiments.carmeMalaret.carmeMalaret1,
+        images: [
+            photos.experiments.carmeMalaret.carmeMalaret1,
+            photos.experiments.carmeMalaret.carmeMalaret2,
+            photos.experiments.carmeMalaret.carmeMalaret3,
+            photos.experiments.carmeMalaret.carmeMalaret4,
+            photos.experiments.carmeMalaret.carmeMalaret5
+        ],
+        year: 2025,
+        type: "experiments",
+        location: "Sant Just Desvern",
+    },
     //GransFormats
     "gf1": {
         name: "L’exili dels profetes",
@@ -822,6 +852,36 @@ const artworks: { [id: string]: Artwork } = {
         year: 2024,
         type: "instalacions",
         location: "X festival Embarrat, Can Trepat, Tàrrega",
+    },
+    "ins11": {
+        name: "Coll avall",
+        description: "assets.description.instalacions.collavall",
+        thumbnail: photos.instalacions.collavall.collavall1,
+        images: [
+            photos.instalacions.collavall.collavall1,
+            photos.instalacions.collavall.collavall2,
+            photos.instalacions.collavall.collavall3,
+            photos.instalacions.collavall.collavall4,
+            photos.instalacions.collavall.collavall5
+        ],
+        year: 2025,
+        type: "instalacions",
+        location: "Festival Errant, Coll de Nargó",
+    },
+    "ins12": {
+        name: "Records imprecisos de viatges amb núvies que mai vaig tenir",
+        description: "assets.description.instalacions.records",
+        thumbnail: photos.instalacions.records.records1,
+        images: [
+            photos.instalacions.records.records1,
+            photos.instalacions.records.records2,
+            photos.instalacions.records.records3,
+            photos.instalacions.records.records4,
+            photos.instalacions.records.records5
+        ],
+        year: 2025,
+        type: "instalacions",
+        location: "Galeria Artotéka, Bratislava, Eslovàquia",
     },
 
     //Murals

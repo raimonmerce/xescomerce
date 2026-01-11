@@ -138,6 +138,12 @@ import ny103 from './experiments/xescomerce_expe_10ny-3.jpg';
 import ny104 from './experiments/xescomerce_expe_10ny-4.jpg';
 import ny105 from './experiments/xescomerce_expe_10ny-5.jpg';
 
+import carmeMalaret1 from './experiments/carmeMalaret/xescomerce_expe_malaret_1.jpg';
+import carmeMalaret2 from './experiments/carmeMalaret/xescomerce_expe_malaret_2.jpg';
+import carmeMalaret3 from './experiments/carmeMalaret/xescomerce_expe_malaret_3.jpg';
+import carmeMalaret4 from './experiments/carmeMalaret/xescomerce_expe_malaret_4.jpg';
+import carmeMalaret5 from './experiments/carmeMalaret/xescomerce_expe_malaret_5.jpg';
+
 import desert1 from './experiments/xescomerce_expe_desert_1.jpg';
 import desert2 from './experiments/xescomerce_expe_desert_2.jpg';
 import desert3 from './experiments/xescomerce_expe_desert_3.jpg';
@@ -173,6 +179,12 @@ import mon2 from './experiments/xescomerce_expe_mon-2.jpg';
 import mon3 from './experiments/xescomerce_expe_mon-3.jpg';
 import mon4 from './experiments/xescomerce_expe_mon-4.jpg';
 import mon5 from './experiments/xescomerce_expe_mon-5.jpg';
+
+import lliga1 from './experiments/lligaJusticia/xescomerce_expe_lliga_1.jpg';
+import lliga2 from './experiments/lligaJusticia/xescomerce_expe_lliga_2.jpg';
+import lliga3 from './experiments/lligaJusticia/xescomerce_expe_lliga_3.jpg';
+import lliga4 from './experiments/lligaJusticia/xescomerce_expe_lliga_4.jpg';
+import lliga5 from './experiments/lligaJusticia/xescomerce_expe_lliga_5.jpg';
 
 import spolipsisme1 from './experiments/xescomerce_expe_solipsisme_1.jpg';
 import spolipsisme2 from './experiments/xescomerce_expe_solipsisme_2.jpg';
@@ -257,6 +269,12 @@ import casa3 from './instalacions/xescomerce_instal_casa_3.jpg'
 import casa4 from './instalacions/xescomerce_instal_casa_4.jpg'
 import casa5 from './instalacions/xescomerce_instal_casa_5.jpg'
 
+import collavall1 from './instalacions/collavall/xescomerce_insta_collavall_1.jpg'
+import collavall2 from './instalacions/collavall/xescomerce_insta_collavall_2.jpg'
+import collavall3 from './instalacions/collavall/xescomerce_insta_collavall_3.jpg'
+import collavall4 from './instalacions/collavall/xescomerce_insta_collavall_4.jpg'
+import collavall5 from './instalacions/collavall/xescomerce_insta_collavall_5.jpg'
+
 import domestic1 from './instalacions/xescomerce_instal_domestic_1.jpg'
 import domestic2 from './instalacions/xescomerce_instal_domestic_2.jpg'
 import domestic3 from './instalacions/xescomerce_instal_domestic_3.jpg'
@@ -292,6 +310,12 @@ import puniques2 from './instalacions/xescomerce_instal_puniques_2.jpg'
 import puniques3 from './instalacions/xescomerce_instal_puniques_3.jpg'
 import puniques4 from './instalacions/xescomerce_instal_puniques_4.jpg'
 import puniques5 from './instalacions/xescomerce_instal_puniques_5.jpg'
+
+import records1 from './instalacions/records/xescomerce_insta_records_1.jpg'
+import records2 from './instalacions/records/xescomerce_insta_records_2.jpeg'
+import records3 from './instalacions/records/xescomerce_insta_records_3.jpg'
+import records4 from './instalacions/records/xescomerce_insta_records_4.jpg'
+import records5 from './instalacions/records/xescomerce_insta_records_5.jpg'
 
 //Murals
 import aigua1 from './murals/xescomerce_murals_aigua1.jpg'
@@ -409,6 +433,10 @@ import newsObrim from './news/obrim/xescomerce_noticies_obrim.jpg'
 import newsObrimT from './news/obrim/xescomerce_noticies_obrim-t.jpg'
 import newsErrant from './news/errant/xescomerce_noticies_errant.jpg'
 import newsComacasa from './news/comacasa/xescomerce_noticies_comacasa.jpg'
+import newsCarrament from './news/carrament/xescomerce_noticies_carrament.jpg'
+import newsCeciNestPass from './news/ceciNestPas/xescomerce_noticies_ceciNestPas.jpg'
+import newsNivi from './news/desertNivi/xescomerce_noticies_desertNivi.jpg'
+import newsVidaNormal from './news/vidaNormal/xescomerce_noticies_vidaNormal.jpg'
 
 //Videos
 import videoDesert from './videos/xescomerce_videos_desert.jpg'
@@ -588,6 +616,13 @@ export const photos = {
             ny104: ny104,
             ny105: ny105
         },
+        carmeMalaret: {
+            carmeMalaret1: carmeMalaret1,
+            carmeMalaret2: carmeMalaret2,
+            carmeMalaret3: carmeMalaret3,
+            carmeMalaret4: carmeMalaret4,
+            carmeMalaret5: carmeMalaret5
+        },
         desert: {
             desert1: desert1,
             desert2: desert2,
@@ -629,6 +664,13 @@ export const photos = {
             mon3: mon3,
             mon4: mon4,
             mon5: mon5
+        },
+        lliga: {
+            lliga1: lliga1,
+            lliga2: lliga2,
+            lliga3: lliga3,
+            lliga4: lliga4,
+            lliga5: lliga5
         },
         solipsisme: {
             solipsisme1: spolipsisme1,
@@ -716,6 +758,9 @@ export const photos = {
         casa: {
             casa1: casa1, casa2: casa2, casa3: casa3, casa4: casa4, casa5: casa5
         },
+        collavall: {
+            collavall1: collavall1, collavall2: collavall2, collavall3: collavall3, collavall4: collavall4, collavall5: collavall5
+        },
         domestic: {
             domestic1: domestic1, domestic2: domestic2, domestic3: domestic3, domestic4: domestic4, domestic5: domestic5
         },
@@ -733,6 +778,9 @@ export const photos = {
         },
         puniques: {
             puniques1: puniques1, puniques2: puniques2, puniques3: puniques3, puniques4: puniques4, puniques5: puniques5
+        },
+        records: {
+            records1: records1, records2: records2, records3: records3, records4: records4, records5: records5
         }
     },
     murals: {
@@ -817,7 +865,23 @@ export const photos = {
         errant: {
             img: newsErrant,
             thumb: newsErrant
-        }
+        },
+        carrament: {
+            img: newsCarrament,
+            thumb: newsCarrament
+        },
+        ceciNestPass: {
+            img: newsCeciNestPass,
+            thumb: newsCeciNestPass
+        },
+        nivi: {
+            img: newsNivi,
+            thumb: newsNivi
+        },
+        vidaNormal: {
+            img: newsVidaNormal,
+            thumb: newsVidaNormal
+        },
     },
     videos: {
         videoDesert: videoDesert,
