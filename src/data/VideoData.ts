@@ -12,7 +12,7 @@ const videos: { [id: string]: Video } = {
         name: "El Paisaje en el Divan",
         thumbnail: photos.videos.videoEscarabajo,
         url: "https://www.rtve.es/television/20081111/paisaje-divan-escarabajo-verde/193298.shtml",
-        subtitle: "RTVE"
+        subtitle: "antena 3"
     },
     "videoKaunas": {
         name: "Simpòsium KANÎBAL’HOPOX",

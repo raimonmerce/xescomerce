@@ -94,6 +94,18 @@ const news: { [id: string]: News } = {
         space: "Taller (13)",
         location: "Ille-sur-Tet i La Capelleta, Céret (França)"
     },
+    "santJordi": {
+        name: "Retaule de la llegenda de la Princesa Drac",
+        subtitle: "newsletter.news.santJordi.subtitle",
+        description: "newsletter.news.santJordi.description",
+        thumbnail: photos.news.santJordi.thumb,
+        images: [
+            photos.news.santJordi.img
+        ],
+        date: new Date("2026-04-14T00:00:00Z"),
+        space: "Pati de l’Institut d’Estudis Ilerdencs",
+        location: "Lleida"
+    },
     // "New4": {
     //     name: "newsletter.news.new4.title",
     //     subtitle: "newsletter.news.new4.title",

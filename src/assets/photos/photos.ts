@@ -437,6 +437,7 @@ import newsCarrament from './news/carrament/xescomerce_noticies_carrament.jpg'
 import newsCeciNestPass from './news/ceciNestPas/xescomerce_noticies_ceciNestPas.jpg'
 import newsNivi from './news/desertNivi/xescomerce_noticies_desertNivi.jpg'
 import newsVidaNormal from './news/vidaNormal/xescomerce_noticies_vidaNormal.jpg'
+import newsSantJordi from './news/santJordi/xescomerce_noticies_santJordi.jpg'
 
 //Videos
 import videoDesert from './videos/xescomerce_videos_desert.jpg'
@@ -881,6 +882,10 @@ export const photos = {
         vidaNormal: {
             img: newsVidaNormal,
             thumb: newsVidaNormal
+        },
+        santJordi: {
+            img: newsSantJordi,
+            thumb: newsSantJordi
         },
     },
     videos: {
