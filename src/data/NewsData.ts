@@ -106,6 +106,18 @@ const news: { [id: string]: News } = {
         space: "Pati de l’Institut d’Estudis Ilerdencs",
         location: "Lleida"
     },
+    "pinturaFresca": {
+        name: "Pintura Fresca",
+        subtitle: "newsletter.news.pinturaFresca.subtitle",
+        description: "newsletter.news.pinturaFresca.description",
+        thumbnail: photos.news.pinturaFresca.thumb,
+        images: [
+            photos.news.pinturaFresca.img
+        ],
+        date: new Date("2026-05-22T00:00:00Z"),
+        space: "Galeria Indecor, Carrer General Brito, 23, 25007 Lleida",
+        location: "Lleida"
+    },
     // "New4": {
     //     name: "newsletter.news.new4.title",
     //     subtitle: "newsletter.news.new4.title",
