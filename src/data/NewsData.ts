@@ -106,6 +106,31 @@ const news: { [id: string]: News } = {
         space: "Pati de l’Institut d’Estudis Ilerdencs",
         location: "Lleida"
     },
+    "mirador": {
+        name: "Mirador",
+        subtitle: "",
+        description: "newsletter.news.mirador.description",
+        thumbnail: photos.news.mirador.thumb,
+        images: [
+            photos.news.mirador.img
+        ],
+        date: new Date("2026-04-14T00:00:00Z"),
+        space: "Sala Gòtica, Institut d’Estudis Ilerdencs",
+        location: "Lleida"
+    },
+    "mirador2": {
+        name: "Duet",
+        subtitle: "",
+        description: "newsletter.news.mirador2.description",
+        thumbnail: photos.news.mirador2.thumb,
+        images: [
+            photos.news.mirador2.img
+        ],
+        date: new Date("2026-04-14T00:00:00Z"),
+        space: "Galeria Art Club BCN (Sant Lluis, 19, Gràcia)",
+        location: "Barcelona"
+    },
+    
     "pinturaFresca": {
         name: "Pintura Fresca",
         subtitle: "newsletter.news.pinturaFresca.subtitle",

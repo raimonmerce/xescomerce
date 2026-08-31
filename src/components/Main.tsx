@@ -20,7 +20,6 @@ const Main: React.FC<MainProps> = ({ setActiveTab, goToTab, setOpenPopup, setGoT
   ];
 
   useEffect(() => {
-    console.log("goToTab", goToTab)
     const section = document.getElementById(goToTab);
     if (section) {
       section.scrollIntoView({

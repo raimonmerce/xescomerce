@@ -438,6 +438,8 @@ import newsCeciNestPass from './news/ceciNestPas/xescomerce_noticies_ceciNestPas
 import newsNivi from './news/desertNivi/xescomerce_noticies_desertNivi.jpg'
 import newsVidaNormal from './news/vidaNormal/xescomerce_noticies_vidaNormal.jpg'
 import newsSantJordi from './news/santJordi/xescomerce_noticies_santJordi.jpg'
+import newsMirador from './news/mirador/xescomerce_noticies_mirador.jpg'
+import newsMirador2 from './news/mirador2/xescomerce_noticies_mirador2.jpg'
 import newsPinturaFresca from './news/pinturaFresca/xescomerce_noticies_pintura_fresca.jpg'
 
 //Videos
@@ -887,6 +889,14 @@ export const photos = {
         santJordi: {
             img: newsSantJordi,
             thumb: newsSantJordi
+        },
+        mirador: {
+            img: newsMirador,
+            thumb: newsMirador
+        },
+        mirador2: {
+            img: newsMirador2,
+            thumb: newsMirador2
         },
         pinturaFresca: {
             img: newsPinturaFresca,
