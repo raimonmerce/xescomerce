@@ -114,7 +114,7 @@ const news: { [id: string]: News } = {
         images: [
             photos.news.mirador.img
         ],
-        date: new Date("2026-04-14T00:00:00Z"),
+        date: new Date("2026-07-31T00:00:00Z"),
         space: "Sala Gòtica, Institut d’Estudis Ilerdencs",
         location: "Lleida"
     },
@@ -126,7 +126,7 @@ const news: { [id: string]: News } = {
         images: [
             photos.news.mirador2.img
         ],
-        date: new Date("2026-04-14T00:00:00Z"),
+        date: new Date("2026-09-15T00:00:00Z"),
         space: "Galeria Art Club BCN (Sant Lluis, 19, Gràcia)",
         location: "Barcelona"
     },
