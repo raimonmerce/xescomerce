@@ -441,6 +441,7 @@ import newsSantJordi from './news/santJordi/xescomerce_noticies_santJordi.jpg'
 import newsMirador from './news/mirador/xescomerce_noticies_mirador.jpg'
 import newsMirador2 from './news/mirador2/xescomerce_noticies_mirador2.jpg'
 import newsPinturaFresca from './news/pinturaFresca/xescomerce_noticies_pintura_fresca.jpg'
+import newsClau12 from './news/clau12/xescomerce_noticies_clau12.jpg'
 
 //Videos
 import videoDesert from './videos/xescomerce_videos_desert.jpg'
@@ -901,7 +902,11 @@ export const photos = {
         pinturaFresca: {
             img: newsPinturaFresca,
             thumb: newsPinturaFresca
-        }
+        },
+        clau12: {
+            img: newsClau12,
+            thumb: newsClau12
+        },
     },
     videos: {
         videoDesert: videoDesert,

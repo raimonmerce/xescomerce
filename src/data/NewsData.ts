@@ -34,18 +34,18 @@ const news: { [id: string]: News } = {
     //     space: "Espai de lliure creació Carme Malaret",
     //     location: "Sant Just Desvern, Barcelona"
     // },
-    "carrament": {
-        name: "Carrément Toujours 2025",
-        subtitle: "newsletter.news.carrament.subtitle",
-        description: "newsletter.news.carrament.description",
-        thumbnail: photos.news.carrament.thumb,
-        images: [
-            photos.news.carrament.img
-        ],
-        date: new Date("2025-12-01T00:00:00Z"),
-        space: "Galerie 4",
-        location: "Barbier, Nîmes, France"
-    },
+    // "carrament": {
+    //     name: "Carrément Toujours 2025",
+    //     subtitle: "newsletter.news.carrament.subtitle",
+    //     description: "newsletter.news.carrament.description",
+    //     thumbnail: photos.news.carrament.thumb,
+    //     images: [
+    //         photos.news.carrament.img
+    //     ],
+    //     date: new Date("2025-12-01T00:00:00Z"),
+    //     space: "Galerie 4",
+    //     location: "Barbier, Nîmes, France"
+    // },
     "ceciNestPass": {
         name: "Ceci n’est pas la col·lecció Reventós",
         subtitle: "newsletter.news.ceciNestPass.subtitle",
@@ -142,6 +142,19 @@ const news: { [id: string]: News } = {
         date: new Date("2026-05-22T00:00:00Z"),
         space: "Galeria Indecor, Carrer General Brito, 23, 25007 Lleida",
         location: "Lleida"
+    },
+
+    "clau12": {
+        name: "Les Claus de l'Espai",
+        subtitle: "newsletter.news.clau12.subtitle",
+        description: "newsletter.news.clau12.description",
+        thumbnail: photos.news.clau12.thumb,
+        images: [
+            photos.news.clau12.img
+        ],
+        date: new Date("2026-11-05T00:00:00Z"),
+        space: "Espai de lliure creació Carme Malaret",
+        location: "Sant Just Desvern"
     },
     // "New4": {
     //     name: "newsletter.news.new4.title",
